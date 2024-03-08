@@ -39,6 +39,11 @@ p {
   }
 }
 
+.list-no-bullets {
+  margin: auto 0;
+  list-style: none;
+}
+
 .search-bar {
   border: 0px;
   background-color: aquamarine;
