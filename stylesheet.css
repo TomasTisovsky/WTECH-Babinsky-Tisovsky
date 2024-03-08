@@ -33,7 +33,7 @@ p {
   margin-right: 5px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .justify-content-center-sm {
     justify-content: center !important;
   }
