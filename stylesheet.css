@@ -63,9 +63,14 @@ p {
   overflow: hidden;
 }
 
-.main-navbar-2 .col {
+.main-navbar-2 .col,
+.main-navbar-2 .col-md-4 {
   display: flex;
   align-items: center;
+}
+
+#col-shopping-cart {
+  justify-content: center;
 }
 
 #kekw {
@@ -118,4 +123,15 @@ p {
 #search-bar-icon-btn:focus,
 #search-bar-icon-btn:active {
   box-shadow: none !important;
+}
+
+.cart-btn {
+  background-color: #0b5f83;
+  color: white;
+  border-radius: 20px;
+}
+
+#shopping-cart-span {
+  padding-left: 30px;
+  padding-right: 30px;
 }
