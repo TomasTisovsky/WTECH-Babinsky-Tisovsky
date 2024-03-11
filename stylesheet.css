@@ -204,3 +204,41 @@ p {
 #pepe {
   overflow: hidden;
 }
+
+.buying-stage-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: #0c739f;
+}
+
+.buying-stage-bar {
+  padding: 0px !important;
+  background-color: white;
+  box-shadow: 0 4px 2px -2px #0d0d0d93;
+  border-radius: 20px;
+}
+
+.buying-stage {
+  min-height: 50px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.buying-stage-bar .buying-stage:first-of-type {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.buying-stage-bar .buying-stage:last-of-type {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.current-buying-stage {
+  background-color: #bbebff;
+  font-weight: bold;
+}
