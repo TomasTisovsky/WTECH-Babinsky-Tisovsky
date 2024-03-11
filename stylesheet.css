@@ -20,6 +20,12 @@ p {
   }
 }
 
+@media (max-width: 141px) {
+  .justify-content-center-sm {
+    justify-content: center !important;
+  }
+}
+
 .main-navbar {
   background-color: #0b5f83;
   border: 20px;
@@ -165,6 +171,7 @@ p {
 
 .aside-buttons button {
   box-shadow: none !important;
+  background-color: white;
   font-size: large;
   text-align: left;
   height: 100px;
@@ -176,11 +183,24 @@ p {
   background-color: #0c739f;
 }
 
+.aside-buttons button span {
+  display: inline-block;
+}
+
 .aside-buttons button span span {
-  padding-left: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .aside-buttons .btn:last-child {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.back-ground-color {
+  background-color: #f4f4f4;
+}
+
+#pepe {
+  overflow: hidden;
 }
