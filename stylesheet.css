@@ -20,9 +20,9 @@ p {
   }
 }
 
-@media (max-width: 141px) {
-  .justify-content-center-sm {
-    justify-content: center !important;
+@media (min-width: 1200px) {
+  .product-card-main-page {
+    max-width: 200px !important;
   }
 }
 
@@ -150,7 +150,24 @@ p {
 
 .product-card {
   text-align: center;
-  max-width: 200px;
+  max-width: 300px;
+  margin: 5px;
+  border-radius: 20px;
+  border-color: #0d0d0d93;
+  border: solid;
+}
+
+.product-card .card-body {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.card-product-name {
+  line-height: 1.2em;
+  max-height: 2.4em;
+  min-height: 2.4em;
+  overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .default-title {
