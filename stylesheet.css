@@ -259,3 +259,8 @@ p {
   background-color: #bbebff;
   font-weight: bold;
 }
+
+footer {
+  font-size: small;
+  background-color: #f4f4f4;
+}
