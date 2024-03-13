@@ -10,48 +10,35 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* Set a fixed height for the container */
-    .custom-container {
-      height: 200px;
-      /* Adjust the height as needed */
+    /* Set a maximum width for the image within its container */
+    .custom-image-container {
+      max-width: 80%;
+      max-height: 600px;
+      margin: auto;
+      /* Center the container */
     }
 
-    /* Ensure the image inside the container is responsive */
-    .custom-container img {
-      max-height: 100%;
-      width: auto;
-    }
-
-    #pepe {
-      max-height: 100px;
-      max-width: 100%;
+    /* Ensure the image is responsive and doesn't exceed its container */
+    .custom-image {
+      width: 100%;
+      height: auto;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container custom-container">
-    <div class="row">
-      <div class="col-6">
-        <div class="card bg-secondary" id="pepe">
-          <div class="card-body">
-            <p>aibndlrjkfaewgrhstjdgnhfedghntrfndsfvgrtfnbhdesfrgtyb</p>
-            <img src="resources/phones/phone_default.png" class="img-fluid" alt="Your Image">
-          </div>
-        </div>
-      </div>
-      <div class="col-6 ">
-        <div class="card bg-primary">
-          <div class="card-body">
-            <p>aishjgisodfeghtrdygeus</p>
-            <img src="resources/phones/phone_default.png" class="img-fluid" alt="Your Image">
-          </div>
+  <div class="container mt-5 h-100 ">
+    <div class="row h-100 ">
+      <div class="col-md-6 bg-warning">
+        <!-- Image container with maximum width -->
+        <div class="custom-image-container bg-primary">
+          <!-- Responsive image -->
+          <img src="https://picsum.photos/30/40" alt="Placeholder Image" class="custom-image">
         </div>
       </div>
     </div>
   </div>
-
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
