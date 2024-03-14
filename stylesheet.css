@@ -321,3 +321,16 @@ footer {
   font-size: small;
   background-color: #f4f4f4;
 }
+
+.admin-panel-gray {
+  background-color: #d9d9d9;
+}
+
+.heading-color{
+  color: #0c739f;
+}
+
+
+.orange-text-color {
+  color: #ffba00;
+}
