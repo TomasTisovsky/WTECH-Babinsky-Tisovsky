@@ -105,30 +105,91 @@
 
         <div class="row container-fluid justify-content-center">
 
-            <div class="col-12  buying-stage-title">
+            <section class="col-12  buying-stage-title">
                 <h2 class="w-100">Tvoj nákupný košík</h2>
-            </div>
+            </section>
 
-            <div class="row container-fluid buying-stage-bar">
+            <section class="row container-fluid buying-stage-bar">
                 <div class="col-md-3 col-sm-6 buying-stage current-buying-stage pep"><span>Nákupný košík</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage"><span>Kontaktné informácie</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage pep"><span>Doprava a platba</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage"><span>Dokončenie objednávky</span></div>
-            </div>
+            </section>
 
-            <div class="row container-fluid pt-1">
-                <div class="col-lg-8 back-ground-white p-0">
-                    <img src="resources/icons/accesories_icon.svg" alt="">
-                </div>
+            <section class="row mt-1 back-ground-white" id="shopping-cart-body">
 
-                <div class="col-lg-4 back-ground-white ">
-                    <div class="card">
-                        <div class="card-body back-ground-color">
-                            pep
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <section class="col-lg-4 back-ground-white p-1 order-1 order-lg-2">
+                    <section class="card" id="shopping-cart-order-sum">
+                        <section class="card-body back-ground-color">
+                            <h3 style="text-align: center;">Súčet objednávky</h3>
+                            <p>Celková suma bez DPH:</p>
+                            <p>255.66 $</p>
+                            <p>DPH:</p>
+                            <p> 0.0 $</p>
+                            <p>Celková suma:</p>
+                            <p>255.66 $</p>
+                        </section>
+                    </section>
+                </section>
+
+
+                <section class="col-lg-8 order-2 order-lg-1 back-ground-white p-0">
+
+
+                    <article class="card shopping-cart-product-card" style="min-height: 150px;">
+                        <section class="row d-flex">
+
+                            <section class="col-6"><img src="resources/phones/phone_2.png" alt=""
+                                    class="img-fluid shopping-cart-product-image"></section>
+
+                            <section class="col-6">A</section>
+
+
+                        </section>
+
+                    </article>
+
+                    <article class="card shopping-cart-product-card back-ground-color m-2" style="min-height: 150px;">
+                        <section class="row d-flex" style="min-height: 150px;">
+
+                            <section class="col-4 p-0 justify-content-center"><img
+                                    src="resources/phones/phone_default.png" alt=""
+                                    class="img-fluid shopping-cart-product-image" style="display: inline-block;">
+
+                            </section>
+
+                            <section class="col-5 align-items-center justify-content-center">
+                                <span>Toto je testovaci textik kde bude nazov produktu</span>
+                            </section>
+
+                            <section class="col-1">
+                                <input type="number" id="quantity" name="quantity" min="1" max="100" step="1" value="1">
+                            </section>
+
+                            <section class="col-2">
+
+                                <span>157.55$</span>
+                                <a href="#">Odstrániť položku</a>
+                            </section>
+
+
+                        </section>
+
+                    </article>
+
+
+
+
+
+
+                </section>
+
+
+
+
+
+
+            </section>
         </div>
 
     </main>

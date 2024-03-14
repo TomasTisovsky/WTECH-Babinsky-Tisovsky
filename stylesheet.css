@@ -368,3 +368,31 @@ footer {
   min-height: 100vh;
   align-items: flex-start;
 }
+
+#shopping-cart-order-sum {
+  border-radius: 20px;
+}
+
+#shopping-cart-order-sum > .card-body {
+  border-radius: 20px;
+}
+
+#shopping-cart-order-sum h3 {
+  padding: 0.2em;
+}
+
+#shopping-cart-order-sum p {
+  padding: 0.2em;
+}
+
+#shopping-cart-body {
+  width: 98%;
+}
+
+.shopping-cart-product-image {
+  width: auto;
+  height: 140px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+}
