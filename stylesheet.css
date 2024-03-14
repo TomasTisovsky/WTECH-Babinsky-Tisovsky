@@ -427,3 +427,16 @@ footer {
   border-radius: 20px;
   box-shadow: none;
 }
+
+.admin-panel-gray {
+  background-color: #d9d9d9;
+}
+
+.heading-color{
+  color: #0c739f;
+}
+
+
+.orange-text-color {
+  color: #ffba00;
+}
