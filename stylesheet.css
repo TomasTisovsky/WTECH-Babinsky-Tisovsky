@@ -20,11 +20,12 @@ p {
   }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .product-card-main-page {
     max-width: 200px !important;
+    height: 100%;
   }
-}
+}*/
 
 .main-navbar {
   background-color: #0b5f83;
@@ -146,14 +147,17 @@ p {
   align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .product-card {
   text-align: center;
-  max-width: 300px;
   margin: 5px;
   border-radius: 20px;
   border-color: #0d0d0d93;
+  width: 100%;
+  height: 100%;
   border: solid;
 }
 
@@ -162,12 +166,65 @@ p {
   padding-bottom: 0.5em;
 }
 
+.modified-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modified-card-body > p,
+.modified-card-body > div {
+  vertical-align: middle;
+  padding: auto;
+  margin: auto;
+}
+
 .card-product-name {
   line-height: 1.2em;
   max-height: 2.4em;
   min-height: 2.4em;
   overflow: hidden;
   margin-bottom: 5px;
+}
+
+.card-main-image {
+  width: 100%;
+  height: 80%;
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.modified-card-body > div button {
+  width: 90%;
+  height: 90%;
+  max-width: 50px;
+  max-height: 50px;
+  display: inline-block;
+  padding: 4px;
+  box-shadow: none !important;
+  background-color: #0c739f;
+}
+
+.shopping-card-plus {
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.card-button-col {
+  align-items: flex-start;
+}
+
+.price-button-col {
+  justify-content: flex-end;
+  padding: 0px;
+}
+
+.price-tag {
+  padding: 0px;
+  font-size: x-large;
+  text-align: right;
 }
 
 .default-title {
@@ -258,4 +315,9 @@ p {
 .current-buying-stage {
   background-color: #bbebff;
   font-weight: bold;
+}
+
+footer {
+  font-size: small;
+  background-color: #f4f4f4;
 }
