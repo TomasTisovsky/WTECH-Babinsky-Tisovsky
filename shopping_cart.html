@@ -52,8 +52,6 @@
                             <span><img src="resources/icons/profile_account_user_avatar_icon.svg"
                                     alt="ikonka prihlasenie" />Prihlásenie</span>
                         </li>
-
-
                     </ul>
                 </div>
             </div>
@@ -103,33 +101,143 @@
         </div>
     </nav>
 
-    <main class="container-fluid h-100 d-flex back-ground-color justify-content-center">
+    <main class="container-fluid back-ground-color justify-content-center" id="buying-stage-main">
 
-        <div class="row container-fluid ">
+        <div class="row container-fluid justify-content-center">
 
-            <div class="row container-fluid buying-stage-title">
-                <div class="col-12">
-                    <h2 class="w-100">Tvoj nákupný košík</h2>
-                </div>
-            </div>
-            <div class="row container-fluid buying-stage-bar">
+            <section class="col-12  buying-stage-title">
+                <h2 class="w-100">Tvoj nákupný košík</h2>
+            </section>
+
+            <section class="row container-fluid buying-stage-bar">
                 <div class="col-md-3 col-sm-6 buying-stage current-buying-stage pep"><span>Nákupný košík</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage"><span>Kontaktné informácie</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage pep"><span>Doprava a platba</span></div>
                 <div class="col-md-3 col-sm-6 buying-stage"><span>Dokončenie objednávky</span></div>
-            </div>
-            <div class="row container-fluid pl-2 pr-2">
-                <div class="col bg-primary">
-                    Tu pojdu produkty
-                </div>
-            </div>
+            </section>
 
+            <section class="row mt-1 back-ground-white" id="shopping-cart-body">
+
+                <section class="col-lg-4 back-ground-white p-1 order-1 order-lg-2">
+                    <section class="card" id="shopping-cart-order-sum">
+                        <section class="card-body back-ground-color">
+                            <h3 class="text-align-center">Súčet objednávky</h3>
+                            <p>Celková suma bez DPH:</p>
+                            <p>255.66 $</p>
+                            <p>DPH:</p>
+                            <p> 0.0 $</p>
+                            <p>Celková suma:</p>
+                            <p>255.66 $</p>
+                            <div class="justify-content-center pt-2">
+                                <button class="btn" id="go-pay">Prejsť do pokladne</button>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+
+
+                <section class="col-lg-8 order-2 order-lg-1 back-ground-white p-0">
+                    <article class="card shopping-cart-product-card back-ground-color m-2">
+                        <section class="row d-flex">
+
+                            <section class="col-6 col-sm-3  p-1 align-items-center justify-content-center"><img
+                                    src="resources/phones/phone_default.png" alt=""
+                                    class="img-fluid shopping-cart-product-image">
+
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center ">
+                                <p class="card-text shopping-cart-product-name">
+                                    Meno_typ jednodcho
+                                    potrebujem
+                                    dlhy text aby som otestoval ten
+                                    javascriptl</p>
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+                                <input type="number" name="quantity" min="1" max="100" step="1" value="1">
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+
+                                <section>
+                                    <span class="justify-content-center">157.55$</span>
+                                    <p class="justify-content-center remove-item"><a href="#">Odstrániť
+                                            položku</a></p>
+                                </section>
+
+                            </section>
+                        </section>
+                    </article>
+
+                    <article class="card shopping-cart-product-card back-ground-color m-2">
+                        <section class="row d-flex">
+
+                            <section class="col-6 col-sm-3  p-1 align-items-center justify-content-center"><img
+                                    src="resources/phones/phone_2.png" alt=""
+                                    class="img-fluid shopping-cart-product-image">
+
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center ">
+                                <p class="card-text shopping-cart-product-name">
+                                    Meno_typ jednodcho
+                                    potrebujem
+                                    dlhy text aby som otestoval ten
+                                    javascriptl</p>
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+                                <input type="number" name="quantity" min="1" max="100" step="1" value="1">
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+
+                                <section>
+                                    <span class="justify-content-center">157.55$</span>
+                                    <p class="justify-content-center remove-item"><a href="#">Odstrániť položku</a></p>
+                                </section>
+
+                            </section>
+                        </section>
+
+                    </article>
+                    <article class="card shopping-cart-product-card back-ground-color m-2">
+                        <section class="row d-flex">
+
+                            <section class="col-6 col-sm-3  p-1 align-items-center justify-content-center"><img
+                                    src="resources/phones/phone_default.png" alt=""
+                                    class="img-fluid shopping-cart-product-image">
+
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center ">
+                                <p class="card-text shopping-cart-product-name">
+                                    Meno_typ jednodcho
+                                    potrebujem
+                                    dlhy text aby som otestoval ten
+                                    javascriptl</p>
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+                                <input type="number" name="quantity" min="1" max="100" step="1" value="1">
+                            </section>
+
+                            <section class="col-6 col-sm-3 align-items-center justify-content-center">
+
+                                <section>
+                                    <span class="justify-content-center">157.55$</span>
+                                    <p class="justify-content-center remove-item"><a href="#">Odstrániť položku</a></p>
+                                </section>
+
+                            </section>
+                        </section>
+
+                    </article>
+                </section>
+            </section>
         </div>
-
-
     </main>
-    <script></script>
-
 </body>
 
 </html>
