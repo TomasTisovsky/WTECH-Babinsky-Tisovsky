@@ -386,7 +386,12 @@ footer {
 }
 
 #shopping-cart-body {
-  width: 98%;
+  width: 97%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.shopping-cart-product-card {
+  border-radius: 20px;
 }
 
 .shopping-cart-product-image {
@@ -395,4 +400,30 @@ footer {
   padding-top: 5px;
   padding-bottom: 5px;
   display: block;
+}
+
+#shopping-cart-body input[type="number"] {
+  width: 50px;
+}
+
+.shopping-cart-product-name {
+  line-height: 1.2em;
+  max-height: 3.6em;
+  min-height: 2.4em;
+  overflow: hidden;
+}
+
+.remove-item {
+  text-align: center;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+#go-pay {
+  background-color: #ffba00;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: none;
 }
