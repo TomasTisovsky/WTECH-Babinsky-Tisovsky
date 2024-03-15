@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="stylesheet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>MobileTech</title>
+</head>
+
+<body>
+    <nav class="main-navbar nav">
+        <div class="container-fluid">
+            <div class="col d-flex justify-content-end align-items-center">
+                <i class="bi bi-box-arrow-right px-1" style="font-size: 1.5rem ;"></i>
+                Odhlásiť sa
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container-fluid admin-panel-gray">
+            <div class="row py-2 align-items-center">
+                <div class="col-12 col-md">
+                    <div class="d-flex align-items-center h-100 justify-content-center"> 
+                        Mobilné telefóny
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="d-flex align-items-center h-100 justify-content-center">
+                        Tablety
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="d-flex align-items-center h-100 justify-content-center"> 
+                        Sklá a fólie
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="d-flex align-items-center h-100 justify-content-center"> 
+                        Príslušenstvo
+                    </div>
+                </div>
+                <div class="col-12 col-md">
+                    <div class="d-flex align-items-center h-100 justify-content-center"> 
+                        Kryty a obaly
+                    </div>
+                </div>
+                <div class="col d-none d-lg-block">
+                    <div class="d-flex align-items-center h-100 justify-content-center"> 
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <main>
+        <div class="container-fluid back-ground-color pb-5">
+            <div class="container-md bg-white pb-5">
+                <div class="container-fluid py-3 pl-4">
+                    <h1>Samsung Galaxy S10
+                    </h1>
+                </div>
+
+                <div class="row justify-content-center py-5">
+                    <div class="col-12 col-md-8 col-lg-4">
+                        <div class="container">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="resources\phones\phone_2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resources\phones\phone_default.png" class="d-block w-100" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="resources\phones\phone_2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+
+               
+                <form id="editForm" class="container-md">
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Cena</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="price" value="256€">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Počet kusov na sklade</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="quantity" value="10">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Značka</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Brand" value="Samsung">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Séria</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Series" value="Galaxy S">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Model</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Model" value="S 10">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Farba</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Color" value="Čierna">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Hardvér a softvér</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">CPU</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="CPU" value="2 x 2,7 GHz + 2 x 2,3 GHz + 4 x 1,9 GHz">
+                        </div>
+                        
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Počet jadier procesora</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="CPU_cores" value="8">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">GPU</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="GPU" value="Mali-G76 MP12">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Operačný systém</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Operaiting_system" value="Android">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Displej</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Veľkosť displeja</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Screen_size" value="6,1">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Rozlíšenie displeja</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Screen_resolution" value="1440x3040">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Typ displeja</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="Screen_type" value="Dynamic AMOLED">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Pamäť</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Operačná pamäť</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="RAM" value="8GB">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Interná pamäť</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="internal_memory" value="128GB">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Batéria</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Typ batérie</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="batery_type" value="Li-Ion">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Kapacita batérie</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="batery_capacity" value="3400mAh">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Rozmery a hmotnosť</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Výška</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="hight" value="149,9mm">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Šírka</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="width" value="70,4mm">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Hrúbka</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="thickness" value="7,8mm">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Hmotnosť</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="wight" value="158g">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Fotoaparát</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Video</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="video" value="2160p 4K, 1080p FulHD">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Rozlíšenie predného fotoaparátu</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="front_camera_resolution" value="10Mpx">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Rozlíšenie zadného fotoaparátu</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="back_camera_resolution" value="16Mpx">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Počet zadných objektívov</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="rear_camera_count" value="3">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Počet predných objektívov</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="front_camera_count" value="1">
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Funkcie</h2>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Audio jack</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <select class="form-select w-100" name="Audio_jack">
+                                <option value="yes">Áno</option>
+                                <option value="no">Nie</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">Bluetooth</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <input type="text" class="form-control" name="bluetooth" value="Bluetooth 5.0">
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">NFC</div>
+                        <div class="col-6 col-md-5 col-lg-4">
+                            <select class="form-select w-100" name="nfc">
+                                <option value="yes">Áno</option>
+                                <option value="no">Nie</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-6 col-md-5 col-lg-4 pl-5">single/dualSim</div>
+                        <div class="col-6 col-md-5 col-lg-4 pb-5">
+                            <select class="form-select w-100" name="sim_type">
+                                <option value="dual_sim">Dual SIM</option>
+                                <option value="single_sim">Single SIM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center my-3">
+                            <button type="submit" class="btn  px-5 cart-btn">Uložiť zmeny</button>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center my-3">
+                            <button class="btn  px-5 cart-btn">Späť</button>
+                        </div>
+                    </div>
+                </form>   
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+  </script>
+
+</body>
+
+</html>
