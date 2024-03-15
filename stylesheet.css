@@ -440,3 +440,10 @@ footer {
 .orange-text-color {
   color: #ffba00;
 }
+
+.orange-btn {
+  background-color: #ffba00;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: none;
+}
