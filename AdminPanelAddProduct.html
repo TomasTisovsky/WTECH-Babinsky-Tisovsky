@@ -72,13 +72,31 @@
         <div class="container-fluid back-ground-color pb-5">
             <div class="container-md bg-white pb-5">
 
-                <form id="editForm" class="container-md">
+                <form id="addForm" class="container-md" enctype="multipart/form-data">
                     <div class="row mt-2">
                         <div class="col-6 col-md-5 col-lg-4 pl-5">Názov</div>
                         <div class="col-6 col-md-5 col-lg-4">
                             <input type="text" class="form-control" name="Name">
                         </div>
                     </div>
+
+                    <div class="container-fluid">
+                        <h2 class="pl-3">Obrázky</h2>
+                    </div>
+                    <div class="row mt-2 justify-content-center">
+                        <div class="col-8">
+                            <label for="product_images">Nahrať obrázky:</label>
+                            <!-- <input type="file" class="form-control" name="product_images[]" id="product_images" multiple accept="image/*"> -->
+                            <div class="file-input-container" style="height: 100px;">
+                                <input type="file" class="form-control" name="product_images[]" id="product_images" multiple accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid mt-3">
+                        <h2 class="pl-3">Všeobecné informácie</h2>
+                    </div>
+
                     <div class="row mt-2">
                         <div class="col-6 col-md-5 col-lg-4 pl-5">Cena</div>
                         <div class="col-6 col-md-5 col-lg-4">
