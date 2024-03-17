@@ -33,9 +33,15 @@ p {
   .buying-stage-bar .buying-stage:last-of-type {
     border-bottom-right-radius: 20px;
   }
+
+  .current-buying-stage {
+    border-top-right-radius: 0px !important;
+    background-color: #bbebff;
+    font-weight: bold;
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .buying-stage-bar .buying-stage:first-of-type {
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
@@ -482,4 +488,15 @@ footer {
   min-height: 80%;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.next-buying-stage-button-row {
+  margin-top: 4rem;
+}
+
+.delivery-payment-name {
+  font-size: large;
+  color: #ffba00;
+  padding-left: 0.5rem;
+  font-weight: bold;
 }
