@@ -502,6 +502,8 @@ footer {
 }
 
 .orange-btn {
+  color: white;
+  font-size: x-large;
   background-color: #ffba00;
   text-align: center;
   border-radius: 20px;
