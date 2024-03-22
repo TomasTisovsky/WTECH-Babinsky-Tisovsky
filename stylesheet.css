@@ -509,3 +509,36 @@ footer {
   border-radius: 20px;
   box-shadow: none;
 }
+
+.cart-btn-fixed-width {
+  width: 200px;
+}
+
+
+.quantity-input-group {
+  width: auto; /* Ensures that the input group width is only as wide as its content */
+}
+
+.quantity-input-group .btn, .input-group {
+  height: 50px; /* Adjusts the height of buttons and 'ks' text to match the input */
+}
+
+.quantity-input-group .form-control {
+  max-width: 80px; /* Sets a max width for the input field */
+}
+
+.offcanvas-body .row {
+  padding-top: 0.5rem; /* Adjust the value to what you need */
+  padding-bottom: 0.5rem; /* Adjust the value to what you need */
+}
+
+.offcanvas h3{
+  color: #0c739f; /* Replace with your chosen hex color */
+}
+.offcanvas h4{
+  color: #0c739f; /* Replace with your chosen hex color */
+}
+
+.carousel-width {
+  width: 40%; /* or any other height */
+}
