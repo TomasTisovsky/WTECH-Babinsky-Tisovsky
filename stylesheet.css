@@ -550,6 +550,7 @@ footer {
   margin: 20px 0; /* Adjust the margin to create more space around the line */
 }
 
+
 .filter h5 {
   color:#0c739f
 }
@@ -616,16 +617,16 @@ footer {
 }
 
 
-.input-group .btn {
-  color: #fff; /* Change text color */
-  background-color: #ffba00; /* Example: Change to a green background */
-  border-color: #ffba00; /* Match border color */
+/* .input-group .btn {
+  color: #fff; 
+  background-color: #ffba00; 
+  border-color: #ffba00; 
 }
 
 .input-group .btn:hover {
-  color: #000000; /* Text color on hover */
-  background-color: #ffffff; /* Background color on hover */
-}
+  color: #000000; 
+  background-color: #ffffff; 
+} */
 
 .btn-link.p-0.text-decoration-none {
   color: #0c739f; /* Change to your desired color */
