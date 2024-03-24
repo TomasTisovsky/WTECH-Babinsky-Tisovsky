@@ -531,32 +531,32 @@ footer {
 }
 
 .quantity-input-group {
-  width: auto; /* Ensures that the input group width is only as wide as its content */
+  width: auto; 
 }
 
 .quantity-input-group .btn,
 .input-group {
-  height: 50px; /* Adjusts the height of buttons and 'ks' text to match the input */
+  height: 50px; 
 }
 
 .quantity-input-group .form-control {
-  max-width: 80px; /* Sets a max width for the input field */
+  max-width: 80px; 
 }
 
 .offcanvas-body .row {
-  padding-top: 0.5rem; /* Adjust the value to what you need */
-  padding-bottom: 0.5rem; /* Adjust the value to what you need */
+  padding-top: 0.5rem; 
+  padding-bottom: 0.5rem; 
 }
 
 .offcanvas h3 {
-  color: #0c739f; /* Replace with your chosen hex color */
+  color: #0c739f; 
 }
 .offcanvas h4 {
-  color: #0c739f; /* Replace with your chosen hex color */
+  color: #0c739f; 
 }
 
 .carousel-width {
-  width: 40%; /* or any other height */
+  width: 40%; 
 }
 
 .section-divider {
@@ -568,7 +568,7 @@ footer {
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0)
   );
-  margin: 20px 0; /* Adjust the margin to create more space around the line */
+  margin: 20px 0; 
 }
 
 .filter h5 {
@@ -605,26 +605,24 @@ footer {
 }
 
 .btn-custom {
-  background-color: #ffba00; /* Replace with your button color */
-  color: #000000; /* Text color */
+  background-color: #ffba00; 
+  color: #000000; 
   border-radius: 20px 20px 0 0; /* Rounded top corners */
 }
 
-/* Use these if you want to round only bottom left and bottom right corners */
 .btn-custom:not(:first-child) {
   border-radius: 0 0 20px 20px;
 }
 
-/* Adjust the padding or margin if necessary to align with your design */
 .btn-custom {
   padding: 10px 15px;
-  margin-bottom: 0; /* Remove space below the button if not needed */
+  margin-bottom: 0; 
 }
 
 #categoriesCollapse .card {
-  border: none; /* Removes the border */
-  background: none; /* Optional: Removes the background if you also want to remove the card background */
-  box-shadow: none; /* Optional: Removes the shadow if you also want to remove the card's shadow */
+  border: none; 
+  background: none;
+  box-shadow: none; 
 }
 
 .category-btn {
@@ -633,19 +631,9 @@ footer {
   border-radius: 0 0 20px 20px;
 }
 
-/* .input-group .btn {
-  color: #fff; 
-  background-color: #ffba00; 
-  border-color: #ffba00; 
-}
-
-.input-group .btn:hover {
-  color: #000000; 
-  background-color: #ffffff; 
-} */
 
 .btn-link.p-0.text-decoration-none {
-  color: #0c739f; /* Change to your desired color */
+  color: #0c739f; 
 }
 
 .horizontal-scroll {
@@ -655,13 +643,13 @@ footer {
 }
 
 .image-card {
-  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+  flex: 0 0 auto; 
   margin-right: 15px; /* Space between cards */
 }
 
 .card-img-top {
   width: 100%;
-  height: 300px; /* Adjust based on your preference */
+  height: 300px; 
   object-fit: contain;
 }
 
