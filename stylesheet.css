@@ -128,13 +128,14 @@ p {
 
 .search-bar {
   border: 0px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding-left: 15px;
   background-color: white;
 }
 
 .search-bar:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 #search-bar-icon-btn {
@@ -172,6 +173,8 @@ p {
   border-radius: 20px;
   min-width: 100px;
   box-shadow: none !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .cart-btn:focus,
@@ -491,6 +494,13 @@ footer {
   min-height: 80%;
   border-radius: 20px;
   overflow: hidden;
+}
+
+.next-buying-stage-button:focus,
+.next-buying-stage-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #ffba00 !important;
 }
 
 .next-buying-stage-button-row {
