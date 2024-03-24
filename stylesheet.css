@@ -631,3 +631,20 @@ footer {
 .btn-link.p-0.text-decoration-none {
   color: #0c739f; /* Change to your desired color */
 }
+
+.horizontal-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+}
+
+.image-card {
+  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+  margin-right: 15px; /* Space between cards */
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Adjust based on your preference */
+  object-fit: contain;
+}

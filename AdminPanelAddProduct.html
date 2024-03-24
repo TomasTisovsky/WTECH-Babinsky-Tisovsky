@@ -85,16 +85,18 @@
                     </div>
                     <div class="row mt-2 justify-content-center">
                         <div class="col-8">
-                            <label for="product_images" class="btn btn-primary btn-block btn-upload">
-                                <i class="fas fa-upload"></i> Nahrať obrázky
-                                <input type="file" class="form-control-file d-none" name="product_images[]" id="product_images" multiple accept="image/*">
-                            </label>
-                            <div id="image-preview" class="d-flex flex-wrap"></div>
+                            <form id="image-upload-form" enctype="multipart/form-data">
+                                <div class="row m-4">
+                                    <div class="col-12">
+                                        <h4>Pridať nové obrázky</h4>
+                                        <input type="file" class="form-control" name="new_images[]" id="new-images" multiple accept="image/*">
+                                        <div class="row justify-content-center">
+                                            <button type="submit" class="btn cart-btn mt-2">Nahrať obrázky</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </div>
-
-                    <div class="container-fluid mt-3">
-                        <h2 class="pl-3">Všeobecné informácie</h2>
                     </div>
 
 
