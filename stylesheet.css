@@ -499,7 +499,8 @@ footer {
 }
 
 .next-buying-stage-button:focus,
-.next-buying-stage-button:active {
+.next-buying-stage-button:active,
+.next-buying-stage-button:hover {
   outline: none !important;
   box-shadow: none !important;
   background-color: #ffba00 !important;
