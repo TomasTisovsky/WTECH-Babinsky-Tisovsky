@@ -61,13 +61,6 @@ p {
   }
 }
 
-/*@media (min-width: 1200px) {
-  .product-card-main-page {
-    max-width: 200px !important;
-    height: 100%;
-  }
-}*/
-
 .main-navbar {
   background-color: #0b5f83;
   border: 20px;
@@ -121,7 +114,7 @@ p {
   justify-content: center;
 }
 
-#kekw {
+#cname {
   display: flex;
   align-items: center; /* Center items vertically */
 }
@@ -135,13 +128,14 @@ p {
 
 .search-bar {
   border: 0px;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   padding-left: 15px;
   background-color: white;
 }
 
 .search-bar:focus {
-  box-shadow: none;
+  box-shadow: none !important;
 }
 
 #search-bar-icon-btn {
@@ -177,11 +171,23 @@ p {
   background-color: #0b5f83;
   color: white;
   border-radius: 20px;
+  min-width: 100px;
+  box-shadow: none !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cart-btn:focus,
+.cart-btn:active {
+  color: white !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #0b5f83 !important;
 }
 
 #shopping-cart-span {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .product-col {
@@ -221,9 +227,10 @@ p {
 }
 
 .card-product-name {
-  line-height: 1.2em;
-  max-height: 2.4em;
-  min-height: 2.4em;
+  font-size: 1.5em;
+  line-height: 2em;
+  max-height: 4em;
+  min-height: 4em;
   overflow: hidden;
   margin-bottom: 5px;
 }
@@ -490,6 +497,13 @@ footer {
   overflow: hidden;
 }
 
+.next-buying-stage-button:focus,
+.next-buying-stage-button:active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: #ffba00 !important;
+}
+
 .next-buying-stage-button-row {
   margin-top: 4rem;
 }
@@ -514,12 +528,12 @@ footer {
   width: 200px;
 }
 
-
 .quantity-input-group {
   width: auto; /* Ensures that the input group width is only as wide as its content */
 }
 
-.quantity-input-group .btn, .input-group {
+.quantity-input-group .btn,
+.input-group {
   height: 50px; /* Adjusts the height of buttons and 'ks' text to match the input */
 }
 
@@ -532,10 +546,10 @@ footer {
   padding-bottom: 0.5rem; /* Adjust the value to what you need */
 }
 
-.offcanvas h3{
+.offcanvas h3 {
   color: #0c739f; /* Replace with your chosen hex color */
 }
-.offcanvas h4{
+.offcanvas h4 {
   color: #0c739f; /* Replace with your chosen hex color */
 }
 
@@ -546,22 +560,25 @@ footer {
 .section-divider {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
   margin: 20px 0; /* Adjust the margin to create more space around the line */
 }
 
-
 .filter h5 {
-  color:#0c739f
+  color: #0c739f;
 }
 
 .filter h6 {
-  color:#0c739f
+  color: #0c739f;
 }
 
-
 .pagination .page-link {
-  color: #000000; 
+  color: #000000;
   border: none;
   background-color: transparent;
 }
@@ -584,8 +601,6 @@ footer {
   border: none;
   color: #000000;
 }
-
-
 
 .btn-custom {
   background-color: #ffba00; /* Replace with your button color */
@@ -610,12 +625,11 @@ footer {
   box-shadow: none; /* Optional: Removes the shadow if you also want to remove the card's shadow */
 }
 
-.category-btn{
+.category-btn {
   background-color: #ffba00;
   color: #ffffff;
   border-radius: 0 0 20px 20px;
 }
-
 
 /* .input-group .btn {
   color: #fff; 
