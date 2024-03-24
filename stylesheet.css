@@ -542,3 +542,91 @@ footer {
 .carousel-width {
   width: 40%; /* or any other height */
 }
+
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin: 20px 0; /* Adjust the margin to create more space around the line */
+}
+
+.filter h5 {
+  color:#0c739f
+}
+
+.filter h6 {
+  color:#0c739f
+}
+
+
+.pagination .page-link {
+  color: #000000; 
+  border: none;
+  background-color: transparent;
+}
+
+.pagination .page-link:hover {
+  color: #ffba00;
+  border: none;
+  background-color: transparent;
+}
+
+.pagination .page-item.active .page-link {
+  border: none;
+  background-color: transparent;
+  background-color: #ffba00;
+  color: #ffba00;
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: transparent;
+  border: none;
+  color: #000000;
+}
+
+
+
+.btn-custom {
+  background-color: #ffba00; /* Replace with your button color */
+  color: #000000; /* Text color */
+  border-radius: 20px 20px 0 0; /* Rounded top corners */
+}
+
+/* Use these if you want to round only bottom left and bottom right corners */
+.btn-custom:not(:first-child) {
+  border-radius: 0 0 20px 20px;
+}
+
+/* Adjust the padding or margin if necessary to align with your design */
+.btn-custom {
+  padding: 10px 15px;
+  margin-bottom: 0; /* Remove space below the button if not needed */
+}
+
+#categoriesCollapse .card {
+  border: none; /* Removes the border */
+  background: none; /* Optional: Removes the background if you also want to remove the card background */
+  box-shadow: none; /* Optional: Removes the shadow if you also want to remove the card's shadow */
+}
+
+.category-btn{
+  background-color: #ffba00;
+  color: #ffffff;
+  border-radius: 0 0 20px 20px;
+}
+
+
+.input-group .btn {
+  color: #fff; /* Change text color */
+  background-color: #ffba00; /* Example: Change to a green background */
+  border-color: #ffba00; /* Match border color */
+}
+
+.input-group .btn:hover {
+  color: #000000; /* Text color on hover */
+  background-color: #ffffff; /* Background color on hover */
+}
+
+.btn-link.p-0.text-decoration-none {
+  color: #0c739f; /* Change to your desired color */
+}
