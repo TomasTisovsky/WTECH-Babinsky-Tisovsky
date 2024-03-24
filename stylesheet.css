@@ -178,7 +178,8 @@ p {
 }
 
 .cart-btn:focus,
-.cart-btn:active {
+.cart-btn:active,
+.cart-btn:hover {
   color: white !important;
   outline: none !important;
   box-shadow: none !important;
@@ -228,9 +229,9 @@ p {
 
 .card-product-name {
   font-size: 1.5em;
-  line-height: 2em;
-  max-height: 4em;
-  min-height: 4em;
+  line-height: 1.5em;
+  max-height: 3em;
+  min-height: 3em;
   overflow: hidden;
   margin-bottom: 5px;
 }
@@ -498,7 +499,8 @@ footer {
 }
 
 .next-buying-stage-button:focus,
-.next-buying-stage-button:active {
+.next-buying-stage-button:active,
+.next-buying-stage-button:hover {
   outline: none !important;
   box-shadow: none !important;
   background-color: #ffba00 !important;
@@ -661,4 +663,8 @@ footer {
   width: 100%;
   height: 300px; /* Adjust based on your preference */
   object-fit: contain;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #0c739f;
 }
