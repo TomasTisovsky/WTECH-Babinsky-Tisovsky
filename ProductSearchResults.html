@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheet.css" />
   <title>MobileTech</title>
   <link rel="icon" href="resources/icons/logo.png">
@@ -17,10 +18,10 @@
       <div class="row">
         <div class="col-md-4 d-flex justify-content-center-sm">
           <ul class="nav navbar-fluid">
-          <li class=" nav-item d-md-inline main-navbar-social">
-            <a href="https://www.instagram.com/">
-              <img src="resources/icons/icons8-instagram.svg" alt="ikonka instagram" />
-            </a>
+            <li class=" nav-item d-md-inline main-navbar-social">
+              <a href="https://www.instagram.com/">
+                <img src="resources/icons/icons8-instagram.svg" alt="ikonka instagram" />
+              </a>
             </li>
             <li class="nav-item d-md-inline main-navbar-social">
               <a href="https://www.facebook.com/">
@@ -80,193 +81,568 @@
 
         <div class="col-md-4 col-12 order-3 order-md-2">
           <div class=" input-group p-4">
-          <input class="form-control search-bar" id="main_search_bar" type="text" aria-label="Vyhľadávanie"
-            aria-describedby="basic-addon1">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" id="search-bar-icon-btn" type="button">
-              <img src="resources/icons/search_strong_icon.svg" alt="ikonka lupa">
-            </button>
+            <input class="form-control search-bar" id="main_search_bar" type="text" aria-label="Vyhľadávanie"
+              aria-describedby="basic-addon1">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" id="search-bar-icon-btn" type="button">
+                <img src="resources/icons/search_strong_icon.svg" alt="ikonka lupa">
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-6 order-2 order-md-3" id="col-shopping-cart">
-        <button class="btn cart-btn">
-          <span id="shopping-cart-span"><img src="resources/icons/shopping_cart.svg" alt="nakupny kosik"
-              class="mr-2">12.00$</span>
-        </button>
-      </div>
+        <div class="col-md-4 col-6 order-2 order-md-3" id="col-shopping-cart">
+          <button class="btn cart-btn">
+            <span id="shopping-cart-span"><img src="resources/icons/shopping_cart.svg" alt="nakupny kosik"
+                class="mr-2">12.00$</span>
+          </button>
+        </div>
 
-    </div>
+      </div>
     </div>
   </nav>
 
   <main class="container-fluid h-100 back-ground-color">
     <div class="row">
-        <!-- filter -->
+      <!-- filter -->
       <div class="col-12 col-lg-3">
         <div class="container bg-white filter rounded-bottom-5">
 
-            <div class="row justify-content-center">
-                <!-- Button trigger for collapsible -->
-                <button class="btn category-btn w-75" type="button" data-bs-toggle="collapse" data-bs-target="#categoriesCollapse" aria-expanded="false" aria-controls="categoriesCollapse">
-                    Vyberte si kategóriu
-                </button>
-                
-                <div class="collapse" id="categoriesCollapse">
-                    <div class="card card-body">
-                      <div class="btn-group-vertical aside-buttons">
-                        <button type="button" class="btn btn-custom">
-                          <span><img src="resources/icons/smartphones_icon.svg" alt="Mobilné telefóny ikonka" class="img-fluid"><span>Mobilné telefóny</span></span>
-                        </button>
-                        <button type="button" class="btn btn-custom">
-                          <span><img src="resources/icons/tablets_icon.svg" alt="Tablety ikonka" class="img-fluid"><span>Tablety</span></span>
-                        </button>
-                        <button type="button" class="btn btn-custom">
-                            <span><img src="resources/icons/protective_glass_icon.svg"
-                            alt="Sklá a fólie ikonka" class="img-fluid"><span>Sklá a fólie</span></span></button>
-                        <button type="button" class="btn btn-custom">
-                            <span><img src="resources/icons/accesories_icon.svg" alt="Tablety ikonka"
-                            class="img-fluid"><span>Príslušenstvo</span></span></button>
-                        <button type="button" class="btn btn-custom">
-                            <span><img src="resources/icons/tablets_icon.svg" alt="Tablety ikonka"
-                            class="img-fluid"><span>Kryty a obaly</span></span>
-                        </button>
-                      </div>
-                    </div>
+          <div class="row justify-content-center">
+            <!-- Button trigger for collapsible -->
+            <button class="btn category-btn w-75" type="button" data-bs-toggle="collapse"
+              data-bs-target="#categoriesCollapse" aria-expanded="false" aria-controls="categoriesCollapse">
+              Vyberte si kategóriu
+            </button>
+
+            <div class="collapse" id="categoriesCollapse">
+              <div class="card card-body">
+                <div class="btn-group-vertical aside-buttons">
+                  <button type="button" class="btn btn-custom">
+                    <span><img src="resources/icons/smartphones_icon.svg" alt="Mobilné telefóny ikonka"
+                        class="img-fluid"><span>Mobilné telefóny</span></span>
+                  </button>
+                  <button type="button" class="btn btn-custom">
+                    <span><img src="resources/icons/tablets_icon.svg" alt="Tablety ikonka"
+                        class="img-fluid"><span>Tablety</span></span>
+                  </button>
+                  <button type="button" class="btn btn-custom">
+                    <span><img src="resources/icons/protective_glass_icon.svg" alt="Sklá a fólie ikonka"
+                        class="img-fluid"><span>Sklá a fólie</span></span></button>
+                  <button type="button" class="btn btn-custom">
+                    <span><img src="resources/icons/accesories_icon.svg" alt="Tablety ikonka"
+                        class="img-fluid"><span>Príslušenstvo</span></span></button>
+                  <button type="button" class="btn btn-custom">
+                    <span><img src="resources/icons/tablets_icon.svg" alt="Tablety ikonka" class="img-fluid"><span>Kryty
+                        a obaly</span></span>
+                  </button>
                 </div>
-                
-                <!-- Information text -->
-                <div class="text-muted mt-3 text-center">
-                    (Zobrazuje sa 1265 položiek)
-                </div>
-            </div>
-            
-            <!-- Price Filter -->
-            <div class="mb-3">
-                <h5 class="mb-3 pt-3">
-                    <label for="priceFilter" class="form-label">Cena</label>
-                </h5>
-              
-                <div class="input-group mb-3">
-                  <input type="number" class="form-control" placeholder="Od" aria-label="Minimum price">
-                  <input type="number" class="form-control" placeholder="Do" aria-label="Maximum price">
-                  <button class="btn btn-outline-secondary " type="button" id="price-filter-btn">Ok</button>
-                </div>
-              
-                <div class="form-check ">
-                  <input class="form-check-input border border-black" type="checkbox" value="" id="under100">
-                  <label class="form-check-label" for="under100">
-                    Menej ako 100 € (422)
-                  </label>
-                </div>
-              
-                <div class="form-check">
-                  <input class="form-check-input border border-black" type="checkbox" value="" id="range100to200">
-                  <label class="form-check-label" for="range100to200">
-                    100 – 200 € (492)
-                  </label>
-                </div>
-              
-                <!-- Repeat for other ranges -->
-                
-                <div class="form-check">
-                  <input class="form-check-input border border-black" type="checkbox" value="" id="range200to300">
-                  <label class="form-check-label" for="range200to300">
-                    200 – 300 € (217)
-                  </label>
-                </div>
-              
-                <div class="form-check">
-                  <input class="form-check-input border border-black" type="checkbox" value="" id="range300to500">
-                  <label class="form-check-label" for="range300to500">
-                    300 – 500 € (230)
-                  </label>
-                </div>
-              
-                <div class="form-check">
-                  <input class="form-check-input border border-black" type="checkbox" value="" id="over500">
-                  <label class="form-check-label" for="over500">
-                    500 € a viac (242)
-                  </label>
-                </div>
-                
               </div>
-        <hr class="section-divider">
-        <!-- Brand Filter -->
-        <div class="mb-3">
+            </div>
+
+            <!-- Information text -->
+            <div class="text-muted mt-3 text-center">
+              (Zobrazuje sa 1265 položiek)
+            </div>
+          </div>
+
+          <!-- Price Filter -->
+          <div class="mb-3">
+            <h5 class="mb-3 pt-3">
+              <label for="priceFilter" class="form-label">Cena</label>
+            </h5>
+
+            <div class="input-group mb-3">
+              <input type="number" class="form-control" placeholder="Od" aria-label="Minimum price">
+              <input type="number" class="form-control" placeholder="Do" aria-label="Maximum price">
+              <button class="btn btn-outline-secondary " type="button" id="price-filter-btn">Ok</button>
+            </div>
+
+            <div class="form-check ">
+              <input class="form-check-input border border-black" type="checkbox" value="" id="under100">
+              <label class="form-check-label" for="under100">
+                Menej ako 100 € (422)
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="" id="range100to200">
+              <label class="form-check-label" for="range100to200">
+                100 – 200 € (492)
+              </label>
+            </div>
+
+            <!-- Repeat for other ranges -->
+
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="" id="range200to300">
+              <label class="form-check-label" for="range200to300">
+                200 – 300 € (217)
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="" id="range300to500">
+              <label class="form-check-label" for="range300to500">
+                300 – 500 € (230)
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="" id="over500">
+              <label class="form-check-label" for="over500">
+                500 € a viac (242)
+              </label>
+            </div>
+
+          </div>
+          <hr class="section-divider">
+          <!-- Brand Filter -->
+          <div class="mb-3">
             <h5>
-                <label for="brandFilter" class="form-label">Značka</label>
+              <label for="brandFilter" class="form-label">Značka</label>
             </h5>
             <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="Samsung" id="brandSamsung">
-                <label class="form-check-label" for="brandSamsung">
-                    Samsung
+              <input class="form-check-input border border-black" type="checkbox" value="Samsung" id="brandSamsung">
+              <label class="form-check-label" for="brandSamsung">
+                Samsung
             </div>
             <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="Apple" id="brandApple">
-                <label class="form-check-label" for="brandSamsung">
-                    Apple
+              <input class="form-check-input border border-black" type="checkbox" value="Apple" id="brandApple">
+              <label class="form-check-label" for="brandSamsung">
+                Apple
             </div>
             <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="Xiaomi" id="brandXiaomi">
-                <label class="form-check-label" for="brandSamsung">
-                    Xioami
+              <input class="form-check-input border border-black" type="checkbox" value="Xiaomi" id="brandXiaomi">
+              <label class="form-check-label" for="brandSamsung">
+                Xioami
             </div>
             <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="Sony" id="brandSony">
-                <label class="form-check-label" for="brandSony">
-                    Sony
+              <input class="form-check-input border border-black" type="checkbox" value="Sony" id="brandSony">
+              <label class="form-check-label" for="brandSony">
+                Sony
             </div>
             <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="Nokia" id="brandNokia">
-                <label class="form-check-label" for="brandNokia">
-                    Nokia
+              <input class="form-check-input border border-black" type="checkbox" value="Nokia" id="brandNokia">
+              <label class="form-check-label" for="brandNokia">
+                Nokia
             </div>
             <div class="row justify-content-center">
-                <!-- Button to show/hide all brands -->
-            <button class="btn btn-link p-0 text-decoration-none " type="button" data-bs-toggle="collapse" data-bs-target="#moreBrands" aria-expanded="false" aria-controls="moreBrands">
+              <!-- Button to show/hide all brands -->
+              <button class="btn btn-link p-0 text-decoration-none " type="button" data-bs-toggle="collapse"
+                data-bs-target="#moreBrands" aria-expanded="false" aria-controls="moreBrands">
                 Zobraziť všetky parametre
-            </button>
+              </button>
             </div>
-            
+
 
             <!-- Hidden checkboxes that will be shown when the button is clicked -->
             <div class="collapse" id="moreBrands">
-                <div class="form-check">
-                    <input class="form-check-input border border-black" type="checkbox" value="Motorola" id="brandMotorola">
-                    <label class="form-check-label" for="brandMotorola">
-                        Motorola
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border border-black" type="checkbox" value="Huawei" id="brandHuawei">
-                    <label class="form-check-label" for="brandHuawei">
-                        Huawei
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input border border-black" type="checkbox" value="Asus" id="brandAsus">
-                    <label class="form-check-label" for="brandAsus">
-                        Asus
-                    </label>
-                </div>
+              <div class="form-check">
+                <input class="form-check-input border border-black" type="checkbox" value="Motorola" id="brandMotorola">
+                <label class="form-check-label" for="brandMotorola">
+                  Motorola
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input border border-black" type="checkbox" value="Huawei" id="brandHuawei">
+                <label class="form-check-label" for="brandHuawei">
+                  Huawei
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input border border-black" type="checkbox" value="Asus" id="brandAsus">
+                <label class="form-check-label" for="brandAsus">
+                  Asus
+                </label>
+              </div>
             </div>
-        </div>
-        <hr class="section-divider">
-        <!-- Display Size Filter -->
-        <div class="mb-3">
+          </div>
+          <hr class="section-divider">
+          <!-- Display Size Filter -->
+          <div class="mb-3">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h5 class="mb-0">Veľkosť displeja</h5>
             </div>
-            
+
             <div class="input-group mb-3">
               <input type="number" class="form-control" placeholder="Od" aria-label="Minimum display size">
               <input type="number" class="form-control" placeholder="Do" aria-label="Maximum display size">
               <button class="btn btn-outline-secondary " type="button">Ok</button>
             </div>
-          
+
             <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Under5Inches" id="sizeUnder5">
+              <label class="form-check-label" for="sizeUnder5">
+                Do 5"
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="5To5_9Inches" id="size5To5_9">
+              <label class="form-check-label" for="size5To5_9">
+                5" - 5.9"
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="6To6_9Inches" id="size6To6_9">
+              <label class="form-check-label" for="size6To6_9">
+                6" - 6.9"
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="Over7Inches" id="sizeOver7">
+              <label class="form-check-label" for="sizeOver7">
+                Nad 7"
+              </label>
+            </div>
+          </div>
+
+          <hr class="section-divider">
+          <!-- RAM Filter -->
+          <div class="mb-3">
+            <h5>
+              <label for="ramFilter" class="form-label">Operačná pamäť</label>
+            </h5>
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
+              <label class="form-check-label" for="ram4GB">
+                2 GB
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
+              <label class="form-check-label" for="ram4GB">
+                4 GB
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
+              <label class="form-check-label" for="ram4GB">
+                8 GB
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
+              <label class="form-check-label" for="ram4GB">
+                12 GB
+              </label>
+            </div>
+            <div class="row justify-content-center">
+              <!-- Button to show/hide all brands -->
+              <button class="btn btn-link p-0 text-decoration-none " type="button" data-bs-toggle="collapse"
+                data-bs-target="#moreRAMs" aria-expanded="false" aria-controls="moreRAMs">
+                Zobraziť všetky parametre
+              </button>
+            </div>
+
+
+            <!-- Hidden checkboxes that will be shown when the button is clicked -->
+            <div class="collapse" id="moreRAMs">
+              <div class="form-check">
+                <input class="form-check-input border border-black" type="checkbox" value="Motorola" id="brandMotorola">
+                <label class="form-check-label" for="brandMotorola">
+                  Motorola
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Button to show more parameters -->
+          <div class="row justify-content-center pb-5 pt-2">
+            <button class="btn orange-btn w-75" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParameters"
+              aria-controls="offcanvasParameters">Všetky parametre</button>
+          </div>
+          <!-- Offcanvas component -->
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasParameters"
+            aria-labelledby="offcanvasParametersLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasParametersLabel">Všetky parametre</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <!-- All parameters go here -->
+              <!-- Content here -->
+              <!-- všeobecne -->
+              <h4>Všeobecné</h4>
+              <h6>Značka</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Samsung" id="brandSamsung">
+                <label class="form-check-label" for="brandSamsung">
+                  Samsung
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Apple" id="brandApple">
+                <label class="form-check-label" for="brandApple">
+                  Apple
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Huawei" id="brandHuawei">
+                <label class="form-check-label" for="brandHuawei">
+                  Huawei
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Xiaomi" id="brandXiaomi">
+                <label class="form-check-label" for="brandXiaomi">
+                  Xiaomi
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="OnePlus" id="brandOnePlus">
+                <label class="form-check-label" for="brandOnePlus">
+                  OnePlus
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Farba</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Čierna" id="colorBlack">
+                <label class="form-check-label" for="colorBlack">
+                  Čierna
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Biela" id="colorWhite">
+                <label class="form-check-label" for="colorWhite">
+                  Biela
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Modrá" id="colorBlue">
+                <label class="form-check-label" for="colorBlue">
+                  Modrá
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Červená" id="colorRed">
+                <label class="form-check-label" for="colorRed">
+                  Červená
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Zlatá" id="colorGold">
+                <label class="form-check-label" for="colorGold">
+                  Zlatá
+                </label>
+              </div>
+              <hr class="section-divider">
+
+              <!-- Batéria -->
+              <h4>Batéria</h4>
+              <h6>Kapacita batérie</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2000-2999mAh" id="battery20002999">
+                <label class="form-check-label" for="battery20002999">
+                  2000 - 2999mAh
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="3000-3999mAh" id="battery30003999">
+                <label class="form-check-label" for="battery30003999">
+                  3000 - 3999mAh
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4000-4999mAh" id="battery40004999">
+                <label class="form-check-label" for="battery40004999">
+                  4000 - 4999mAh
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="5000mAh+" id="battery5000plus">
+                <label class="form-check-label" for="battery5000plus">
+                  5000mAh a viac
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Typ batérie</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Li-Ion" id="batteryTypeLiIon">
+                <label class="form-check-label" for="batteryTypeLiIon">
+                  Li-Ion (Lithium-Ion)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Li-Poly" id="batteryTypeLiPoly">
+                <label class="form-check-label" for="batteryTypeLiPoly">
+                  Li-Poly (Lithium-Polymer)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="NiMH" id="batteryTypeNiMH">
+                <label class="form-check-label" for="batteryTypeNiMH">
+                  NiMH (Nickel-Metal Hydride)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="NiCd" id="batteryTypeNiCd">
+                <label class="form-check-label" for="batteryTypeNiCd">
+                  NiCd (Nickel-Cadmium)
+                </label>
+              </div>
+              <hr class="section-divider">
+
+              <!-- Hardvér a softvér -->
+              <h4>Hardvér a softvér</h4>
+              <h6>Počet jadier</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Dual-core" id="coresDual">
+                <label class="form-check-label" for="coresDual">
+                  Dual-core (2)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Quad-core" id="coresQuad">
+                <label class="form-check-label" for="coresQuad">
+                  Quad-core (4)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Octa-core" id="coresOcta">
+                <label class="form-check-label" for="coresOcta">
+                  Octa-core (8)
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Operačný systém</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Android" id="osAndroid">
+                <label class="form-check-label" for="osAndroid">
+                  Android
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="iOS" id="osiOS">
+                <label class="form-check-label" for="osiOS">
+                  iOS
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Windows Phone" id="osWindowsPhone">
+                <label class="form-check-label" for="osWindowsPhone">
+                  Windows Phone
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Other" id="osOther">
+                <label class="form-check-label" for="osOther">
+                  Iný
+                </label>
+              </div>
+              <hr class="section-divider">
+
+              <!-- Pamäť -->
+              <h4>Pamäť</h4>
+              <h6>Operačná pamäť</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2GB" id="ram2GB">
+                <label class="form-check-label" for="ram2GB">
+                  2 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4GB" id="ram4GB">
+                <label class="form-check-label" for="ram4GB">
+                  4 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="6GB" id="ram6GB">
+                <label class="form-check-label" for="ram6GB">
+                  6 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="8GB" id="ram8GB">
+                <label class="form-check-label" for="ram8GB">
+                  8 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="12GB" id="ram12GB">
+                <label class="form-check-label" for="ram12GB">
+                  12 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="16GB" id="ram16GB">
+                <label class="form-check-label" for="ram16GB">
+                  16 GB a viac
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Interná pamäť</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="16GB" id="storage16GB">
+                <label class="form-check-label" for="storage16GB">
+                  16 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="32GB" id="storage32GB">
+                <label class="form-check-label" for="storage32GB">
+                  32 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="64GB" id="storage64GB">
+                <label class="form-check-label" for="storage64GB">
+                  64 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="128GB" id="storage128GB">
+                <label class="form-check-label" for="storage128GB">
+                  128 GB
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="256GB+" id="storage256GBPlus">
+                <label class="form-check-label" for="storage256GBPlus">
+                  256 GB a viac
+                </label>
+              </div>
+              <hr class="section-divider">
+
+              <!-- Displej -->
+              <h4>Displej</h4>
+              <h6>Rozlíšenie displeja</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="HD" id="resolutionHD">
+                <label class="form-check-label" for="resolutionHD">
+                  HD (1280 x 720)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="FullHD" id="resolutionFullHD">
+                <label class="form-check-label" for="resolutionFullHD">
+                  Full HD (1920 x 1080)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="QHD" id="resolutionQHD">
+                <label class="form-check-label" for="resolutionQHD">
+                  QHD (2560 x 1440)
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4K" id="resolution4K">
+                <label class="form-check-label" for="resolution4K">
+                  4K (3840 x 2160)
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Veľkosť displeja</h6>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Od" aria-label="Minimum display size">
+                <input type="number" class="form-control" placeholder="Do" aria-label="Maximum display size">
+                <button class="btn btn-outline-secondary" type="button">Ok</button>
+              </div>
+              <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Under5Inches" id="sizeUnder5">
                 <label class="form-check-label" for="sizeUnder5">
                   Do 5"
@@ -290,868 +666,531 @@
                   Nad 7"
                 </label>
               </div>
-        </div>
+              <hr class="section-divider">
 
-        <hr class="section-divider">
-        <!-- RAM Filter -->
-        <div class="mb-3">
-            <h5>
-                <label for="ramFilter" class="form-label">Operačná pamäť</label>
-            </h5>
-            <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
-                <label class="form-check-label" for="ram4GB">
-                    2 GB
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
-                <label class="form-check-label" for="ram4GB">
-                    4 GB
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
-                <label class="form-check-label" for="ram4GB">
-                    8 GB
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input border border-black" type="checkbox" value="4GB" id="ram4GB">
-                <label class="form-check-label" for="ram4GB">
-                    12 GB
-                </label>
-            </div>
-            <div class="row justify-content-center">
-                <!-- Button to show/hide all brands -->
-            <button class="btn btn-link p-0 text-decoration-none " type="button" data-bs-toggle="collapse" data-bs-target="#moreRAMs" aria-expanded="false" aria-controls="moreRAMs">
-                Zobraziť všetky parametre
-            </button>
-            </div>
-            
-
-            <!-- Hidden checkboxes that will be shown when the button is clicked -->
-            <div class="collapse" id="moreRAMs">
-                <div class="form-check">
-                    <input class="form-check-input border border-black" type="checkbox" value="Motorola" id="brandMotorola">
-                    <label class="form-check-label" for="brandMotorola">
-                        Motorola
-                    </label>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Button to show more parameters -->
-        <div class="row justify-content-center pb-5 pt-2">
-            <button class="btn orange-btn w-75" data-bs-toggle="offcanvas" data-bs-target="#offcanvasParameters" aria-controls="offcanvasParameters">Všetky parametre</button>
-        </div>
-        <!-- Offcanvas component -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasParameters" aria-labelledby="offcanvasParametersLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasParametersLabel">Všetky parametre</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-            <!-- All parameters go here -->
-            <!-- Content here -->
-                <!-- všeobecne -->
-                <h4>Všeobecné</h4>
-                <h6>Značka</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Samsung" id="brandSamsung">
-                    <label class="form-check-label" for="brandSamsung">
-                      Samsung
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Apple" id="brandApple">
-                    <label class="form-check-label" for="brandApple">
-                      Apple
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Huawei" id="brandHuawei">
-                    <label class="form-check-label" for="brandHuawei">
-                      Huawei
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Xiaomi" id="brandXiaomi">
-                    <label class="form-check-label" for="brandXiaomi">
-                      Xiaomi
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="OnePlus" id="brandOnePlus">
-                    <label class="form-check-label" for="brandOnePlus">
-                      OnePlus
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Farba</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Čierna" id="colorBlack">
-                    <label class="form-check-label" for="colorBlack">
-                      Čierna
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Biela" id="colorWhite">
-                    <label class="form-check-label" for="colorWhite">
-                      Biela
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Modrá" id="colorBlue">
-                    <label class="form-check-label" for="colorBlue">
-                      Modrá
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Červená" id="colorRed">
-                    <label class="form-check-label" for="colorRed">
-                      Červená
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Zlatá" id="colorGold">
-                    <label class="form-check-label" for="colorGold">
-                      Zlatá
-                    </label>
-                  </div>
-                <hr class="section-divider">
-
-                <!-- Batéria -->
-                <h4>Batéria</h4>
-                <h6>Kapacita batérie</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="2000-2999mAh" id="battery20002999">
-                    <label class="form-check-label" for="battery20002999">
-                      2000 - 2999mAh
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="3000-3999mAh" id="battery30003999">
-                    <label class="form-check-label" for="battery30003999">
-                      3000 - 3999mAh
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4000-4999mAh" id="battery40004999">
-                    <label class="form-check-label" for="battery40004999">
-                      4000 - 4999mAh
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="5000mAh+" id="battery5000plus">
-                    <label class="form-check-label" for="battery5000plus">
-                      5000mAh a viac
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Typ batérie</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Li-Ion" id="batteryTypeLiIon">
-                    <label class="form-check-label" for="batteryTypeLiIon">
-                      Li-Ion (Lithium-Ion)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Li-Poly" id="batteryTypeLiPoly">
-                    <label class="form-check-label" for="batteryTypeLiPoly">
-                      Li-Poly (Lithium-Polymer)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="NiMH" id="batteryTypeNiMH">
-                    <label class="form-check-label" for="batteryTypeNiMH">
-                      NiMH (Nickel-Metal Hydride)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="NiCd" id="batteryTypeNiCd">
-                    <label class="form-check-label" for="batteryTypeNiCd">
-                      NiCd (Nickel-Cadmium)
-                    </label>
-                  </div>
-                <hr class="section-divider">
-
-                <!-- Hardvér a softvér -->
-                <h4>Hardvér a softvér</h4>
-                <h6>Počet jadier</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Dual-core" id="coresDual">
-                    <label class="form-check-label" for="coresDual">
-                      Dual-core (2)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Quad-core" id="coresQuad">
-                    <label class="form-check-label" for="coresQuad">
-                      Quad-core (4)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Octa-core" id="coresOcta">
-                    <label class="form-check-label" for="coresOcta">
-                      Octa-core (8)
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Operačný systém</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Android" id="osAndroid">
-                    <label class="form-check-label" for="osAndroid">
-                      Android
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="iOS" id="osiOS">
-                    <label class="form-check-label" for="osiOS">
-                      iOS
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Windows Phone" id="osWindowsPhone">
-                    <label class="form-check-label" for="osWindowsPhone">
-                      Windows Phone
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Other" id="osOther">
-                    <label class="form-check-label" for="osOther">
-                      Iný
-                    </label>
-                  </div>
-                <hr class="section-divider">
-
-                <!-- Pamäť -->
-                <h4>Pamäť</h4>
-                <h6>Operačná pamäť</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="2GB" id="ram2GB">
-                    <label class="form-check-label" for="ram2GB">
-                      2 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4GB" id="ram4GB">
-                    <label class="form-check-label" for="ram4GB">
-                      4 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="6GB" id="ram6GB">
-                    <label class="form-check-label" for="ram6GB">
-                      6 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="8GB" id="ram8GB">
-                    <label class="form-check-label" for="ram8GB">
-                      8 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="12GB" id="ram12GB">
-                    <label class="form-check-label" for="ram12GB">
-                      12 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="16GB" id="ram16GB">
-                    <label class="form-check-label" for="ram16GB">
-                      16 GB a viac
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Interná pamäť</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="16GB" id="storage16GB">
-                    <label class="form-check-label" for="storage16GB">
-                      16 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="32GB" id="storage32GB">
-                    <label class="form-check-label" for="storage32GB">
-                      32 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="64GB" id="storage64GB">
-                    <label class="form-check-label" for="storage64GB">
-                      64 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="128GB" id="storage128GB">
-                    <label class="form-check-label" for="storage128GB">
-                      128 GB
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="256GB+" id="storage256GBPlus">
-                    <label class="form-check-label" for="storage256GBPlus">
-                      256 GB a viac
-                    </label>
-                  </div>
-                <hr class="section-divider">
-
-                <!-- Displej -->
-                <h4>Displej</h4>
-                <h6>Rozlíšenie displeja</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="HD" id="resolutionHD">
-                    <label class="form-check-label" for="resolutionHD">
-                      HD (1280 x 720)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="FullHD" id="resolutionFullHD">
-                    <label class="form-check-label" for="resolutionFullHD">
-                      Full HD (1920 x 1080)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="QHD" id="resolutionQHD">
-                    <label class="form-check-label" for="resolutionQHD">
-                      QHD (2560 x 1440)
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4K" id="resolution4K">
-                    <label class="form-check-label" for="resolution4K">
-                      4K (3840 x 2160)
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Veľkosť displeja</h6>
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Od" aria-label="Minimum display size">
-                    <input type="number" class="form-control" placeholder="Do" aria-label="Maximum display size">
-                    <button class="btn btn-outline-secondary" type="button">Ok</button>
-                  </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Under5Inches" id="sizeUnder5">
-                    <label class="form-check-label" for="sizeUnder5">
-                      Do 5"
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="5To5_9Inches" id="size5To5_9">
-                    <label class="form-check-label" for="size5To5_9">
-                      5" - 5.9"
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="6To6_9Inches" id="size6To6_9">
-                    <label class="form-check-label" for="size6To6_9">
-                      6" - 6.9"
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Over7Inches" id="sizeOver7">
-                    <label class="form-check-label" for="sizeOver7">
-                      Nad 7"
-                    </label>
-                  </div>
-                <hr class="section-divider">
-
-                <!-- Rozmery a hmotnosť -->
-                <h4>Rozmery a hmotnosť</h4>
-                <h6>Výška (v cm)</h6>
-                <div class="input-group mb-3">
+              <!-- Rozmery a hmotnosť -->
+              <h4>Rozmery a hmotnosť</h4>
+              <h6>Výška (v cm)</h6>
+              <div class="input-group mb-3">
                 <input type="number" class="form-control" placeholder="Od" aria-label="Minimum height">
                 <input type="number" class="form-control" placeholder="Do" aria-label="Maximum height">
                 <button class="btn btn-outline-secondary" type="button">Ok</button>
-                </div>
-                <hr class="section-divider">
+              </div>
+              <hr class="section-divider">
 
-                <h6>Hrúbka (v mm)</h6>
-                <div class="input-group mb-3">
+              <h6>Hrúbka (v mm)</h6>
+              <div class="input-group mb-3">
                 <input type="number" class="form-control" placeholder="Od" aria-label="Minimum thickness">
                 <input type="number" class="form-control" placeholder="Do" aria-label="Maximum thickness">
                 <button class="btn btn-outline-secondary" type="button">Ok</button>
-                </div>
-                <hr class="section-divider">
+              </div>
+              <hr class="section-divider">
 
-                <h6>Šírka (v cm)</h6>
-                <div class="input-group mb-3">
+              <h6>Šírka (v cm)</h6>
+              <div class="input-group mb-3">
                 <input type="number" class="form-control" placeholder="Od" aria-label="Minimum width">
                 <input type="number" class="form-control" placeholder="Do" aria-label="Maximum width">
                 <button class="btn btn-outline-secondary" type="button">Ok</button>
-                </div>
-                <hr class="section-divider">
+              </div>
+              <hr class="section-divider">
 
-                <h6>Hmotnosť (v gramoch)</h6>
-                <div class="input-group mb-3">
+              <h6>Hmotnosť (v gramoch)</h6>
+              <div class="input-group mb-3">
                 <input type="number" class="form-control" placeholder="Od" aria-label="Minimum weight">
                 <input type="number" class="form-control" placeholder="Do" aria-label="Maximum weight">
                 <button class="btn btn-outline-secondary" type="button">Ok</button>
-                </div>
-                <hr class="section-divider">
+              </div>
+              <hr class="section-divider">
 
-                <!-- Fotoaparát -->
-                <h4>Fotoaparát</h4>
-                <h6>Rozlíšenie predného fotoaparátu</h6>
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Od (MP)" aria-label="Minimum front camera resolution">
-                    <input type="number" class="form-control" placeholder="Do (MP)" aria-label="Maximum front camera resolution">
-                    <button class="btn btn-outline-secondary" type="button">Ok</button>
-                  </div>
-                <hr class="section-divider">
-                <h6>Rozlíšenie zadného fotoaparátu</h6>
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Od (MP)" aria-label="Minimum rear camera resolution">
-                    <input type="number" class="form-control" placeholder="Do (MP)" aria-label="Maximum rear camera resolution">
-                    <button class="btn btn-outline-secondary" type="button">Ok</button>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rearResUnder12MP" value="Under12">
-                    <label class="form-check-label" for="rearResUnder12MP">Menej ako 12 MP</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rearRes12To48MP" value="12To48">
-                    <label class="form-check-label" for="rearRes12To48MP">12 MP - 48 MP</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rearRes48To108MP" value="48To108">
-                    <label class="form-check-label" for="rearRes48To108MP">48 MP - 108 MP</label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="rearResOver108MP" value="Over108">
-                    <label class="form-check-label" for="rearResOver108MP">Viac ako 108 MP</label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Počet zadných objektívov</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="rearLenses1">
-                    <label class="form-check-label" for="rearLenses1">
-                      1
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="2" id="rearLenses2">
-                    <label class="form-check-label" for="rearLenses2">
-                      2
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="3" id="rearLenses3">
-                    <label class="form-check-label" for="rearLenses3">
-                      3
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4+" id="rearLenses4Plus">
-                    <label class="form-check-label" for="rearLenses4Plus">
-                      4+
-                    </label>
-                  </div>
-                <hr class="section-divider">
+              <!-- Fotoaparát -->
+              <h4>Fotoaparát</h4>
+              <h6>Rozlíšenie predného fotoaparátu</h6>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Od (MP)"
+                  aria-label="Minimum front camera resolution">
+                <input type="number" class="form-control" placeholder="Do (MP)"
+                  aria-label="Maximum front camera resolution">
+                <button class="btn btn-outline-secondary" type="button">Ok</button>
+              </div>
+              <hr class="section-divider">
+              <h6>Rozlíšenie zadného fotoaparátu</h6>
+              <div class="input-group mb-3">
+                <input type="number" class="form-control" placeholder="Od (MP)"
+                  aria-label="Minimum rear camera resolution">
+                <input type="number" class="form-control" placeholder="Do (MP)"
+                  aria-label="Maximum rear camera resolution">
+                <button class="btn btn-outline-secondary" type="button">Ok</button>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rearResUnder12MP" value="Under12">
+                <label class="form-check-label" for="rearResUnder12MP">Menej ako 12 MP</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rearRes12To48MP" value="12To48">
+                <label class="form-check-label" for="rearRes12To48MP">12 MP - 48 MP</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rearRes48To108MP" value="48To108">
+                <label class="form-check-label" for="rearRes48To108MP">48 MP - 108 MP</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rearResOver108MP" value="Over108">
+                <label class="form-check-label" for="rearResOver108MP">Viac ako 108 MP</label>
+              </div>
+              <hr class="section-divider">
+              <h6>Počet zadných objektívov</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1" id="rearLenses1">
+                <label class="form-check-label" for="rearLenses1">
+                  1
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="2" id="rearLenses2">
+                <label class="form-check-label" for="rearLenses2">
+                  2
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="3" id="rearLenses3">
+                <label class="form-check-label" for="rearLenses3">
+                  3
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="4+" id="rearLenses4Plus">
+                <label class="form-check-label" for="rearLenses4Plus">
+                  4+
+                </label>
+              </div>
+              <hr class="section-divider">
 
-                <!-- Funkcie -->
-                <h4>Funkcie</h4>
-                <h6>Audio jack</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="audioJackOptions" id="audioJackYes" value="Yes">
-                    <label class="form-check-label" for="audioJackYes">
-                      Áno
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="audioJackOptions" id="audioJackNo" value="No">
-                    <label class="form-check-label" for="audioJackNo">
-                      Nie
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>NFC</h6>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="simOptions" id="singleSim" value="single">
-                    <label class="form-check-label" for="singleSim">
-                      Single SIM
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="simOptions" id="dualSim" value="dual">
-                    <label class="form-check-label" for="dualSim">
-                      Dual SIM
-                    </label>
-                  </div>
-                <hr class="section-divider">
-                <h6>Single/DualSIM</h6>
-                
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="singleDualSIM" value="Single" id="singleSIM">
-                    <label class="form-check-label" for="singleSIM">
-                        Single
-                    </label>
-                    </div>
-                    <div class="form-check">
-                    <input class="form-check-input" type="radio" name="singleDualSIM" value="Dual" id="dualSIM">
-                    <label class="form-check-label" for="dualSIM">
-                        Dual
-                    </label>
-                </div>
+              <!-- Funkcie -->
+              <h4>Funkcie</h4>
+              <h6>Audio jack</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="audioJackOptions" id="audioJackYes" value="Yes">
+                <label class="form-check-label" for="audioJackYes">
+                  Áno
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="audioJackOptions" id="audioJackNo" value="No">
+                <label class="form-check-label" for="audioJackNo">
+                  Nie
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>NFC</h6>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="simOptions" id="singleSim" value="single">
+                <label class="form-check-label" for="singleSim">
+                  Single SIM
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="simOptions" id="dualSim" value="dual">
+                <label class="form-check-label" for="dualSim">
+                  Dual SIM
+                </label>
+              </div>
+              <hr class="section-divider">
+              <h6>Single/DualSIM</h6>
 
-                <hr class="section-divider">
-                <h6>LTE/4G</h6>
-                
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="lte4gOptions" id="lte4gYes" value="yes">
-                    <label class="form-check-label" for="lte4gYes">Áno</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="lte4gOptions" id="lte4gNo" value="no">
-                    <label class="form-check-label" for="lte4gNo">Nie</label>
-                </div>
-                
-                <hr class="section-divider">
-                
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="singleDualSIM" value="Single" id="singleSIM">
+                <label class="form-check-label" for="singleSIM">
+                  Single
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="singleDualSIM" value="Dual" id="dualSIM">
+                <label class="form-check-label" for="dualSIM">
+                  Dual
+                </label>
+              </div>
+
+              <hr class="section-divider">
+              <h6>LTE/4G</h6>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="lte4gOptions" id="lte4gYes" value="yes">
+                <label class="form-check-label" for="lte4gYes">Áno</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="lte4gOptions" id="lte4gNo" value="no">
+                <label class="form-check-label" for="lte4gNo">Nie</label>
+              </div>
+
+              <hr class="section-divider">
+
             </div>
             <div class="offcanvas-footer p-3 justify-content-center">
-                <button class="btn orange-btn w-75 ">Použiť filtre</button>
+              <button class="btn orange-btn w-75 ">Použiť filtre</button>
             </div>
+          </div>
+
+
+
         </div>
-
-
-
       </div>
-        </div>
-        
+
       <div class="col-12 col-lg-9">
         <div class="container">
-            <h1 class="p-3 default-title">Mobilné telefóny</h1>
-            <div class="container bg-white rounded-4 mx-3">
-                <div class="row py-2">
-                    <div class="col-sm-3 col-6 text-center">
-                        <button type="button" class="btn">Od najlacnejšieho</button>
-                    </div>
-                    <div class="col-sm-3 col-6 text-center">
-                        <button type="button" class="btn">Od najdrahšieho</button>
-                    </div>
-                    <div class="col-sm-3 col-6 text-center">
-                        <button type="button" class="btn">Najnovšie</button>
-                    </div>
-                    <div class="col-sm-3 col-6 text-center">
-                        <button type="button" class="btn">Výška zľavy</button>
-                    </div>
-                </div>
+          <h1 class="p-3 default-title">Mobilné telefóny</h1>
+          <div class="container bg-white rounded-4 mx-3">
+            <div class="row py-2">
+              <div class="col-sm-3 col-6 text-center">
+                <button type="button" class="btn">Od najlacnejšieho</button>
               </div>
-            <div class="row">
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-4 col-xl-3 product-col">  
-                    <div class="card product-card ">
-                        <div class="card-body  product-card-main-page modified-card-body">
-                        <p class="card-text card-product-name">
-                            Xiaomi #1</p>
-                        <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
-                            alt="mobil fotografia">
-        
-                        <div class="row container-fluid p-0">
-                            <div class="col-6 d-flex card-button-col">
-                            <button class="btn">
-                                <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
-                                    class="shopping-card-plus"></span>
-                            </button>
-                            </div>
-                            <div class="col-6 d-flex price-button-col ">
-                            <p class="price-tag">125.99$</p>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <nav aria-label="Page navigation">
-                    <ul class="pagination justify-content-center">
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                          <span aria-hidden="true">&laquo;</span>
-                        </a>
-                      </li>
-                      <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item"><a class="page-link" href="#">2</a></li>
-                      <li class="page-item"><a class="page-link" href="#">3</a></li>
-                      <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
-                      <li class="page-item"><a class="page-link" href="#">12</a></li>
-                      <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
-                        </a>
-                      </li>
-                    </ul>
-                  </nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+              <div class="col-sm-3 col-6 text-center">
+                <button type="button" class="btn">Od najdrahšieho</button>
+              </div>
+              <div class="col-sm-3 col-6 text-center">
+                <button type="button" class="btn">Najnovšie</button>
+              </div>
+              <div class="col-sm-3 col-6 text-center">
+                <button type="button" class="btn">Výška zľavy</button>
+              </div>
             </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 product-col">
+              <a href="" class="text-decoration-none">
+                <div class="card product-card">
+                  <div class="card-body product-card-main-page modified-card-body">
+                    <p class="card-text card-product-name">
+                      Xiaomi #1
+                    </p>
+                    <img class="img-fluid card-main-image card-image-top p-0" src="resources/phones/phone_default.png"
+                      alt="mobil fotografia">
+                    <div class="row container-fluid p-0">
+                      <div class="col-6 d-flex card-button-col">
+                        <button class="btn" onclick="event.preventDefault();">
+                          <span><img src="resources/icons/shopping_cart_plus.svg" alt="nakupny kosik"
+                              class="shopping-card-plus"></span>
+                        </button>
+                      </div>
+                      <div class="col-6 d-flex price-button-col">
+                        <p class="price-tag">125.99$</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+
+            <nav aria-label="Page navigation">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">12</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
         </div>
       </div>
     </div>
   </main>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
