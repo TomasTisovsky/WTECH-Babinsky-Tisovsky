@@ -30,15 +30,23 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'name' => 'required|string|max:50', 
+            'surname' => 'required|string|max:50',
+            'email' => 'required|string|email|max:254|unique:users,email',
+            'password' => 'required',
         ]);
+
+        // Create a new cart instance
+        #$cart = new Cart();
+        #$cart->save();  // Save the cart to generate an ID
 
         $user = User::create([
             'name' => $request->name,
+            'surname' => $request->surname,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 'user',
+            #'cart_id' => $cart->id,  // Assign the new cart's ID to the user
         ]);
 
         event(new Registered($user));

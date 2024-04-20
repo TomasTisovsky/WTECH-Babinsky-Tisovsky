@@ -15,11 +15,12 @@ class User extends Authenticatable
     protected $table = 'users';
 
     protected $fillable = [
-        'username',
+        'name',
+        'surname',
         'email',
         'role',
         'cart_id',
-        'password_hash',
+        'password',
     ];
 
 

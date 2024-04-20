@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('username', 50);
+            $table->string('name', 50);
+            $table->string('surname', 50);
             $table->string('email', 254);
-            $table->string('password_hash',255);
+            $table->string('password',255);
             $table->enum('role', ['admin', 'user']);
             $table->unsignedBigInteger('cart_id')->nullable();
             $table->foreign('cart_id')->references('id')->on('carts')->onDelete('set null');
