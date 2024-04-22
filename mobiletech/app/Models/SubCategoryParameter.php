@@ -15,6 +15,11 @@ class SubCategoryParameter extends Model
     protected $fillable = [
         'name',
         'sub_category_id',
+        'options',
+    ];
+
+    protected $casts = [
+        'options' => 'array',  // This will auto-cast JSON to array and vice versa
     ];
 
     public function subCategory()

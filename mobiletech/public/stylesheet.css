@@ -656,3 +656,9 @@ footer {
 .add-to-cart-btn:hover {
   background-color: #0c739f;
 }
+
+
+.btn-transparent {
+  background: transparent;
+  border: none;
+}

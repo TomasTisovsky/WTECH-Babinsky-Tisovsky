@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('sub_category_parameters', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
+            $table->json('options')->nullable();
             $table->unsignedBigInteger('sub_category_id');
             $table->foreign('sub_category_id')->references('id')->on('sub_categories')->onDelete('cascade');
         });

@@ -39,9 +39,9 @@ class AuthenticatedSessionController extends Controller
     protected function redirectBasedOnRole(): RedirectResponse
     {
         if (Auth::user()->role === 'admin') {
-            return redirect()->route('adminpanel');  // Redirect to the admin panel route
+            $categoryName = 'Mobilné telefóny';  // Set the default category name
+            return redirect()->route('admin.products.show', ['categoryName' => $categoryName]);
         }
-
         return redirect()->route('dashboard');  // Redirect to the dashboard route
     }
 
