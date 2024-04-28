@@ -531,32 +531,32 @@ footer {
 }
 
 .quantity-input-group {
-  width: auto; 
+  width: auto;
 }
 
 .quantity-input-group .btn,
 .input-group {
-  height: 50px; 
+  height: 50px;
 }
 
 .quantity-input-group .form-control {
-  max-width: 80px; 
+  max-width: 80px;
 }
 
 .offcanvas-body .row {
-  padding-top: 0.5rem; 
-  padding-bottom: 0.5rem; 
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .offcanvas h3 {
-  color: #0c739f; 
+  color: #0c739f;
 }
 .offcanvas h4 {
-  color: #0c739f; 
+  color: #0c739f;
 }
 
 .carousel-width {
-  width: 40%; 
+  width: 40%;
 }
 
 .section-divider {
@@ -568,7 +568,7 @@ footer {
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0)
   );
-  margin: 20px 0; 
+  margin: 20px 0;
 }
 
 .filter h5 {
@@ -605,8 +605,8 @@ footer {
 }
 
 .btn-custom {
-  background-color: #ffba00; 
-  color: #000000; 
+  background-color: #ffba00;
+  color: #000000;
   border-radius: 20px 20px 0 0; /* Rounded top corners */
 }
 
@@ -616,13 +616,13 @@ footer {
 
 .btn-custom {
   padding: 10px 15px;
-  margin-bottom: 0; 
+  margin-bottom: 0;
 }
 
 #categoriesCollapse .card {
-  border: none; 
+  border: none;
   background: none;
-  box-shadow: none; 
+  box-shadow: none;
 }
 
 .category-btn {
@@ -633,7 +633,7 @@ footer {
 
 
 .btn-link.p-0.text-decoration-none {
-  color: #0c739f; 
+  color: #0c739f;
 }
 
 .horizontal-scroll {
@@ -643,13 +643,13 @@ footer {
 }
 
 .image-card {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   margin-right: 15px; /* Space between cards */
 }
 
 .card-img-top {
   width: 100%;
-  height: 300px; 
+  height: 300px;
   object-fit: contain;
 }
 
@@ -661,4 +661,9 @@ footer {
 .btn-transparent {
   background: transparent;
   border: none;
+}
+
+#mail {
+    text-decoration: none; /* Removes underline */
+    color: inherit;
 }

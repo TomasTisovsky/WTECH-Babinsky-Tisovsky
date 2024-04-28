@@ -9,7 +9,7 @@
             <div class="col-md-8 d-flex justify-content-end justify-content-center-sm col-sm-12">
                 <ul class="navbar-fluid list-no-bullets">
                     <li class="nav-item d-md-inline"><span><img src="{{ asset('resources/icons/phone_icon.svg') }}" alt="ikonka telefon" />0908 156 156</span></li>
-                    <li class="nav-item d-md-inline"><span><img src="{{ asset('resources/icons/envelope_email_icon.svg') }}" alt="ikonka email" />info@mobiletech.sk</span></li>
+                    <li class="nav-item d-md-inline"><span><img src="{{ asset('resources/icons/envelope_email_icon.svg') }}" alt="ikonka email" /><a href="mailto:info@mobiletech.sk" id="mail">info@mobiletech.sk</a></span></li>
                     <li class="nav-item d-md-inline"><span><img src="{{ asset('resources/icons/profile_account_user_avatar_icon.svg') }}" alt="ikonka prihlasenie" />Prihlásenie</span></li>
                 </ul>
             </div>

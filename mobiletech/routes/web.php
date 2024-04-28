@@ -7,7 +7,7 @@ use App\Http\Controllers\AddProductController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.mainLayout');
 });
 
 Route::get('/dashboard', function () {
