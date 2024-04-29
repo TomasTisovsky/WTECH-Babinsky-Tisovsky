@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -17,7 +17,10 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CategorySubCategoryParametersSeeder::class,
             ProductTableSeeder::class,
-           
+
+            // Image seeder musi ist po ProductSeeder
+            ImageSeeder::class,
+
         ]);
     }
 }

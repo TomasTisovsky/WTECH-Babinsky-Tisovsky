@@ -4,11 +4,12 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
-
+use App\Http\Controllers\MainController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.mainLayout');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -33,3 +34,6 @@ Route::get('/add-product/{categoryName}', [AddProductController::class, 'index']
 
 
 require __DIR__.'/auth.php';
+
+// testovanie
+Route::get('/test', [MainController::class, 'show_top_products']);
