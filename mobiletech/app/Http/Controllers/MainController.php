@@ -13,7 +13,7 @@ class MainController extends Controller
 
         $products = Product::join('images','products.id','=','images.product_id')->select('products.*', 'images.*')->limit(3)->get();
 
-        return view('pages/main-with-products', ['products' => $products]);
+        return view('pages/mainWithProducts', ['products' => $products]);
     }
 
 

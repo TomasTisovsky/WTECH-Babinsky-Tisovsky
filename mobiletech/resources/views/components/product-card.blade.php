@@ -2,7 +2,7 @@
     <div class="card-body  product-card-main-page modified-card-body">
         <p class="card-text card-product-name">
             {{$name}}</p>
-        <a><img class="img-fluid card-main-image card-image-top p-0" src="{{asset('resources/phones/'.$image)}}"
+        <a href="/test"><img class="img-fluid card-main-image card-image-top p-0" src="{{asset('resources/phones/'.$image)}}"
                 alt="mobil fotografia"></a>
 
         <div class="row container-fluid p-0">
