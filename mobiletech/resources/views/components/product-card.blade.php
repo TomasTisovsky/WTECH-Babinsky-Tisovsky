@@ -2,8 +2,8 @@
     <div class="card-body  product-card-main-page modified-card-body">
         <p class="card-text card-product-name">
             {{$name}}</p>
-        {{--<img class="img-fluid card-main-image card-image-top p-0" src="{{asset($image)}}"
-             alt="mobil fotografia">--}}
+        <img class="img-fluid card-main-image card-image-top p-0" src="{{asset('resources/phones/'.$image)}}"
+             alt="mobil fotografia">
 
         <div class="row container-fluid p-0">
             <div class="col-6 d-flex card-button-col">

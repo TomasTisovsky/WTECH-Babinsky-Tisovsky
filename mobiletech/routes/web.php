@@ -35,4 +35,5 @@ Route::get('/add-product/{categoryName}', [AddProductController::class, 'index']
 
 require __DIR__.'/auth.php';
 
+// testovanie
 Route::get('/test', [MainController::class, 'show_top_products']);
