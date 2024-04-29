@@ -663,7 +663,12 @@ footer {
   border: none;
 }
 
-#mail {
+.nav-top-anchor {
+    text-decoration: none; /* Removes underline */
+    color: inherit;
+}
+
+.nav-top-anchor:hover {
     text-decoration: none; /* Removes underline */
     color: inherit;
 }
