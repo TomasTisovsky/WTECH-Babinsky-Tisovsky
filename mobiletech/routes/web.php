@@ -7,10 +7,6 @@ use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
 
-Route::get('/', function () {
-    return view('layouts.mainLayout');
-});
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -36,6 +32,8 @@ Route::get('/add-product/{categoryName}', [AddProductController::class, 'index']
 
 require __DIR__.'/auth.php';
 
-// testovanie
-Route::get('/test', [MainController::class, 'show_top_products']);
-Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail']);
+// Hlavna stranka
+Route::get('/', [MainController::class, 'show_top_products']);
+
+// Detail produktu
+Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
