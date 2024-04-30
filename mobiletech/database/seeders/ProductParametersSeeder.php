@@ -21,7 +21,7 @@ class ProductParametersSeeder extends Seeder
         // otvorenie CSV suboru
         $opened_phone_data_file = fopen('storage/app/public/phones_data.csv','r');
 
-
+        // prvy riadok v csv su nazvy stlpcov
         fgetcsv($opened_phone_data_file);
 
         foreach ($product_ids as $pid){

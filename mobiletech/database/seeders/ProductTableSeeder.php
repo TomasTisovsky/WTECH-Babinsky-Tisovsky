@@ -15,7 +15,7 @@ class ProductTableSeeder extends Seeder
     {
         DB::table('products')->delete();
 
-
+        // musi byt zakomentovane ak sa pouziva aj ProductParametersSeeder
         /*Product::create([
             'name' => 'Apple iPhone XR 64GB Blue - Trieda C',
             'description' => '6.1 LCD Liquid Retina 1792×828, procesor A12 Bionic, interná pamäť 64GB, fotoaparát zadný 12Mpx (F/1.8), fotoaparát predný 7Mpx (F/2.2), optická stabilizácia, GPS, Glonass, NFC, LTE, Lightning, Face ID, Dve SIM (nano-SIM a eSIM), vodoodolný podľa IP67,',
