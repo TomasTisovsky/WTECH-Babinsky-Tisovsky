@@ -11,7 +11,7 @@ class ProductDetailController extends Controller
     public function showProductDetail(Request $request){
 
         // ziskanie vlastnosti produktov
-        $product = Product::join('product_parameters','id','=','product_id')->join('sub_categories', 'sub_category_parameter_id','=','sub_categories.id')->where('id',$request->product_id);
+        $product = Product::join('product_parameters','products.id','=','product_id')->join('sub_categories', 'sub_category_parameter_id','=','sub_categories.id')->where('products.id',$request->product_id)->first();
 
         // ziskanie obrazkov produktu
         $product_images = Image::where('product_id',$request->product_id)->get();

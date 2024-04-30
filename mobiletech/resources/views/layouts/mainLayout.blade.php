@@ -11,7 +11,7 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
     <title>MobileTech</title>
-    <link rel="icon" href="resources/icons/logo.png">
+    <link rel="icon" href="{{asset('resources/icons/logo.png')}}">
 </head>
 
 <body>

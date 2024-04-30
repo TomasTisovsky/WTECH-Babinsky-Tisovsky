@@ -33,6 +33,22 @@ class ImageSeeder extends Seeder
                 'updated_at' => now(),
 
             ]);
+
+            Image::create([
+                'product_id' => $pid,
+                'name_hash' => "phone_default.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+            Image::create([
+                'product_id' => $pid,
+                'name_hash' => "phone_2.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
         }
 
     }
