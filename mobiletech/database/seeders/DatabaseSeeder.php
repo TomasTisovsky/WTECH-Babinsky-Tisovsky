@@ -17,9 +17,9 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CategorySubCategoryParametersSeeder::class,
             ProductTableSeeder::class,
-
             // Image seeder musi ist po ProductSeeder
             ImageSeeder::class,
+            ProductParametersSeeder::class
 
         ]);
     }
