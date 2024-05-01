@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
+use \App\Http\Controllers\CartController;
 
 
 Route::get('/dashboard', function () {
@@ -41,3 +42,7 @@ Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'sho
 Route::get('/test', function () {
     return view('pages/shoppingCart');
 });
+
+Route::post('/', [CartController::class, 'add_to_cart'])->name('shopping-cart.add');
+Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add');
+Route::get('/ns', [CartController::class, 'new_session'])->name('new-session');
