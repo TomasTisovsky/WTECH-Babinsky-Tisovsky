@@ -129,6 +129,8 @@
       <path value="$PROJECT_DIR$/mobiletech/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/mobiletech/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/mobiletech/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/mobiletech/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/mobiletech/vendor/laravel/breeze" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

@@ -25,7 +25,7 @@ class CartController extends Controller
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($current_cart[$request->product_id]['quantity'] + $request->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$request->product_id] = ['quantity' => $request->quantity + $current_cart[$request->product_id]['quantity'],'image' => $request->image];
+                    $current_cart[$request->product_id] = ['quantity' => $request->quantity + $current_cart[$request->product_id]['quantity'], 'image' => $request->image];
                 }
 
             } else {

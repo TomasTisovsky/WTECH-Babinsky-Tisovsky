@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="stylesheet.css" />
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+    @livewireStyles
     <title>MobileTech</title>
     <link rel="icon" href="{{asset('resources/icons/logo.png')}}">
 </head>
@@ -49,9 +51,8 @@
 
         </div>
     </div>
+    @livewireScripts
 </main>
-
-
 
 </body>
 @include('partials.footer')
