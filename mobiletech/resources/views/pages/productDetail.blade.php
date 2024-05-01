@@ -5,9 +5,7 @@
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="container my-5 justify-content-center">
-                    <x-image-carousel :images="$product_images">
-
-                    </x-image-carousel>
+                    <x-image-carousel :images="$product_images"></x-image-carousel>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
@@ -54,7 +52,7 @@
 
                                 </div>
                                 <div class="col-12 col-sm-6 py-sm-0 py-3 justify-content-center">
-                                    <button class="btn cart-btn cart-btn-fixed-width">
+                                    <button class="btn cart-btn cart-btn-fixed-width" >
                                         <img src="{{asset('resources/icons/shopping_cart.svg')}}" alt="nakupny kosik">
                                         Vložiť do košíka
                                     </button>

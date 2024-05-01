@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="{{ asset('stylesheet.css') }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <title>MobileTech</title>
-  <link rel="icon" href="{{ asset('icons/logo.png') }}">
+  <link rel="icon" href="{{ asset('resources/icons/logo.png') }}">
 </head>
 <body class="back-ground-color">
     @include('partials.navbar-top')

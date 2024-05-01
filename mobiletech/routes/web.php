@@ -37,3 +37,7 @@ Route::get('/', [MainController::class, 'show_top_products']);
 
 // Detail produktu
 Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
+
+Route::get('/test', function () {
+    return view('pages/shoppingCart');
+});

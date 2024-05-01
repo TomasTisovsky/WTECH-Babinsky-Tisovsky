@@ -186,10 +186,10 @@ p {
     background-color: #0b5f83;
     color: white;
     border-radius: 20px;
-    min-width: 100px;
+    min-width: 80px;
     box-shadow: none !important;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .cart-btn:focus,
@@ -556,7 +556,7 @@ footer {
 }
 
 .cart-btn-fixed-width {
-    width: 200px;
+    width: 225px;
 }
 
 .quantity-input-group {
