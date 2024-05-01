@@ -13,7 +13,7 @@ class SubCategoryParameter extends Model
     protected $table = 'sub_category_parameters';
 
     protected $fillable = [
-        'name',
+        'scp_name',
         'sub_category_id',
         'options',
     ];

@@ -17,7 +17,7 @@ class CategorySubCategoryParametersSeeder extends Seeder
         DB::table('sub_category_parameters')->truncate();
         DB::table('sub_categories')->truncate();
         DB::table('categories')->truncate();
-     
+
 
 
 
@@ -141,11 +141,11 @@ class CategorySubCategoryParametersSeeder extends Seeder
                         $parameterName = $parameter;
                         $options = null;
                     }
-        
+
                     DB::table('sub_category_parameters')->insert([
-                        'name' => $parameterName,
+                        'scp_name' => $parameterName,
                         'sub_category_id' => $subcategoryId,
-                        'options' => $options ? json_encode($options) : null,     
+                        'options' => $options ? json_encode($options) : null,
                     ]);
                 }
             }
