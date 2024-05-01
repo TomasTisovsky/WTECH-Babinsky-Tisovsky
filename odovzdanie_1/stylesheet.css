@@ -236,12 +236,24 @@ p {
   margin-bottom: 5px;
 }
 
-.card-main-image {
+.product-card-image-anchor{
   width: 100%;
   height: 80%;
   display: block;
-  padding-top: 5px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.product-card-name-anchor{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.card-main-image {
+  width: 100%;
+  height: 100%;
+
 }
 
 .modified-card-body > div button {

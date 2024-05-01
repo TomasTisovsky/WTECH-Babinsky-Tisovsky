@@ -4,11 +4,12 @@
 
             <div class="col-md-4 col-6 order-1 order-md-1">
                 <div class="row">
-                    <div class="col-lg-4 brand-icon"><img src="{{asset('resources/icons/icons8-mobile-order-100.png')}}"
-                                                          alt="logo spolocnosti MobileTech">
+                    <div class="col-lg-4 brand-icon">
+                        <a href="/"><img src="{{asset('resources/icons/icons8-mobile-order-100.png')}}"
+                                         alt="logo spolocnosti MobileTech"></a>
                     </div>
                     <div class="col-lg-7 brand-name d-none d-lg-flex" id="cname">
-                        <p>MobileTech</p>
+                        <a href="/">MobileTech</a>
                     </div>
                 </div>
             </div>

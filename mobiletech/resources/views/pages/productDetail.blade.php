@@ -1,0 +1,114 @@
+@extends('layouts.layout')
+
+@section('content')
+    <div class="container-fluid back-ground-color">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="container my-5 justify-content-center">
+                    <x-image-carousel :images="$product_images">
+
+                    </x-image-carousel>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="container my-5">
+                    <ul class="list-no-bullets">
+                        <li>
+                            <div class="container">
+                                <h1>{{$product_parameters->first()->name}}</h1>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="container my-5 py-3 px-3 bg-white rounded-4">
+                                <div class="container back-ground-color rounded-4 px-4 py-3">
+                                    <h1 class="pb-2">Popis produktu</h1>
+                                    <p>{{$product_parameters->first()->description}}</p>
+                                    <h1 class="py-2">Parametre</h1>
+                                    @for($i = 0; $i < 5; $i++)
+                                        <div class="row">
+                                            <div class="col-6">{{$product_parameters[$i]->scp_name}}</div>
+                                            <div class="col-6">{{$product_parameters[$i]->value}}</div>
+                                        </div>
+                                    @endfor
+                                    <button class="btn btn-link p-0 text-decoration-none" type="button"
+                                            data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasParameters" aria-controls="offcanvasParameters">
+                                        Zobraziť všetky parametre
+                                    </button>
+                                    <div class="text-end px-3">
+                                        <h1>{{$product_parameters->first()->price}}€</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-12 col-sm-6 justify-content-center">
+                                    <div class="input-group quantity-input-group">
+                                        <button class="btn btn-outline-secondary" type="button">-</button>
+                                        <input type="text" id="quantity" class="form-control text-center" value="1"
+                                               aria-label="Quantity">
+                                        <span class="input-group-text">ks</span>
+                                        <button class="btn btn-outline-secondary" type="button">+</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-sm-6 py-sm-0 py-3 justify-content-center">
+                                    <button class="btn cart-btn cart-btn-fixed-width">
+                                        <img src="{{asset('resources/icons/shopping_cart.svg')}}" alt="nakupny kosik">
+                                        Vložiť do košíka
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('offcanvas')
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasParameters"
+         aria-labelledby="offcanvasParametersLabel">
+        {{--<div class="offcanvas-header">
+            <h3 id="offcanvasParametersLabel">Všetky parametre</h3>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>--}}
+        <div class="offcanvas-body">
+
+            @php
+                // zoberie sa id prvej subkategorie
+                $previous_subcategory_id = $product_parameters->first()->sub_category_id;
+            @endphp
+
+            <div class="row">
+                <h4>{{$product_parameters->first()->sub_category_name}}</h4>
+            </div>
+
+            @foreach($product_parameters as $parameter)
+
+                @php
+                    if ($parameter->sub_category_id != $previous_subcategory_id){
+                        echo "<h4>{$parameter->sub_category_name}</h4>";
+                        $previous_subcategory_id = $parameter->sub_category_id;
+                    }
+
+                @endphp
+
+
+                <div class="row">
+                    <div class="col-6">{{$parameter->scp_name}}</div>
+                    <div class="col-6">{{$parameter->value}}</div>
+                </div>
+            @endforeach
+
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+
+@endsection

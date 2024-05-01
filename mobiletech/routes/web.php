@@ -5,10 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
-
-Route::get('/', function () {
-    return view('layouts.mainLayout');
-});
+use App\Http\Controllers\ProductDetailController;
 
 
 Route::get('/dashboard', function () {
@@ -35,5 +32,8 @@ Route::get('/add-product/{categoryName}', [AddProductController::class, 'index']
 
 require __DIR__.'/auth.php';
 
-// testovanie
-Route::get('/test', [MainController::class, 'show_top_products']);
+// Hlavna stranka
+Route::get('/', [MainController::class, 'show_top_products']);
+
+// Detail produktu
+Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
