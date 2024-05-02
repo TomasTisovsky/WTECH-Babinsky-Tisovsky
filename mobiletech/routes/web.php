@@ -29,6 +29,12 @@ Route::get('/adminpanel/{categoryName?}', [AdminPanelMainController::class, 'sho
 
 Route::get('/add-product/{categoryName}', [AddProductController::class, 'index'])->name('add-product.index');
 
+// Route to submit the product data
+Route::post('/add-product', [AddProductController::class, 'store'])->name('products.store');
+
+
+Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
+
 
 require __DIR__.'/auth.php';
 
