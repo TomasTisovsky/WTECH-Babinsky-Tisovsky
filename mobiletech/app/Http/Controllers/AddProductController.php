@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Product;
+use Illuminate\Support\Facades\Hash;
 
 class AddProductController extends Controller
 {
@@ -39,18 +41,43 @@ class AddProductController extends Controller
 
     }
 
-    public function store(Request $request)
-    {
-        // Validate the request...
-
-        // Create a new product instance...
-        $product = new Product($request->all());
-        
-        // Save the product to the database...
+    public function store(Request $request,$category)
+    {   
+        $product = new Product([
+            'name' => $request->name,
+            'price' => $request->price,
+            'description' => $request->description,
+            'stock_quantity' => $request->stock_quantity,
+            'category_id' => $category->id,
+        ]);
         $product->save();
 
-        // Redirect the user or return a response...
-        return redirect()->route('somewhere')->with('success', 'Product added successfully.');
+        // Handling multiple parameters
+        if($request->input('parameters.name')) {
+            foreach ($request->input('parameters.name') as $index => $name) {
+                if ($name !== null) {
+                    $product->parameters()->create([
+                        'name' => $name,
+                        'value' => $request->input('parameters.value')[$index],
+                    ]);
+                }
+            }
+        }
+
+
+         // Handling multiple images upload
+        if ($request->hasfile('images')) {
+            foreach ($request->file('images') as $image) {
+                $name = $image->getClientOriginalName();
+                $image->move(public_path().'/resources/images/', $name);  
+                $product->images()->create(['name_hash' => Hash::make('/resources/images/'.$name)]);
+            }
+        }
+
+        $product->save();
+
+        return redirect()->route('pages/adminPanel')->with('success', 'Product added successfully.');
+     
     }
 
 }
