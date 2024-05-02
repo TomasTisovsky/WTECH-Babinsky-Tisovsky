@@ -65,7 +65,7 @@
                             <td>{{$product->price}}</td>
                             <td>{{$product->stock_quantity}}</td>
                             <td>
-                                <p class="btn">Zobraziť všetky parametre</p>
+                                <a href="{{ route('products.show', $product) }}" class="btn">Zobraziť všetky parametre</a>
                             </td>           
                             <td>
                                 <button class="btn btn-primary">Edit</button>
