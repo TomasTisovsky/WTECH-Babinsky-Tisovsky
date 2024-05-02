@@ -4,7 +4,6 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
-use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
@@ -31,12 +30,6 @@ Route::get('/adminPanel', function () {
 Route::get('/adminpanel/{categoryName?}', [AdminPanelMainController::class, 'showProducts'])->name('admin.products.show');
 
 Route::get('/add-product/{categoryName}', [AddProductController::class, 'index'])->name('add-product.index');
-
-// Route to submit the product data
-Route::post('/add-product', [AddProductController::class, 'store'])->name('products.store');
-
-
-Route::get('/products/{product}', [ProductController::class, 'show'])->name('products.show');
 
 
 require __DIR__.'/auth.php';

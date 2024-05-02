@@ -26,16 +26,5 @@ class Product extends Model
      {
          return $this->belongsTo(Category::class);
      }
-
-     public function images()
-    {
-        return $this->hasMany(Image::class);
-    }
-
-    public function parameters()
-    {
-        return $this->hasMany(ProductParameter::class);
-    }
-
-
+ 
 }
