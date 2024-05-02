@@ -8,7 +8,6 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
 
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
