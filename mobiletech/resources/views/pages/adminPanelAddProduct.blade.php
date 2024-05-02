@@ -7,8 +7,8 @@
 <main>
         <div class="container-fluid back-ground-color pb-5">
             <div class="container-md bg-white pb-5">
-                <form id="addForm" class="container-md" enctype="multipart/form-data"  method="POST" action="{{ route('products.store', ['category' => $category]) }}">
-                    @csrf  <!-- CSRF token is necessary for form security -->
+                <form id="addForm" class="container-md" enctype="multipart/form-data"  method="POST">
+                @csrf  <!-- CSRF token is necessary for form security -->
                 <div class="row mt-2">
                     <div class="col-6 col-md-5 col-lg-4 pl-5">Názov</div>
                     <div class="col-6 col-md-5 col-lg-4">
@@ -21,13 +21,15 @@
                     </div>
                     <div class="row mt-2 justify-content-center">
                         <div class="col-8">
+                            <form id="image-upload-form" enctype="multipart/form-data">
                                 <div class="row m-4">
                                     <div class="col-12">
                                         <h4>Pridať nové obrázky</h4>
-                                        <input type="file" class="form-control-file" name="images[]" id="images"
+                                        <input type="file" class="form-control" name="new_images[]" id="new-images"
                                             multiple accept="image/*">
                                     </div>
                                 </div>
+                            </form>
                         </div>
                     </div>
 
@@ -79,7 +81,7 @@
 
                     <div class="row justify-content-center">
                         <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center my-3">
-                            <button type="submit" class="btn px-5 cart-btn">Pridať produkt</button>
+                        <button type="submit" class="btn px-5 cart-btn">Pridať produkt</button>
                         </div>
                         <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center my-3">
                             <button class="btn  px-5 cart-btn" onclick="location.href='{{ route('admin.products.show', $category->category_name) }}'">Späť</button>
