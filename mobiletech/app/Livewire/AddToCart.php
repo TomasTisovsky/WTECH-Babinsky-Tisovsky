@@ -68,7 +68,7 @@ class AddToCart extends Component
         if($product_added){
             //$this->emit('productAddedToCart', $this->product_id);
         }
-
+        $this->dispatch('totalSumChanged');
         return view('livewire.add-to-cart');
     }
 
