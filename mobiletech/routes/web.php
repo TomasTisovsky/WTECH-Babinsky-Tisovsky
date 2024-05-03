@@ -44,5 +44,6 @@ Route::get('/test', function () {
 });
 
 Route::post('/', [CartController::class, 'add_to_cart'])->name('shopping-cart.add');
+
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add');
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session');

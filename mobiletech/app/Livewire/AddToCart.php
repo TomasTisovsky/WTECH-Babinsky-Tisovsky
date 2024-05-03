@@ -3,8 +3,6 @@
 namespace App\Livewire;
 
 use App\Models\Product;
-use App\Services\ShoppingCart;
-use GuzzleHttp\Psr7\Request;
 use Livewire\Component;
 
 class AddToCart extends Component
@@ -13,6 +11,7 @@ class AddToCart extends Component
     public $product_id;
     public $quantity;
     public $image;
+    public $price;
 
     public function render()
     {
@@ -24,9 +23,11 @@ class AddToCart extends Component
     {
         // ziskanie kvantity produktu
         $product = Product::where('id', $this->product_id)->get()->first();
+        // pocet dostupnych produktov
         $available_quantity = $product->stock_quantity;
 
         $product_added = false;
+
         if (session()->has('cart')) {
             // ziskanie kosika z relacie
             $current_cart = session()->get('cart');
@@ -37,7 +38,7 @@ class AddToCart extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($current_cart[$this->product_id]['quantity'] + $this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price];
                     $product_added = true;
                 }
 
@@ -45,7 +46,7 @@ class AddToCart extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price];
                     $product_added = true;
                 }
             }
@@ -59,16 +60,17 @@ class AddToCart extends Component
 
             // kontrola ci sa neprekrocil pocet produktov "na sklade"
             if ($this->quantity <= $available_quantity) {
-                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image])]);
+                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price])]);
                 $product_added = true;
             }
         }
 
         // ak bol produkt pridany vygeneruje sa signal na prepocitanie celkoveho suctu poloziek v kosiku
         if($product_added){
-            //$this->emit('productAddedToCart', $this->product_id);
+            $current_cart = session()->get('cart');
+            $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity);
         }
-        $this->dispatch('totalSumChanged');
+
         return view('livewire.add-to-cart');
     }
 
