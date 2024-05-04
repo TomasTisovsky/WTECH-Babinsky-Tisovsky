@@ -58,8 +58,22 @@ class ImageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Image $image)
-    {
-        //
+    public function destroy($imageID)
+{
+    $image = Image::find($imageID);
+    if (!$image) {
+        return response()->json(['success' => false, 'message' => 'Image not found.'], 404);
     }
+
+    try {
+        // Delete the image from the database
+        $image->delete();
+
+        return response()->json(['success' => true, 'message' => 'Image deleted successfully.']);
+    } catch (\Exception $e) {
+        // If an error occurs during deletion
+        return response()->json(['success' => false, 'message' => 'Failed to delete image.'], 500);
+    }
+    
+}
 }
