@@ -663,27 +663,12 @@ footer {
   border: none;
 }
 
-.full-height {
-  min-height: 100vh; /* 100% of the viewport height */
+.nav-top-anchor {
+  text-decoration: none; /* Removes underline */
+  color: inherit;
 }
 
-.carousel-item {
-  height: 500px; /* Set the height of the carousel items */
-  justify-content: center; /* Center the images horizontally if they are smaller than container */
-  align-items: center; /* Center the images vertically */
-  overflow: hidden; /* Prevents any overflow from the fixed height */
-}
-
-.carousel-item img {
-  width: auto;  /* Allows the width to adjust to the image's natural size */
-  max-width: 100%; /* Ensures the image does not exceed the container's width */
-  height: auto; /* Allows the height to adjust naturally */
-  max-height: 100%; /* Ensures the image does not exceed the container's height */
-  object-fit: contain; /* Ensures the whole image fits into the container without cropping */
-}
-
-/*carousel to be semi transparent */
-.carousel-control-next, .carousel-control-prev {
-  background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
-  border: none;
+.nav-top-anchor:hover {
+  text-decoration: none; /* Removes underline */
+  color: inherit;
 }
