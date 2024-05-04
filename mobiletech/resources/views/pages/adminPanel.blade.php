@@ -29,7 +29,6 @@
                 <table class="table px-5">
                     <thead>
                         <tr>
-                            <th scope="col">Znacka</th>
                             <th scope="col">Názov</th>
                             <th scope="col">Cena</th>
                             <th scope="col">Počet kusov</th>
@@ -39,28 +38,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Samsung</td>
-                            <td>Samsung Galaxy S10</td>
-                            <td>500,99</td>
-                            <td>10</td>
-                            <td>
-                                <p class="btn">Zobraziť všetky parametre</p>
-                            </td>
-                            <td>
-                                <button class="btn btn-primary">Edit</button>
-                            </td>
-                            <td>
-                                <button class="btn btn-danger">Delete</button>
-
-                            </td>
-                        </tr>
-                    </tbody>
                     @foreach ($products as $product)
-
-                    <tbody>
                         <tr>
-                            <td>{{$product->brand}}</td>
                             <td>{{$product->name}}</td>
                             <td>{{$product->price}}</td>
                             <td>{{$product->stock_quantity}}</td>
@@ -68,14 +47,18 @@
                                 <a href="{{ route('products.show', $product) }}" class="btn">Zobraziť všetky parametre</a>
                             </td>           
                             <td>
-                                <button class="btn btn-primary">Edit</button>
+                            <a href="{{ route('products.edit', $product) }}" class="btn btn-primary">Edit</a>
                             </td>
                             <td>
-                                <button class="btn btn-danger">Delete</button>
+                                <form action="{{ route('products.destroy', $product) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
+                                </form>
                             </td>
                         </tr>
-                    </tbody>
                     @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -101,5 +84,5 @@
 
     @yield('Title')
     @yield('table')
-    @yield('page_number')
+    
 @endsection

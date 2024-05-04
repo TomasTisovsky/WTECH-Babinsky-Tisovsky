@@ -13,7 +13,7 @@ class Image extends Model
 
     protected $fillable = [
         'product_id',
-        'name_hash',
+        'name',
     ];
 
     public function product()

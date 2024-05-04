@@ -28,13 +28,11 @@ class AddProductController extends Controller
 
         // Create an associative array where each key is a subcategory and each value is an array of parameters for that subcategory
         $subCategoriesWithParameters = $subCategories->mapWithKeys(function ($subCategory) {
-        return [$subCategory->sub_category_name => $subCategory->parameters->map(function ($parameter) {
+            // Directly return the parameters collection or convert it to an array
             return [
-                'name' => $parameter->name,
-                'options' => $parameter->options // Assuming 'options' is a relationship or attribute on the Parameter model
+                $subCategory->sub_category_name => $subCategory->parameters->toArray()
             ];
-        })];
-    });
+        });
 
         // Pass the data to Syour view
         return view('pages/adminPanelAddProduct', compact('categories','category', 'subCategoriesWithParameters'));
@@ -47,36 +45,35 @@ class AddProductController extends Controller
             'name' => $request->name,
             'price' => $request->price,
             'description' => $request->description,
-            'stock_quantity' => $request->stock_quantity,
-            'category_id' => $category->id,
+            'stock_quantity' => $request->quantity,
+            'category_id' => $category,
         ]);
         $product->save();
 
-        // Handling multiple parameters
-        if($request->input('parameters.name')) {
-            foreach ($request->input('parameters.name') as $index => $name) {
-                if ($name !== null) {
+        // Assuming you have a $product instance already created/defined
+        if($request->has('parameters')) {
+            foreach ($request->input('parameters') as $parameterId => $value) {
+                if ($value !== null) {
                     $product->parameters()->create([
-                        'name' => $name,
-                        'value' => $request->input('parameters.value')[$index],
+                        'sub_category_parameter_id' => $parameterId,
+                        'value' => $value
                     ]);
                 }
             }
         }
 
-
-         // Handling multiple images upload
+        // Handling multiple images upload
         if ($request->hasfile('images')) {
             foreach ($request->file('images') as $image) {
                 $name = $image->getClientOriginalName();
                 $image->move(public_path().'/resources/images/', $name);  
-                $product->images()->create(['name_hash' => Hash::make('/resources/images/'.$name)]);
+                $product->images()->create(['name' => $name]);
             }
         }
 
         $product->save();
 
-        return redirect()->route('pages/adminPanel')->with('success', 'Product added successfully.');
+        return redirect()->route('admin.products.show')->with('success', 'Product added successfully.');
      
     }
 

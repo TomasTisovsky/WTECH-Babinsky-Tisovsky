@@ -17,7 +17,7 @@
     @include('partials.adminPanelNavbarTop')
     @include('partials.adminPanelNavbarMain')
 
-    <div class="container-fluid back-ground-color">
+    <div class="container-fluid back-ground-color full-height">
         @yield('content')    
     </div>
     
