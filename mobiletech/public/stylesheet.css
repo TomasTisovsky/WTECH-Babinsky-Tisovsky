@@ -115,7 +115,7 @@ p {
 }
 
 #col-shopping-cart {
-    justify-content: center;
+    justify-content: right;
 }
 
 #cname {
@@ -190,6 +190,7 @@ p {
     box-shadow: none !important;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-right: 20px;
 }
 
 .cart-btn:focus,
