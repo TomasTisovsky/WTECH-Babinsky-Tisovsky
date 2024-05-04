@@ -5,7 +5,7 @@
         <div class="input-group quantity-input-group">
             <button class="btn btn-outline-secondary" type="button" id="sub-btn" wire:click="sub">-</button>
 
-            <input type="number" id="quantity" class="form-control text-center" wire:model="quantity"
+            <input type="text" id="quantity" class="form-control text-center" wire:model="quantity"
                    aria-label="Quantity" min="1">
             <span class="input-group-text">ks</span>
 

@@ -30,6 +30,12 @@ class QuantityButtons extends Component
 
     public function submit()
     {
+        // vpodstate sanitacia vstupu
+        // ak zadal pouzivatel string tak prednastavena hodnota bude 1
+        if (!is_int($this->quantity)){
+            $this->quantity = 1;
+        }
+
         // ziskanie kvantity produktu
         $product = Product::where('id', $this->product_id)->get()->first();
         // pocet dostupnych produktov

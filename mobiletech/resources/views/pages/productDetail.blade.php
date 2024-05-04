@@ -41,6 +41,7 @@
                         </li>
                         <li>
 
+
                             @livewire('quantity-buttons',['product_id' => $product_parameters->first()->product_id, 'image' => $product_images[0]->name_hash, 'price' =>$product_parameters->first()->price])
 
 
