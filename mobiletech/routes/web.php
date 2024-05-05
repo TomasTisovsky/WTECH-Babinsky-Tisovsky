@@ -36,14 +36,13 @@ require __DIR__.'/auth.php';
 // Hlavna stranka
 Route::get('/', [MainController::class, 'show_top_products']);
 
+
 // Detail produktu
 Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
 
-Route::get('/test', function () {
-    return view('pages/shoppingCart');
-});
+// Nakupny kosik
+Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->name('shopping-cart-view');
 
-Route::post('/', [CartController::class, 'add_to_cart'])->name('shopping-cart.add');
-
-Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add');
-Route::get('/ns', [CartController::class, 'new_session'])->name('new-session');
+// Debug - ODSTRANIT PRED ODOVZDANIM !!!
+Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
+Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session

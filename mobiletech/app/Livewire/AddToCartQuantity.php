@@ -5,34 +5,36 @@ namespace App\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 
-class QuantityButtons extends Component
+class AddToCartQuantity extends Component
 {
     public $product_id;
     public $quantity = 1;
     public $image;
     public $price;
+    public $name;
     public function render()
     {
-        return view('livewire.quantity-buttons');
+        return view('livewire.add-to-cart-quantity');
     }
 
     public function add(){
         $this->quantity++;
-        return view('livewire.quantity-buttons');
+        return view('livewire.add-to-cart-quantity');
     }
 
     public function sub(){
         if ($this->quantity > 1){
             $this->quantity--;
         }
-        return view('livewire.quantity-buttons');
+        return view('livewire.add-to-cart-quantity');
     }
 
     public function submit()
     {
         // vpodstate sanitacia vstupu
         // ak zadal pouzivatel string tak prednastavena hodnota bude 1
-        if (!is_int($this->quantity)){
+        $this->quantity = (int)$this->quantity ;
+        if (!filter_var($this->quantity, FILTER_VALIDATE_INT)){
             $this->quantity = 1;
         }
 
@@ -53,7 +55,7 @@ class QuantityButtons extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($current_cart[$this->product_id]['quantity'] + $this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
                     $product_added = true;
                 }
 
@@ -61,7 +63,7 @@ class QuantityButtons extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
                     $product_added = true;
                 }
             }
@@ -75,7 +77,7 @@ class QuantityButtons extends Component
 
             // kontrola ci sa neprekrocil pocet produktov "na sklade"
             if ($this->quantity <= $available_quantity) {
-                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price])]);
+                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name])]);
                 $product_added = true;
             }
         }
@@ -87,6 +89,6 @@ class QuantityButtons extends Component
             $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity);
         }
 
-        return view('livewire.quantity-buttons');
+        return view('livewire.add-to-cart-quantity');
     }
 }

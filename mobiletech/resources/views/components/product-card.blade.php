@@ -10,7 +10,7 @@
         <div class="row container-fluid p-0">
             <div class="col-6 d-flex card-button-col">
 
-                @livewire('add-to-cart',  ['product_id' => $product->product_id, 'image' => $image, 'quantity' => 1, 'price' => $price])
+                @livewire('add-to-cart',  ['product_id' => $product->product_id, 'image' => $image, 'quantity' => 1, 'price' => $price, 'name' => $name])
 
             </div>
             <div class="col-6 d-flex price-button-col ">

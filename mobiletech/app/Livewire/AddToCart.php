@@ -12,6 +12,7 @@ class AddToCart extends Component
     public $quantity;
     public $image;
     public $price;
+    public $name;
 
     public function render()
     {
@@ -38,7 +39,7 @@ class AddToCart extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($current_cart[$this->product_id]['quantity'] + $this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
                     $product_added = true;
                 }
 
@@ -46,7 +47,7 @@ class AddToCart extends Component
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
                 if ($this->quantity <= $available_quantity) {
                     //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price];
+                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
                     $product_added = true;
                 }
             }
@@ -60,7 +61,7 @@ class AddToCart extends Component
 
             // kontrola ci sa neprekrocil pocet produktov "na sklade"
             if ($this->quantity <= $available_quantity) {
-                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price])]);
+                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name])]);
                 $product_added = true;
             }
         }
