@@ -12,18 +12,19 @@
                 {{$product['name']}}</p>
         </section>
 
-        <section class="col-6 col-sm-3 align-items-center justify-content-center">
-            <input type="number" name="quantity" min="1" max="100" step="1" value="{{$product['quantity']}}">
-        </section>
-
-        <section class="col-6 col-sm-3 align-items-center justify-content-center">
-
-            <section>
-                <span class="justify-content-center">{{$product['quantity']*$product['price']}}€</span>
-                <p class="justify-content-center remove-item"><a href="#">Odstrániť
-                        položku</a></p>
+        <section class=" col-12 col-sm-6  justify-content-center">
+            <section class="col-6 col-sm-6 align-items-center justify-content-center">
+                <input type="number" name="quantity" min="1" max="100" step="1" value="{{$product['quantity']}}">
             </section>
 
+            <section class="col-6 col-sm-6 align-items-center justify-content-center">
+
+                <section>
+                    <span class="justify-content-center">{{$product['quantity']*$product['price']}}€</span>
+                    <p class="justify-content-center remove-item"><a href="#">Odstrániť
+                            položku</a></p>
+                </section>
+            </section>
         </section>
     </section>
 </article>

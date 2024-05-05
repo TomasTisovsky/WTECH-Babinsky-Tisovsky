@@ -9,10 +9,18 @@ use Illuminate\Http\Request;
 class CartController extends Controller
 {
     public function view_shopping_cart()
-    {   $cart = session()->get('cart');
-        return view('pages/shoppingCart', ['cart' =>$cart]);
-    }
+    {
+        $cart = session()->get('cart');
+        $totalSum = 0;
 
+        if ($cart != null) {
+            foreach ($cart as $cartitem) {
+                $totalSum += $cartitem['price']*$cartitem['quantity'];
+            }
+        }
+
+        return view('pages/shoppingCart', ['cart' => $cart, 'totalSum' => $totalSum]);
+    }
 
 
     public function debug()

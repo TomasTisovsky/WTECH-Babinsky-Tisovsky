@@ -1,3 +1,4 @@
+// kod bol vygenerovany pomocou chatGPT a mierne upraveny
 window.addEventListener('resize', function () {
     if (window.innerWidth <= 992) {
         var container = document.getElementById('shopping-cart-body');
@@ -5,3 +6,4 @@ window.addEventListener('resize', function () {
         container.appendChild(specialDiv);
     }
 });
+

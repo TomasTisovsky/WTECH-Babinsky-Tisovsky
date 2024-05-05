@@ -5,40 +5,41 @@ namespace App\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 
-class AddToCartQuantity extends Component
+class LiveCartItem extends Component
 {
     public $product_id;
-    public $quantity = 1;
+    public $quantity;
     public $image;
     public $price;
     public $name;
+    public $visibility = true;
     public function render()
     {
-        return view('livewire.add-to-cart-quantity');
+        return view('livewire.live-cart-item');
     }
 
-    public function add(){
-        $this->quantity++;
-        return view('livewire.add-to-cart-quantity');
+    public function discard (){
+        $this->visibility = false;
+        $cart = session()->get('cart');
+        $product_price = $cart[$this->product_id]['price'];
+        $product_quantity = $cart[$this->product_id]['quantity'];
+
+        unset($cart[$this->product_id]);
+        session(['cart' => $cart]);
+
+        $this->dispatch('productRemoved', $product_price, $product_quantity);
+
     }
 
-    public function sub(){
-        if ($this->quantity > 1){
-            $this->quantity--;
-        }
-        return view('livewire.add-to-cart-quantity');
+    public function quantityChanged(){
+        echo "{GG}";
     }
 
-    public function submit()
+    public function changeQuantity()
+
     {
-        // vpodstate sanitacia vstupu
-        // ak zadal pouzivatel string tak prednastavena hodnota bude 1
-        $this->quantity = (int)$this->quantity ;
-        if (!filter_var($this->quantity, FILTER_VALIDATE_INT)){
-            $this->quantity = 1;
-        }
 
-        // ziskanie kvantity produktu
+        /*// ziskanie kvantity produktu
         $product = Product::where('id', $this->product_id)->get()->first();
         // pocet dostupnych produktov
         $available_quantity = $product->stock_quantity;
@@ -84,12 +85,13 @@ class AddToCartQuantity extends Component
 
         // ak bol produkt pridany vygeneruje sa signal na prepocitanie celkoveho suctu poloziek v kosiku
         if($product_added){
-            $this->quantity =1;
             $current_cart = session()->get('cart');
-            // dispatchuje sa len kvantita o ktoru sa pocet zmenil z povodneho
             $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity);
-        }
+        }*/
 
-        return view('livewire.add-to-cart-quantity');
+        return view('livewire.live-cart-item');
     }
+
+
+
 }

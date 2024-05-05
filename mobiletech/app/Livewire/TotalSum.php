@@ -10,7 +10,7 @@ class TotalSum extends Component
 {
     public $totalSum =0;
     // funkcia totalSumChanged sa bude vykonavat v pripade pridania alebo odobratia produktu z kosika
-    protected $listeners = ['totalSumChanged'];
+    protected $listeners = ['totalSumChanged', 'productRemoved'];
 
     public function render()
     {
@@ -37,5 +37,17 @@ class TotalSum extends Component
 
         return view('livewire.total-sum')->with('totalSum', $this->totalSum);
     }
+
+    public function productRemoved($price, $quantity){
+        if (session()->has('cart')){
+            $this->totalSum -= $price*$quantity;
+        }
+        $this->dispatch('updateOrderSummary', $this->totalSum);
+        return view('livewire.total-sum')->with('totalSum', $this->totalSum);
+
+    }
+
+
+
 
 }
