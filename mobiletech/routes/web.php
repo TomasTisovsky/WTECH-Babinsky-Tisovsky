@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
@@ -19,25 +20,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-
-//adminPanel
-
-Route::get('/adminPanel', function () {
-    return view('pages/adminPanel');
-})->middleware(['auth', 'verified'])->name('adminpanel');
-
-Route::get('/adminpanel/{categoryName?}', [AdminPanelMainController::class, 'showProducts'])->name('admin.products.show');
-
-Route::get('/add-product/{categoryName}', [AddProductController::class, 'index'])->name('add-product.index');
-
-
 require __DIR__.'/auth.php';
+require __DIR__.'/admin.php';
 
 // Hlavna stranka
-Route::get('/', [MainController::class, 'show_top_products']);
+#Route::get('/', [MainController::class, 'show_top_products']);
 
 
 // Detail produktu
+
 Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
 
 // Nakupny kosik
@@ -46,3 +37,4 @@ Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->nam
 // Debug - ODSTRANIT PRED ODOVZDANIM !!!
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
+

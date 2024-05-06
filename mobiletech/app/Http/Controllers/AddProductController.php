@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Product;
+use Illuminate\Support\Facades\Hash;
 
 class AddProductController extends Controller
 {
@@ -26,31 +28,53 @@ class AddProductController extends Controller
 
         // Create an associative array where each key is a subcategory and each value is an array of parameters for that subcategory
         $subCategoriesWithParameters = $subCategories->mapWithKeys(function ($subCategory) {
-        return [$subCategory->sub_category_name => $subCategory->parameters->map(function ($parameter) {
+            // Directly return the parameters collection or convert it to an array
             return [
-                'name' => $parameter->name,
-                'options' => $parameter->options // Assuming 'options' is a relationship or attribute on the Parameter model
+                $subCategory->sub_category_name => $subCategory->parameters->toArray()
             ];
-        })];
-    });
+        });
 
         // Pass the data to Syour view
         return view('pages/adminPanelAddProduct', compact('categories','category', 'subCategoriesWithParameters'));
 
     }
 
-    public function store(Request $request)
-    {
-        // Validate the request...
-
-        // Create a new product instance...
-        $product = new Product($request->all());
-        
-        // Save the product to the database...
+    public function store(Request $request,$category)
+    {   
+        $product = new Product([
+            'name' => $request->name,
+            'price' => $request->price,
+            'description' => $request->description,
+            'stock_quantity' => $request->quantity,
+            'category_id' => $category,
+        ]);
         $product->save();
 
-        // Redirect the user or return a response...
-        return redirect()->route('somewhere')->with('success', 'Product added successfully.');
+        // Assuming you have a $product instance already created/defined
+        if($request->has('parameters')) {
+            foreach ($request->input('parameters') as $parameterId => $value) {
+                if ($value !== null) {
+                    $product->parameters()->create([
+                        'sub_category_parameter_id' => $parameterId,
+                        'value' => $value
+                    ]);
+                }
+            }
+        }
+
+        // Handling multiple images upload
+        if ($request->hasfile('images')) {
+            foreach ($request->file('images') as $image) {
+                $name = $image->getClientOriginalName();
+                $image->move(public_path().'/resources/images/', $name);  
+                $product->images()->create(['name' => $name]);
+            }
+        }
+
+        $product->save();
+
+        return redirect()->route('admin.products.show')->with('success', 'Product added successfully.');
+     
     }
 
 }

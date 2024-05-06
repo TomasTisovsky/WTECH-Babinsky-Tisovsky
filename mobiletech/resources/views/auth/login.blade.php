@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
       <div class="col-8 col-lg-6 col-xl-4">
       <form method="POST" action="{{ route('login') }}">
-    @csrf  <!-- CSRF Token for form submission validation -->
+      @csrf  <!-- CSRF Token for form submission validation -->
           <div class="mb-3">
             <label for="email" class="form-label"><i class="bi bi-envelope-at-fill orange-text-color mr-2"
                 style="font-size: 1.5rem;"></i> Email:</label>
