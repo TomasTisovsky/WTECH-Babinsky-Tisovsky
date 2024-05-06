@@ -42,7 +42,6 @@ class TotalSum extends Component
     }
 
 
-
     public function productRemoved($price, $quantity){
         if (session()->has('cart')){
             $this->totalSum -= $price*$quantity;
@@ -51,8 +50,5 @@ class TotalSum extends Component
         return view('livewire.total-sum')->with('totalSum', $this->totalSum);
 
     }
-
-
-
 
 }

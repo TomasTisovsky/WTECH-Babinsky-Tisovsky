@@ -17,7 +17,7 @@
                 <section class=" col-12 col-sm-6  justify-content-center">
                     <section class="col-6 col-sm-6 align-items-center justify-content-center">
                         <input id="qinput" type="number" name="quantity" min="1" max="100" step="1"
-                               value="{{$quantity}}" wire:input.debounce.500ms="changeQuantity($event.target.value)">
+                               value="{{$quantity}}" wire:model="volatile_quantity" wire:input.debounce.500ms="changeQuantity($event.target.value)">
                     </section>
                     {{--wire:model.debounce.500ms="quantityChanged"--}}
                     <section class="col-6 col-sm-6 align-items-center justify-content-center">

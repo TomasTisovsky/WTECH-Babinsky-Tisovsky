@@ -9,13 +9,14 @@ class LiveCartItem extends Component
 {
     public $product_id;
     public $quantity;
+    public $volatile_quantity;
     public $image;
     public $price;
     public $name;
     public $visibility = true;
 
     public function render()
-    {
+    {   $this->volatile_quantity = $this->quantity;
         return view('livewire.live-cart-item');
     }
 
@@ -42,9 +43,13 @@ class LiveCartItem extends Component
     {
         // ziskanie kvantity produktu
         $product = Product::where('id', $this->product_id)->get()->first();
+
         // pocet dostupnych produktov
         $available_quantity = $product->stock_quantity;
+
         $quantity_changed = false;
+
+        //zmena poctu produktu v kosiku
         $quantity_diff = 0;
 
         if (session()->has('cart')) {
@@ -59,16 +64,17 @@ class LiveCartItem extends Component
                 $quantity_diff = $new_quantity - $this->quantity;
                 $this->quantity = $new_quantity;
                 $quantity_changed = true;
+
+                session(['cart' => $current_cart]);
+            }else{
+                $this->volatile_quantity = $this->quantity;
             }
-
-
-            session(['cart' => $current_cart]);
 
         }
 
         // ak bol produkt pridany vygeneruje sa signal na prepocitanie celkoveho suctu poloziek v kosiku
+        // ak je quntity_diff mensia ako 0 (uberali sme) tak sa odpocita z celkovej sumy
         if ($quantity_changed) {
-            $current_cart = session()->get('cart');
             $this->dispatch('totalSumChanged', $this->product_id, $this->price,$quantity_diff, true);
         }
 
