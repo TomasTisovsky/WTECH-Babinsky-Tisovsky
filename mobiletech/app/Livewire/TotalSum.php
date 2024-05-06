@@ -27,16 +27,21 @@ class TotalSum extends Component
         return view('livewire.total-sum')->with('totalSum', $this->totalSum);
     }
 
-    public function totalSumChanged($product_id,$price, $quantity){
+    public function totalSumChanged($product_id,$price, $quantity, $updateSummary){
         if (session()->has('cart')){
             $current_cart = session()->get('cart');
             $current_cart[$product_id]['quantity'] = $quantity;
             $this->totalSum += $price*$quantity;
 
         }
+        if ($updateSummary){
+            $this->dispatch('updateOrderSummary', $this->totalSum);
+        }
 
         return view('livewire.total-sum')->with('totalSum', $this->totalSum);
     }
+
+
 
     public function productRemoved($price, $quantity){
         if (session()->has('cart')){

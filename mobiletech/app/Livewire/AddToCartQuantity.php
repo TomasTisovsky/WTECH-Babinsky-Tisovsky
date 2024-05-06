@@ -87,7 +87,7 @@ class AddToCartQuantity extends Component
             $this->quantity =1;
             $current_cart = session()->get('cart');
             // dispatchuje sa len kvantita o ktoru sa pocet zmenil z povodneho
-            $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity);
+            $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity, false);
         }
 
         return view('livewire.add-to-cart-quantity');

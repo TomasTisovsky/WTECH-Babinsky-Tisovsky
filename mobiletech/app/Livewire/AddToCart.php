@@ -69,7 +69,7 @@ class AddToCart extends Component
         // ak bol produkt pridany vygeneruje sa signal na prepocitanie celkoveho suctu poloziek v kosiku
         if($product_added){
             $current_cart = session()->get('cart');
-            $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity);
+            $this->dispatch('totalSumChanged', $this->product_id, $this->price, $this->quantity, false);
         }
 
         return view('livewire.add-to-cart');
