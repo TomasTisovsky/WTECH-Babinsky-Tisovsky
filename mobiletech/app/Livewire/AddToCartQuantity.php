@@ -53,19 +53,24 @@ class AddToCartQuantity extends Component
             if (array_key_exists($this->product_id, $current_cart)) {
 
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
-                if ($current_cart[$this->product_id]['quantity'] + $this->quantity <= $available_quantity) {
-                    //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
-                    $product_added = true;
+                // ak bol prekroceny tak sa prida max produktov kolko sa moze pridat
+                if ($current_cart[$this->product_id]['quantity'] + $this->quantity > $available_quantity) {
+                    $this->quantity = $available_quantity - $current_cart[$this->product_id]['quantity'];
                 }
+                //zmena kvantity pre zaznam v kosiku
+                $current_cart[$this->product_id] = ['quantity' => $this->quantity + $current_cart[$this->product_id]['quantity'], 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
+                $product_added = true;
 
             } else {
                 // kontrola ci sa neprekrocil pocet produktov "na sklade"
-                if ($this->quantity <= $available_quantity) {
-                    //zmena kvantity pre zaznam v kosiku
-                    $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
-                    $product_added = true;
+                // ak bol prekroceny tak sa prida max produktov kolko sa moze pridat
+                if ($this->quantity > $available_quantity) {
+                    $this->quantity = $available_quantity;
                 }
+                //zmena kvantity pre zaznam v kosiku
+                $current_cart[$this->product_id] = ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name];
+                $product_added = true;
+
             }
 
 
@@ -76,10 +81,13 @@ class AddToCartQuantity extends Component
 
 
             // kontrola ci sa neprekrocil pocet produktov "na sklade"
+            // ak bol prekroceny tak sa prida max produktov kolko sa moze pridat
             if ($this->quantity <= $available_quantity) {
-                session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name])]);
-                $product_added = true;
+                $this->quantity = $available_quantity;
             }
+
+            session(['cart' => array($this->product_id => ['quantity' => $this->quantity, 'image' => $this->image, 'price' => $this->price, 'name'=>$this->name])]);
+            $product_added = true;
         }
 
         // ak bol produkt pridany vygeneruje sa signal na prepocitanie celkoveho suctu poloziek v kosiku
