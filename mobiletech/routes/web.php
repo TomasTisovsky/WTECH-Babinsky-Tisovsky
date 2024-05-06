@@ -24,7 +24,7 @@ require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 
 // Hlavna stranka
-#Route::get('/', [MainController::class, 'show_top_products']);
+Route::get('/', [MainController::class, 'show_top_products']);
 
 
 // Detail produktu
