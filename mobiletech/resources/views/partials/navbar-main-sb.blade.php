@@ -16,7 +16,8 @@
 
             <div class="col-md-4 col-12 order-3 order-md-2 pb-4">
                 <div class="input-group p-4">
-                    <input type="text" class="form-control search-bar" placeholder="Vyhľadávanie" aria-label="Vyhľadávanie"
+                    <input type="text" class="form-control search-bar" placeholder="Vyhľadávanie"
+                           aria-label="Vyhľadávanie"
                            id="main_search_bar">
                     <button class="btn btn-outline-secondary" type="button" id="search-bar-icon-btn">
                         <i class="bi bi-search"></i>
@@ -25,11 +26,7 @@
             </div>
 
             <div class="col-md-4 col-6 order-2 order-md-3" id="col-shopping-cart">
-                <button class="btn cart-btn">
-
-            <span id="shopping-cart-span justify-content-center"><img src="{{asset('resources/icons/shopping_cart.svg')}}"
-                                                                      alt="nakupny kosik" class="mr-2">12.00€</span>
-                </button>
+                @livewire('total-sum')
             </div>
         </div>
     </div>

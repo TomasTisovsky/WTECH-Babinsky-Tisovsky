@@ -9,10 +9,9 @@
 
         <div class="row container-fluid p-0">
             <div class="col-6 d-flex card-button-col">
-                <button class="btn add-to-cart-btn">
-                      <span><img src="{{asset('resources/icons/shopping_cart_plus.svg')}}" alt="nakupny kosik"
-                                 class="shopping-card-plus"></span>
-                </button>
+
+                @livewire('add-to-cart',  ['product_id' => $product->product_id, 'image' => $image, 'quantity' => 1, 'price' => $price, 'name' => $name])
+
             </div>
             <div class="col-6 d-flex price-button-col ">
                 <p class="price-tag">{{$price}}€</p>
