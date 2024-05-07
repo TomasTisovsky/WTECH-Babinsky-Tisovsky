@@ -15,11 +15,11 @@
         @for($i = 0; $i < count($images); $i ++)
             @if($i ==0)
                 <div class="carousel-item active">
-                    <img src="{{asset('resources/phones/'.$images[$i]->name_hash)}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('resources/phones/'.$images[$i]->name)}}" class="d-block w-100" alt="...">
                 </div>
             @else
                 <div class="carousel-item">
-                    <img src="{{asset('resources/phones/'.$images[$i]->name_hash)}}" class="d-block w-100" alt="...">
+                    <img src="{{asset('resources/phones/'.$images[$i]->name)}}" class="d-block w-100" alt="...">
                 </div>
             @endif
 
