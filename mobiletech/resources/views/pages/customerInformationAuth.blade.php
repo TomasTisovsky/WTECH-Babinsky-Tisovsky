@@ -6,7 +6,7 @@
 
 @section('content')
 
-    <section class="row mt-1 back-ground-white" id="shopping-cart-body">
+    <section class="mt-1 back-ground-white pb-4 pr-4 pl-4" id="shopping-cart-body">
         <h3 class="personal-data-title ">Vaše kontaktné údaje</h3>
         <form>
             <section class="row container-fluid">
@@ -90,7 +90,7 @@
         </form>
         <section class="row container-fluid mt-4">
             <section class="col-12 d-flex justify-content-center">
-                <a href="/customer-information" class="no-glow-anchor"> <button class="btn next-buying-stage-button ">Pokračovať na výber dopravy a platby</button> </a>
+                <a href="/payment-transport" class="no-glow-anchor next-buying-stage-button">Pokračovať na výber dopravy a platby</a>
             </section>
 
         </section>

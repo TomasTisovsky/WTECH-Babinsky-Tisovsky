@@ -528,6 +528,8 @@ footer {
     min-height: 80%;
     border-radius: 20px;
     overflow: hidden;
+    text-align: center;
+    padding: 6px 12px 6px 12px;
 }
 
 .next-buying-stage-button:focus,
