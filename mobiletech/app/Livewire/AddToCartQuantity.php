@@ -79,10 +79,9 @@ class AddToCartQuantity extends Component
         } else {
             // vytvorenie pola poli, ktore reprezentujenakubny kosik
 
-
             // kontrola ci sa neprekrocil pocet produktov "na sklade"
             // ak bol prekroceny tak sa prida max produktov kolko sa moze pridat
-            if ($this->quantity <= $available_quantity) {
+            if ($this->quantity >= $available_quantity) {
                 $this->quantity = $available_quantity;
             }
 
