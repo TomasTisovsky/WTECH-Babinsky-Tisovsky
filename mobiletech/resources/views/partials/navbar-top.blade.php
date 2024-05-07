@@ -34,9 +34,27 @@
                                 src="{{ asset('resources/icons/envelope_email_icon.svg') }}" alt="ikonka email"/><a
                                 href="mailto:info@mobiletech.sk" class="nav-top-anchor">info@mobiletech.sk</a></span>
                     </li>
-                    <li class="nav-item d-md-inline"><span><img
+                    <li class="nav-item d-md-inline">
+                        <span>
+                            <img
                                 src="{{ asset('resources/icons/profile_account_user_avatar_icon.svg') }}"
-                                alt="ikonka prihlasenie"/><a href="/login" class="nav-top-anchor">Prihlásenie</a></span>
+                                alt="ikonka prihlasenie"/>
+
+                            {{-- zdroj: https://laracasts.com/discuss/channels/laravel/breeze-auth-logout-link--}}
+                            @auth
+                                <a class="nav-top-anchor" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{Auth::user()->name}}</a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                      style="display: none;">
+                                    @csrf
+                                </form>
+
+                            @else
+                                <a href="/login" class="nav-top-anchor">Prihlásenie</a>
+                            @endauth
+
+                        </span>
                     </li>
                 </ul>
             </div>

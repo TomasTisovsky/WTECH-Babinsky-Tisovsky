@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -9,10 +10,15 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
 use \App\Http\Controllers\CartController;
 
-
+// prihlasenie
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('main-page');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+//odhlasenie
+Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
+    ->middleware('auth')
+    ->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -24,15 +30,15 @@ require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 
 // Hlavna stranka
-Route::get('/', [MainController::class, 'show_top_products']);
-
+Route::get('/', [MainController::class, 'show_top_products'])->name('main-page');
 
 // Detail produktu
-
 Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'showProductDetail'])->name('product-detail.show');
 
 // Nakupny kosik
 Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->name('shopping-cart-view');
+
+
 
 // Debug - ODSTRANIT PRED ODOVZDANIM !!!
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
