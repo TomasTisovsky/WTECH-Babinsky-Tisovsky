@@ -30,8 +30,9 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'name' => 'required|string|max:50', 
+            'name' => 'required|string|max:50',
             'surname' => 'required|string|max:50',
+            'phone_number' => 'string|max:50',
             'email' => 'required|string|email|max:254|unique:users,email',
             'password' => 'required',
         ]);
@@ -44,6 +45,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'surname' => $request->surname,
             'email' => $request->email,
+            'phone_number' => $request->phone_number,
             'password' => Hash::make($request->password),
             'role' => 'user',
             #'cart_id' => $cart->id,  // Assign the new cart's ID to the user

@@ -434,6 +434,7 @@ footer {
 
 #shopping-cart-body {
     width: 97%;
+    justify-content: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 

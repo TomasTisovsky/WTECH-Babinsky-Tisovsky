@@ -44,3 +44,6 @@ Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->nam
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
 
+Route::get('/t', function (){
+    return view('pages/contactInformation');
+})->name('test'); // test

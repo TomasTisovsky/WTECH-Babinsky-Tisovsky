@@ -16,14 +16,14 @@
                                 class="pl-2">Email:*</span></span>
 
                     <input type="text" name="Email input" placeholder="Sem zadajte váš email"
-                           class="personal-data-input">
+                           class="personal-data-input" value="{{$user->email}}">
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img src="resources/icons/phone_icon_yellow.svg"
                                                               alt="ikonka telefon"><span
                                 class="pl-2">Telefón:*</span></span>
 
-                    <input type="text" name="Phone input" placeholder="+421" class="personal-data-input">
+                    <input type="text" name="Phone input" placeholder="+421" class="personal-data-input" >
                 </section>
                 <section class="col-sm-6">
                         <span class=" personal-data-span "><img
@@ -31,7 +31,7 @@
                             <span class="pl-2">Meno:*</span></span>
 
                     <input type="text" name="Name input" placeholder="Sem zadajte vaše meno"
-                           class="personal-data-input">
+                           class="personal-data-input" value="{{$user->name}}">
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img
@@ -39,7 +39,7 @@
                                 alt="ikonka priezvisko"><span class="pl-2">Priezvisko:*</span></span>
 
                     <input type="text" name="Phone input" placeholder="Sem zadajte vaše priezvisko"
-                           class="personal-data-input">
+                           class="personal-data-input" value="{{$user->surname}}>
                 </section>
 
 

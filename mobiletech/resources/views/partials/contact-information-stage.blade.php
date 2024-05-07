@@ -1,5 +1,5 @@
 <section class="col-12  buying-stage-title">
-    <h2 class="w-100">Tvoj nákupný košík</h2>
+    <h2 class="w-100">Informácie o kupujúcom a adrese doručenia</h2>
 </section>
 
 <section class="row container-fluid buying-stage-bar">

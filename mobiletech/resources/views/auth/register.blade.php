@@ -46,11 +46,11 @@
                     <input type="text" class="form-control" id="surname" name="surname" required>
                 </section>
                 <section class="mb-3">
-                    <label for="phone-number" class="form-label">
+                    <label for="phone_number class="form-label">
                         <img src="resources/icons/phone_icon_yellow.svg" alt="ikonka email">
                         Telefón (nepovinné):
                     </label>
-                    <input type="tel" class="form-control" id="phone-number" name="phone-number">
+                    <input type="tel" class="form-control" id="phone_number" name="phone_number">
                 </section>
             </section>
 
