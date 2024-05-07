@@ -152,7 +152,7 @@ class ProductController extends Controller
         foreach ($request->file('images') as $image) {
             $name = $image->getClientOriginalName();
             $image->move(public_path().'/resources/images/', $name);  
-            $product->images()->create(['name' => $name]);
+            $product->images()->create(['image_name' => $name]);
         }
     }
 

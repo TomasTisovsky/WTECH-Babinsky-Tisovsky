@@ -24,7 +24,7 @@
                             @foreach($images as $image)
                             <div class="image-card" data-id="{{ $image->id }}">
                                 <div class="card">
-                                    <img src="{{ asset('resources/phones/' . $image->name) }}" class="card-img-top" alt="Image Description">
+                                    <img src="{{ asset('resources/phones/' . $image->image_name) }}" class="card-img-top" alt="Image Description">
                                     <div class="card-body text-center">
                                         <!-- Hidden input to keep track of deletion status -->
                                         <input type="hidden" name="deleted_images[]" value="" data-image-input-id="{{ $image->id }}">

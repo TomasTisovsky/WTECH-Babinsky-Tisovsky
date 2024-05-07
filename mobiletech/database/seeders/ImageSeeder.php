@@ -28,7 +28,7 @@ class ImageSeeder extends Seeder
         foreach ($product_ids as $pid){
             Image::create([
                 'product_id' => $pid,
-                'name' => $images[array_rand($images)],
+                'image_name' => $images[array_rand($images)],
                 'created_at' => now(),
                 'updated_at' => now(),
 
@@ -36,7 +36,7 @@ class ImageSeeder extends Seeder
 
             Image::create([
                 'product_id' => $pid,
-                'name' => "phone_default.png",
+                'image_name' => "phone_default.png",
                 'created_at' => now(),
                 'updated_at' => now(),
 
@@ -44,7 +44,7 @@ class ImageSeeder extends Seeder
 
             Image::create([
                 'product_id' => $pid,
-                'name' => "phone_2.png",
+                'image_name' => "phone_2.png",
                 'created_at' => now(),
                 'updated_at' => now(),
 

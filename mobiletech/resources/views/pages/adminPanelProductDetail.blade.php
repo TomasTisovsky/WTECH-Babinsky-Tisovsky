@@ -19,7 +19,7 @@
                                     <div class="carousel-inner">
                                         @foreach ($product->images as $image)
                                             <div class="carousel-item @if ($loop->first) active @endif">
-                                                <img src="{{ asset('resources/phones/' . $image->name) }}" class="d-block w-100" alt="...">
+                                                <img src="{{ asset('resources/phones/' . $image->image_name) }}" class="d-block w-100" alt="...">
                                             </div>
                                         @endforeach
                                     </div>
