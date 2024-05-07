@@ -8,7 +8,7 @@
         <p>Celková suma:</p>
         <p>{{$totalSum}}€</p>
         <div class="justify-content-center pt-2">
-            <button class="btn" id="go-pay">Prejsť do pokladne</button>
+            <a href="/customer-information" class="no-glow-anchor"><button class="btn" id="go-pay">Prejsť do pokladne</button></a>
         </div>
     </section>
 </section>

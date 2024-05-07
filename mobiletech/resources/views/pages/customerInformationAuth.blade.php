@@ -23,7 +23,7 @@
                                                               alt="ikonka telefon"><span
                                 class="pl-2">Telefón:*</span></span>
 
-                    <input type="text" name="Phone input" placeholder="+421" class="personal-data-input" >
+                    <input type="text" name="Phone input" placeholder="+421" class="personal-data-input" value="{{$user->phone_number}}" >
                 </section>
                 <section class="col-sm-6">
                         <span class=" personal-data-span "><img
@@ -38,8 +38,8 @@
                                 src="resources/icons/profile_account_user_avatar_icon_yellow.svg"
                                 alt="ikonka priezvisko"><span class="pl-2">Priezvisko:*</span></span>
 
-                    <input type="text" name="Phone input" placeholder="Sem zadajte vaše priezvisko"
-                           class="personal-data-input" value="{{$user->surname}}>
+                        <input type="text" name="Phone input" placeholder="Sem zadajte vaše priezvisko"
+                           class="personal-data-input" value="{{$user->surname}}">
                 </section>
 
 
@@ -90,7 +90,7 @@
         </form>
         <section class="row container-fluid mt-4">
             <section class="col-12 d-flex justify-content-center">
-                <button class="btn next-buying-stage-button ">Pokračovať na výber dopravy a platby</button>
+                <a href="/customer-information" class="no-glow-anchor"> <button class="btn next-buying-stage-button ">Pokračovať na výber dopravy a platby</button> </a>
             </section>
 
         </section>

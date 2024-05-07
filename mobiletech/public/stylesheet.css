@@ -735,3 +735,17 @@ footer {
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
     border: none;
   }
+
+  .no-glow-anchor{
+      text-decoration: none;
+      color: inherit;
+  }
+
+.no-glow-anchor:hover{
+    color: inherit;
+}
+
+.no-glow-anchor:focus, .button-link:active{
+    color: inherit;
+    outline: none;
+}

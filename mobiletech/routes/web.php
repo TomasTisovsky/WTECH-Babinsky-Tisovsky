@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\ContactInfoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,8 @@ Route::get('/product-detail/{product_id}', [ProductDetailController::class, 'sho
 // Nakupny kosik
 Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->name('shopping-cart-view');
 
+// Informacie o kupujucom a adrese dorucenia
+Route::get('/customer-information', [ContactInfoController::class, 'enter_customer_information'])->name('customer-information');
 
 
 // Debug - ODSTRANIT PRED ODOVZDANIM !!!
@@ -45,5 +48,5 @@ Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
 
 Route::get('/t', function (){
-    return view('pages/contactInformation');
+    return view('pages/customerInformation');
 })->name('test'); // test
