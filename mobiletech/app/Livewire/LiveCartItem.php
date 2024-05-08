@@ -55,6 +55,18 @@ class LiveCartItem extends Component
             $cart_item_to_be_removed->delete();
         }
 
+        // odstranenie kosika ak nema ziadne produkty
+        if(count(session()->get('cart'))==0){
+            session()->forget('cart');
+            if ($logged_user != null){
+                $cart_to_be_deleted = Cart::find($logged_user->cart_id);
+                $cart_to_be_deleted->delete();
+                $logged_user->cart_id = null;
+                $logged_user->save();
+
+            }
+        }
+
         $this->dispatch('productRemoved', $product_price, $product_quantity);
 
     }
@@ -88,6 +100,21 @@ class LiveCartItem extends Component
             $quantity_diff = $new_quantity - $this->quantity;
             $this->quantity = $new_quantity;
             $quantity_changed = true;
+
+            $logged_user = auth()->user();
+
+            if ($logged_user!= null){
+                // zmena kvantity v databaze, konkretne v tabulke cart items
+                //ziskanie zaznamu o produkte v kosiku
+                $cart_item = CartItem::where('product_id',$this->product_id)
+                    ->where('cart_id',$logged_user->cart_id)->first();
+
+                // zmena kvantity produktu v kosiku
+                $cart_item->quantity = $new_quantity;
+
+                //ulozenie zmien
+                $cart_item->save();
+            }
 
             session(['cart' => $current_cart]);
 
@@ -127,6 +154,18 @@ class LiveCartItem extends Component
                 $cart_item_to_be_removed->delete();
             }
 
+
+            // odstranenie kosika ak nema ziadne produkty
+            if(count(session()->get('cart'))==0){
+                session()->forget('cart');
+                if ($logged_user != null){
+                    $cart_to_be_deleted = Cart::find($logged_user->cart_id);
+                    $cart_to_be_deleted->delete();
+                    $logged_user->cart_id = null;
+                    $logged_user->save();
+
+                }
+            }
 
             $this->dispatch('productRemoved', $product_price, $product_quantity);
         }

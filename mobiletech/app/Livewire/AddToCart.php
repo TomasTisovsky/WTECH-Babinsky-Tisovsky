@@ -86,7 +86,7 @@ class AddToCart extends Component
                         //ulozenie noveho zaznamu
                         $cart_item->save();
                     }
-                    
+
                 }
             }
 
