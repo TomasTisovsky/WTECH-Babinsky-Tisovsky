@@ -56,8 +56,8 @@ class AddToCart extends Component
                         // zmena kvantity v databaze, konkretne v tabulke cart items
 
                         //ziskanie zaznamu o produkte v kosiku
-                        $cart_item = CartItem::where('id','=',$this->product_id)
-                            ->where($logged_user->cart_id,'=','id')->first();
+                        $cart_item = CartItem::where('product_id',$this->product_id)
+                            ->where('cart_id',$logged_user->cart_id)->first();
 
                         // zmena kvantity produktu v kosiku
                         $cart_item->quantity = $this->quantity + $current_cart[$this->product_id]['quantity'];
@@ -81,14 +81,12 @@ class AddToCart extends Component
                         $cart_item = new CartItem();
                         $cart_item->cart_id = $logged_user->cart_id;
                         $cart_item->product_id = $this->product_id;
-                        $cart_item->quantity = $this->quantity + $current_cart[$this->product_id]['quantity'];
+                        $cart_item->quantity = $this->quantity;
 
                         //ulozenie noveho zaznamu
                         $cart_item->save();
                     }
-
-
-
+                    
                 }
             }
 

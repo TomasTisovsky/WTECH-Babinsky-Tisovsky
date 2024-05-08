@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Models\Cart;
+use App\Models\CartItem;
 use App\Models\Product;
 use Livewire\Component;
 
@@ -22,13 +24,36 @@ class LiveCartItem extends Component
 
     public function discard()
     {
+        // Odstranenie produktu (cela kvantita) z kosika
+
+        // nebude uz vidno v html
         $this->visibility = false;
+
+
         $cart = session()->get('cart');
+
         $product_price = $cart[$this->product_id]['price'];
         $product_quantity = $cart[$this->product_id]['quantity'];
 
+        // odstranenie zo session
         unset($cart[$this->product_id]);
         session(['cart' => $cart]);
+
+        //odstranenie z databazy ak je pouzivatel prihlaseny
+
+        $logged_user = auth()->user();
+
+        // zistenie ci je pouzivatel prihlaseny
+        if ($logged_user != null){
+
+            //ziskanie zaznamu z tabulk cart_items
+            $cart_item_to_be_removed = CartItem::where('cart_items.cart_id','=',$logged_user->cart_id)
+                ->where('cart_items.product_id','=',$this->product_id)
+                ->first();
+
+            //odstranenie zaznamu
+            $cart_item_to_be_removed->delete();
+        }
 
         $this->dispatch('productRemoved', $product_price, $product_quantity);
 
@@ -86,6 +111,22 @@ class LiveCartItem extends Component
 
             unset($cart[$this->product_id]);
             session(['cart' => $cart]);
+
+            //odstranenie z databazy ak je pouzivatel prihlaseny
+            $logged_user = auth()->user();
+
+            // zistenie ci je pouzivatel prihlaseny
+            if ($logged_user != null){
+
+                //ziskanie zaznamu z tabulk cart_items
+                $cart_item_to_be_removed = CartItem::where('cart_items.cart_id','=',$logged_user->cart_id)
+                    ->where('cart_items.product_id','=',$this->product_id)
+                    ->first();
+
+                //odstranenie zaznamu
+                $cart_item_to_be_removed->delete();
+            }
+
 
             $this->dispatch('productRemoved', $product_price, $product_quantity);
         }
