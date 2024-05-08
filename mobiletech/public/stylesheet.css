@@ -434,6 +434,7 @@ footer {
 
 #shopping-cart-body {
     width: 97%;
+    justify-content: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 
@@ -527,6 +528,8 @@ footer {
     min-height: 80%;
     border-radius: 20px;
     overflow: hidden;
+    text-align: center;
+    padding: 6px 12px 6px 12px;
 }
 
 .next-buying-stage-button:focus,
@@ -555,6 +558,11 @@ footer {
     text-align: center;
     border-radius: 20px;
     box-shadow: none;
+}
+
+.orange-btn:hover{
+    color: white;
+    background-color: #ffba00;
 }
 
 .cart-btn-fixed-width {
@@ -734,3 +742,17 @@ footer {
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
     border: none;
   }
+
+  .no-glow-anchor{
+      text-decoration: none;
+      color: inherit;
+  }
+
+.no-glow-anchor:hover{
+    color: inherit;
+}
+
+.no-glow-anchor:focus, .button-link:active{
+    color: inherit;
+    outline: none;
+}

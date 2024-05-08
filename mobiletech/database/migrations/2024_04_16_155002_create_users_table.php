@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('surname', 50);
             $table->string('email', 254);
             $table->string('password',255);
+            $table->string('phone_number', 50)->nullable();
             $table->enum('role', ['admin', 'user']);
             $table->unsignedBigInteger('cart_id')->nullable();
             $table->foreign('cart_id')->references('id')->on('carts')->onDelete('set null');

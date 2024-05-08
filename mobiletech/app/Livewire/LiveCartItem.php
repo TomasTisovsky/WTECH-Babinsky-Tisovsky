@@ -2,6 +2,8 @@
 
 namespace App\Livewire;
 
+use App\Models\Cart;
+use App\Models\CartItem;
 use App\Models\Product;
 use Livewire\Component;
 
@@ -22,13 +24,48 @@ class LiveCartItem extends Component
 
     public function discard()
     {
+        // Odstranenie produktu (cela kvantita) z kosika
+
+        // nebude uz vidno v html
         $this->visibility = false;
+
+
         $cart = session()->get('cart');
+
         $product_price = $cart[$this->product_id]['price'];
         $product_quantity = $cart[$this->product_id]['quantity'];
 
+        // odstranenie zo session
         unset($cart[$this->product_id]);
         session(['cart' => $cart]);
+
+        //odstranenie z databazy ak je pouzivatel prihlaseny
+
+        $logged_user = auth()->user();
+
+        // zistenie ci je pouzivatel prihlaseny
+        if ($logged_user != null){
+
+            //ziskanie zaznamu z tabulk cart_items
+            $cart_item_to_be_removed = CartItem::where('cart_items.cart_id','=',$logged_user->cart_id)
+                ->where('cart_items.product_id','=',$this->product_id)
+                ->first();
+
+            //odstranenie zaznamu
+            $cart_item_to_be_removed->delete();
+        }
+
+        // odstranenie kosika ak nema ziadne produkty
+        if(count(session()->get('cart'))==0){
+            session()->forget('cart');
+            if ($logged_user != null){
+                $cart_to_be_deleted = Cart::find($logged_user->cart_id);
+                $cart_to_be_deleted->delete();
+                $logged_user->cart_id = null;
+                $logged_user->save();
+
+            }
+        }
 
         $this->dispatch('productRemoved', $product_price, $product_quantity);
 
@@ -64,6 +101,21 @@ class LiveCartItem extends Component
             $this->quantity = $new_quantity;
             $quantity_changed = true;
 
+            $logged_user = auth()->user();
+
+            if ($logged_user!= null){
+                // zmena kvantity v databaze, konkretne v tabulke cart items
+                //ziskanie zaznamu o produkte v kosiku
+                $cart_item = CartItem::where('product_id',$this->product_id)
+                    ->where('cart_id',$logged_user->cart_id)->first();
+
+                // zmena kvantity produktu v kosiku
+                $cart_item->quantity = $new_quantity;
+
+                //ulozenie zmien
+                $cart_item->save();
+            }
+
             session(['cart' => $current_cart]);
 
         }
@@ -86,6 +138,34 @@ class LiveCartItem extends Component
 
             unset($cart[$this->product_id]);
             session(['cart' => $cart]);
+
+            //odstranenie z databazy ak je pouzivatel prihlaseny
+            $logged_user = auth()->user();
+
+            // zistenie ci je pouzivatel prihlaseny
+            if ($logged_user != null){
+
+                //ziskanie zaznamu z tabulk cart_items
+                $cart_item_to_be_removed = CartItem::where('cart_items.cart_id','=',$logged_user->cart_id)
+                    ->where('cart_items.product_id','=',$this->product_id)
+                    ->first();
+
+                //odstranenie zaznamu
+                $cart_item_to_be_removed->delete();
+            }
+
+
+            // odstranenie kosika ak nema ziadne produkty
+            if(count(session()->get('cart'))==0){
+                session()->forget('cart');
+                if ($logged_user != null){
+                    $cart_to_be_deleted = Cart::find($logged_user->cart_id);
+                    $cart_to_be_deleted->delete();
+                    $logged_user->cart_id = null;
+                    $logged_user->save();
+
+                }
+            }
 
             $this->dispatch('productRemoved', $product_price, $product_quantity);
         }

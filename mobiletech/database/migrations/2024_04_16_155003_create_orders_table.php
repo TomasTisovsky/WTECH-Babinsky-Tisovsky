@@ -16,10 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->enum('shipping', ['kurier', 'osobny_odber']);
             $table->enum('payment', ['karta', 'dobierka', 'bankovy_prevod']);
-            $table->string('phone_number', 50);
             $table->unsignedBigInteger('address_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade'); 
+            $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
             $table->timestamps();
         });
     }
