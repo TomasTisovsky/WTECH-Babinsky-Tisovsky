@@ -11,12 +11,11 @@ use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
-use \App\Http\Controllers\CartController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\LoginController;
 
 // prihlasenie
-Route::get('/dashboard', function () {
-    return redirect()->route('main-page');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [LoginController::class, 'login'])->middleware(['auth', 'verified'])->name('dashboard');
 
 //odhlasenie
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
@@ -55,5 +54,6 @@ Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
 
 Route::get('/t', function (){
+    dd( auth()->user());
     return view('pages/paymentTransport');
 })->name('test'); // test
