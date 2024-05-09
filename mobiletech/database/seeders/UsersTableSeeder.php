@@ -28,6 +28,7 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name' => 'pepe',
             'surname' => 'ga',
+            'phone_number' => '+421444444444',
             'email' => 'pepe@example.com',
             'password' => Hash::make('123'), // Use a hashed password
             'role' => 'user',

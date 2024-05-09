@@ -42,6 +42,7 @@ Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->nam
 
 // Informacie o kupujucom a adrese dorucenia
 Route::get('/customer-information', [ContactInfoController::class, 'enter_customer_information'])->name('customer-information');
+Route::post('/customer-information', [ContactInfoController::class, 'proceed'])->name('customer-information.proceed');
 
 // Informacie o sposobe dopravy a pravdy
 Route::get('/payment-transport', [PaymentTransportController::class, 'next'])->name('payment-transport');
