@@ -440,6 +440,18 @@ footer {
 
 }
 
+#shopping-cart-upper-title{
+    padding-left: 36px;
+}
+
+#shopping-cart-form {
+    padding-left: 20px;
+     justify-content: center;
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+
+
 .shopping-cart-product-card {
     border-radius: 20px;
 }

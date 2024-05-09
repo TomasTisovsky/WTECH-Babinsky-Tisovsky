@@ -42,7 +42,7 @@ class ContactInfoController extends Controller
         $order_details['surname'] = $request->input('surname_in');
         $order_details['email'] = $request->input('email_in');
         $order_details['phone_number'] = $request->input('phone_in');
-        
+
         //dodacie udaje
         $order_details['street'] = $request->input('street_in');
         $order_details['city'] = $request->input('city_in');

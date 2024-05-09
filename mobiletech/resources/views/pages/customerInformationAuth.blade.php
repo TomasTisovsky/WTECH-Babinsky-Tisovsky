@@ -7,8 +7,8 @@
 @section('content')
 
     <section class="mt-1 back-ground-white pb-4 pr-4 pl-4" id="shopping-cart-body">
-        <h3 class="personal-data-title ">Vaše kontaktné údaje</h3>
-        <form method="POST" action="{{ route('customer-information.proceed') }}">
+        <h3 class="personal-data-title" id="shopping-cart-upper-title">Vaše kontaktné údaje</h3>
+        <form method="POST" action="{{ route('customer-information.proceed') }}" id="shopping-cart-form">
             @csrf
             <section class="row container-fluid">
                 <section class="col-sm-6">
@@ -92,8 +92,7 @@
 
             <section class="row container-fluid mt-4">
                 <section class="col-12 d-flex justify-content-center">
-                    <button class="btn next-buying-stage-button" type="submit">Pokračovať na výber dopravy a platby
-                    </button>
+                    <button class="btn next-buying-stage-button" type="submit">Pokračovať na výber dopravy a platby</button>
                 </section>
             </section>
 

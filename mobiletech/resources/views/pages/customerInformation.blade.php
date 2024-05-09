@@ -7,8 +7,8 @@
 @section('content')
 
     <section class="mt-1 back-ground-white pb-4 pr-4 pl-4" id="shopping-cart-body">
-        <h3 class="personal-data-title ">Vaše kontaktné údaje</h3>
-        <form method="POST" action="{{ route('customer-information.proceed') }}">
+        <h3 class="personal-data-title" id="shopping-cart-upper-title">Vaše kontaktné údaje</h3>
+        <form method="POST" action="{{ route('customer-information.proceed') }}" id="shopping-cart-form">
             @csrf
             <section class="row container-fluid">
                 <section class="col-sm-6">
@@ -17,7 +17,7 @@
                                 class="pl-2">Email:*</span></span>
 
                     <input type="text" name="email_in" placeholder="Sem zadajte váš email"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img src="resources/icons/phone_icon_yellow.svg"
@@ -32,7 +32,7 @@
                             <span class="pl-2">Meno:*</span></span>
 
                     <input type="text" name="name_in" placeholder="Sem zadajte vaše meno"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img
@@ -40,7 +40,7 @@
                                 alt="ikonka priezvisko"><span class="pl-2">Priezvisko:*</span></span>
 
                     <input type="text" name="surname_in" placeholder="Sem zadajte vaše priezvisko"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
 
 
@@ -53,7 +53,7 @@
                                 class="pl-2">Ulica a čislo domu:*</span></span>
 
                     <input type="text" name="street_in" placeholder="Sem zadajte vašu ulicu"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img src="resources/icons/location.svg"
@@ -61,7 +61,7 @@
                                 class="pl-2">Mesto:*</span></span>
 
                     <input type="text" name="city_in" placeholder="Sem zadajte vaše mesto"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img src=" resources/icons/envelope-check-fill.svg"
@@ -69,14 +69,14 @@
                             <span class="pl-2">PSČ:*</span></span>
 
                     <input type="text" name="postal_code_in" placeholder="Sem zadajte vaše PSČ"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
                 <section class="col-sm-6">
                         <span class="personal-data-span"><img src="resources/icons/map.svg" alt="ikonka krajina"><span
                                 class="pl-2">Krajina:*</span></span>
 
                     <input type="text" name="country_in" placeholder="Sem zadajte vašu krajinu"
-                           class="personal-data-input">
+                           class="personal-data-input" required>
                 </section>
             </section>
 
@@ -91,7 +91,7 @@
 
         <section class="row container-fluid mt-4">
             <section class="col-12 d-flex justify-content-center">
-                <button class="btn next-buying-stage-button">Pokračovať na výber dopravy a platby</button>
+                <button class="btn next-buying-stage-button" type="submit">Pokračovať na výber dopravy a platby</button>
             </section>
         </section>
         </form>
