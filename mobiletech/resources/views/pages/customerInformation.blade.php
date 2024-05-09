@@ -90,7 +90,7 @@
         </form>
         <section class="row container-fluid mt-4">
             <section class="col-12 d-flex justify-content-center">
-                <a href="/payment-transport" class="no-glow-anchor next-buying-stage-button">Pokračovať na výber dopravy a platby</a>
+                <a href="/payment-transport" class="no-glow-anchor next-buying-stage-anchor"><button class="btn next-buying-stage-button">Pokračovať na výber dopravy a platby</button></a>
             </section>
 
         </section>

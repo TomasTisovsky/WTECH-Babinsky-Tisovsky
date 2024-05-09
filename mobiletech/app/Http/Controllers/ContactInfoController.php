@@ -17,8 +17,10 @@ class ContactInfoController extends Controller
                 if (Auth::check()) {
                     // kontrola ci ide o prihlaseneho pouzivatela
                     $user = Auth::user();
+                    // ak je pouzivatel prihlseny tak sa predvyplnia jeho udaje (adresa nie)
                     return view('pages/customerInformationAuth', compact('user'));
                 } else {
+                    // ak nie je pouzivatel prihlaseny tak sa nic nevyplni
                     return view('pages/customerInformation');
                 }
             }
