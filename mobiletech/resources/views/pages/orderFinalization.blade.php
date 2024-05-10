@@ -54,7 +54,7 @@
 
         <section class="row container-fluid next-buying-stage-button-row">
             <section class="col-12 d-flex justify-content-center">
-                <form  method="POST" action="/order-finalization">
+                <form  method="POST" action="/order-finalization" id="finalization-form">
                     @csrf
                     <button type="submit" class="btn next-buying-stage-button">Dokončiť objednávku</button>
                 </form>
