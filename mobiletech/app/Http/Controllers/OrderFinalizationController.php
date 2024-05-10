@@ -99,7 +99,7 @@ class OrderFinalizationController extends Controller
         session()->forget('order_details');
 
 
-        return redirect(route('main-page'));
+        return redirect(route('order-successful.show'));
     }
 
 }

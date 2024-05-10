@@ -440,16 +440,16 @@ footer {
 
 }
 
-#shopping-cart-upper-title{
+#shopping-cart-upper-title {
     padding-left: 36px;
 }
 
 #shopping-cart-form {
     padding-left: 20px;
-     justify-content: center;
-     border-bottom-left-radius: 20px;
-     border-bottom-right-radius: 20px;
- }
+    justify-content: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 
 .shopping-cart-product-card {
@@ -542,7 +542,8 @@ footer {
     overflow: hidden;
     text-align: center;
 }
-.next-buying-stage-anchor{
+
+.next-buying-stage-anchor {
     background-color: #ffba00;
     min-width: 90%;
     min-height: 80%;
@@ -564,14 +565,14 @@ footer {
     margin-top: 4rem;
 }
 
-.delivery-payment-span{
+.delivery-payment-span {
     display: block;
     cursor: pointer;
     margin-top: 2rem;
     color: #ffba00;
 }
 
-.delivery-payment-span-clicked{
+.delivery-payment-span-clicked {
     display: block;
     cursor: pointer;
     margin-top: 2rem;
@@ -587,7 +588,6 @@ footer {
 }
 
 
-
 .orange-btn {
     color: white;
     font-size: x-large;
@@ -597,7 +597,7 @@ footer {
     box-shadow: none;
 }
 
-.orange-btn:hover{
+.orange-btn:hover {
     color: white;
     background-color: #ffba00;
 }
@@ -753,43 +753,70 @@ footer {
 .btn-transparent {
     background: transparent;
     border: none;
-  }
+}
 
-  .full-height {
+.full-height {
     min-height: 100vh; /* 100% of the viewport height */
-  }
+}
 
-  .carousel-item {
+.carousel-item {
     height: 500px; /* Set the height of the carousel items */
     justify-content: center; /* Center the images horizontally if they are smaller than container */
     align-items: center; /* Center the images vertically */
     overflow: hidden; /* Prevents any overflow from the fixed height */
-  }
+}
 
-  .carousel-item img {
-    width: auto;  /* Allows the width to adjust to the image's natural size */
+.carousel-item img {
+    width: auto; /* Allows the width to adjust to the image's natural size */
     max-width: 100%; /* Ensures the image does not exceed the container's width */
     height: auto; /* Allows the height to adjust naturally */
     max-height: 100%; /* Ensures the image does not exceed the container's height */
     object-fit: contain; /* Ensures the whole image fits into the container without cropping */
-  }
+}
 
-  /*carousel to be semi transparent */
-  .carousel-control-next, .carousel-control-prev {
+/*carousel to be semi transparent */
+.carousel-control-next, .carousel-control-prev {
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
     border: none;
-  }
+}
 
-  .no-glow-anchor{
-      text-decoration: none;
-      color: inherit;
-  }
-
-.no-glow-anchor:hover{
+.no-glow-anchor {
+    text-decoration: none;
     color: inherit;
 }
 
-.no-glow-anchor:focus, .button-link:active{
+.no-glow-anchor:hover {
+    color: inherit;
+}
+
+.no-glow-anchor:focus, .button-link:active {
     color: inherit;
     outline: none;
+}
+
+/*Order successful styles*/
+
+#os_main {
+    height: 76vh;
+    align-items: center;
+}
+
+#successful-img {
+    height: 45vh;
+}
+
+#center-successful-img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center-successful-img-text p{
+    color: #ffba00;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#finalization-form{
+    width: 100%;
 }
