@@ -564,12 +564,26 @@ footer {
     margin-top: 4rem;
 }
 
+.delivery-payment-span{
+    display: block;
+    margin-top: 2rem;
+    color: #ffba00;
+}
+
+.delivery-payment-span-clicked{
+    display: block;
+    margin-top: 2rem;
+    color: #0b5f83;
+}
+
 .delivery-payment-name {
     font-size: large;
-    color: #ffba00;
+    color: inherit;
     padding-left: 0.5rem;
     font-weight: bold;
 }
+
+
 
 .orange-btn {
     color: white;

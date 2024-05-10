@@ -22,6 +22,8 @@
         @yield('current_stage')
         @yield('content')
     </div>
+    {{--<script src="js/paymentTransportMethods.js"></script>--}}
+    @livewireScripts
 </main>
 
 @yield('offcanvas')

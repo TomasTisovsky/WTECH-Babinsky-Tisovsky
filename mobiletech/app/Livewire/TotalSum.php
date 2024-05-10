@@ -3,14 +3,13 @@
 namespace App\Livewire;
 
 use App\Models\Product;
-use GuzzleHttp\Psr7\Request;
 use Livewire\Component;
 
 class TotalSum extends Component
 {
     public $totalSum = 0;
     // funkcia totalSumChanged sa bude vykonavat v pripade pridania alebo odobratia produktu z kosika
-    protected $listeners = ['totalSumChanged', 'productRemoved'];
+    protected $listeners = ['totalSumChanged', 'productRemoved', 'addAdditionalCosts'];
 
     public function render()
     {
@@ -55,9 +54,10 @@ class TotalSum extends Component
 
     public function addAdditionalCosts($additionalCosts)
     {
+
         // funkcia pouzivana pri pridani dalsich vydavkov ako kurier alebo dobierka
         $this->totalSum += $additionalCosts;
-        $this->dispatch('updateOrderSummary', $this->totalSum);
+
     }
 
 }
