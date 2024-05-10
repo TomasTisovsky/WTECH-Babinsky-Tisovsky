@@ -566,12 +566,14 @@ footer {
 
 .delivery-payment-span{
     display: block;
+    cursor: pointer;
     margin-top: 2rem;
     color: #ffba00;
 }
 
 .delivery-payment-span-clicked{
     display: block;
+    cursor: pointer;
     margin-top: 2rem;
     color: #0b5f83;
 }
@@ -579,6 +581,7 @@ footer {
 .delivery-payment-name {
     font-size: large;
     color: inherit;
+    cursor: pointer;
     padding-left: 0.5rem;
     font-weight: bold;
 }

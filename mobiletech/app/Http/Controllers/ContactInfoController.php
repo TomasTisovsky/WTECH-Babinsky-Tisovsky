@@ -14,7 +14,12 @@ class ContactInfoController extends Controller
         // kontrola ci jestvuje nakupny kosik
         if (session()->has('cart')) {
             if (count(session('cart'))> 0) {
-                if (Auth::check()) {
+
+                if (session()->has('order_details')){
+                    $order_details = session()->get('order_details');
+                    return view('pages/customerInformationFilled', compact('order_details'));
+                }
+                else if (Auth::check()) {
                     // kontrola ci ide o prihlaseneho pouzivatela
                     $user = Auth::user();
                     // ak je pouzivatel prihlseny tak sa predvyplnia jeho udaje (adresa nie)
@@ -47,7 +52,7 @@ class ContactInfoController extends Controller
         $order_details['street'] = $request->input('street_in');
         $order_details['city'] = $request->input('city_in');
         $order_details['postal_code'] = $request->input('postal_code_in');
-        $order_details['cuntry'] = $request->input('country_in');
+        $order_details['country'] = $request->input('country_in');
 
 
 

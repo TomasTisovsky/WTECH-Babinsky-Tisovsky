@@ -50,6 +50,7 @@ Route::post('/payment-transport', [PaymentTransportController::class, 'setMethod
 
 // Dokoncenie objednavky
 Route::get('/order-finalization', [OrderFinalizationController::class, 'next'])->name('order-finalization');
+Route::post('/order-finalization', [OrderFinalizationController::class, 'finalize'])->name('order-finalization-final-database');
 
 // Debug - ODSTRANIT PRED ODOVZDANIM !!!
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
