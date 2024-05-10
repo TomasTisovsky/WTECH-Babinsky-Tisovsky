@@ -42,18 +42,21 @@ Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->nam
 
 // Informacie o kupujucom a adrese dorucenia
 Route::get('/customer-information', [ContactInfoController::class, 'enter_customer_information'])->name('customer-information');
+Route::post('/customer-information', [ContactInfoController::class, 'proceed'])->name('customer-information.proceed');
 
 // Informacie o sposobe dopravy a pravdy
 Route::get('/payment-transport', [PaymentTransportController::class, 'next'])->name('payment-transport');
+Route::post('/payment-transport', [PaymentTransportController::class, 'setMethods'])->name('payment-transport-set');
 
 // Dokoncenie objednavky
 Route::get('/order-finalization', [OrderFinalizationController::class, 'next'])->name('order-finalization');
+Route::post('/order-finalization', [OrderFinalizationController::class, 'finalize'])->name('order-finalization-final-database');
 
 // Debug - ODSTRANIT PRED ODOVZDANIM !!!
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
 
 Route::get('/t', function (){
-    dd( auth()->user());
+    dd(csrf_token());
     return view('pages/paymentTransport');
 })->name('test'); // test

@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>MobileTech</title>
     <link rel="icon" href="{{ asset('resources/icons/logo.png') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body class="back-ground-color">
 @include('partials.navbar-top')
@@ -19,6 +22,8 @@
         @yield('current_stage')
         @yield('content')
     </div>
+    {{--<script src="js/paymentTransportMethods.js"></script>--}}
+    @livewireScripts
 </main>
 
 @yield('offcanvas')

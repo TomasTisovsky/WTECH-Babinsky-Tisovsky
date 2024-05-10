@@ -25,7 +25,7 @@ class CartController extends Controller
 
     public function debug()
     {
-        dd(session()->get('cart'));
+        dd(session()->get('cart'),session()->get('order_details'));
     }
 
     public function new_session(Request $request)

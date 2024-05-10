@@ -13,11 +13,17 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->unsignedBigInteger('cart_id');
+            $table->string('name', 50);
+            $table->string('surname', 50);
+            $table->string('email', 254);
+            $table->string('phone_number', 50)->nullable();
             $table->enum('shipping', ['kurier', 'osobny_odber']);
             $table->enum('payment', ['karta', 'dobierka', 'bankovy_prevod']);
             $table->unsignedBigInteger('address_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('cart_id')->references('id')->on('carts')->onDelete('cascade');
             $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
             $table->timestamps();
         });

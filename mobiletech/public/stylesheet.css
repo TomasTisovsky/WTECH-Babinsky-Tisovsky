@@ -440,6 +440,18 @@ footer {
 
 }
 
+#shopping-cart-upper-title{
+    padding-left: 36px;
+}
+
+#shopping-cart-form {
+    padding-left: 20px;
+     justify-content: center;
+     border-bottom-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+ }
+
+
 .shopping-cart-product-card {
     border-radius: 20px;
 }
@@ -524,13 +536,21 @@ footer {
 
 .next-buying-stage-button {
     background-color: #ffba00;
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.next-buying-stage-anchor{
+    background-color: #ffba00;
     min-width: 90%;
     min-height: 80%;
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-    padding: 6px 12px 6px 12px;
 }
+
 
 .next-buying-stage-button:focus,
 .next-buying-stage-button:active,
@@ -544,12 +564,29 @@ footer {
     margin-top: 4rem;
 }
 
+.delivery-payment-span{
+    display: block;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #ffba00;
+}
+
+.delivery-payment-span-clicked{
+    display: block;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #0b5f83;
+}
+
 .delivery-payment-name {
     font-size: large;
-    color: #ffba00;
+    color: inherit;
+    cursor: pointer;
     padding-left: 0.5rem;
     font-weight: bold;
 }
+
+
 
 .orange-btn {
     color: white;
