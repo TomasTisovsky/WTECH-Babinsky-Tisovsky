@@ -23,19 +23,22 @@ class ImageSeeder extends Seeder
         // dostupne obrazky
         $images = ['phone_default.png', 'phone_2.png'];
 
+        $opened_phone_data_file = fopen('public/resources/mobily_data.csv','r');
+        fgetcsv($opened_phone_data_file);
 
-        // jeden obrazok pre kazdy produkt
-        foreach ($product_ids as $pid){
+        for ($i = 0; $i < sizeof($product_ids); $i++){
+            $phone_data = fgetcsv($opened_phone_data_file);
+
             Image::create([
-                'product_id' => $pid,
-                'image_name' => $images[array_rand($images)],
+                'product_id' => $product_ids[$i],
+                'image_name' => $phone_data[9],
                 'created_at' => now(),
                 'updated_at' => now(),
 
             ]);
 
             Image::create([
-                'product_id' => $pid,
+                'product_id' => $product_ids[$i],
                 'image_name' => "phone_default.png",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -43,13 +46,15 @@ class ImageSeeder extends Seeder
             ]);
 
             Image::create([
-                'product_id' => $pid,
+                'product_id' => $product_ids[$i],
                 'image_name' => "phone_2.png",
                 'created_at' => now(),
                 'updated_at' => now(),
 
             ]);
         }
+
+
 
     }
 }

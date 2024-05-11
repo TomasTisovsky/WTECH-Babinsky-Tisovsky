@@ -18,7 +18,69 @@ class ProductParametersSeeder extends Seeder
         $product_ids = Product::pluck('id');
 
 
+
+
         // otvorenie CSV suboru
+        $opened_phone_data_file = fopen('public/resources/mobily_data.csv','r');
+
+        // prvy riadok v csv su nazvy stlpcov
+        fgetcsv($opened_phone_data_file);
+
+        foreach ($product_ids as $pid){
+
+            $phone_data = fgetcsv($opened_phone_data_file);
+
+            //model
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[0],
+                'sub_category_parameter_id' => 3,
+            ]);
+
+            //operacny system
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[2],
+                'sub_category_parameter_id' => 7,
+            ]);
+
+            //velkost obrazovky
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[3],
+                'sub_category_parameter_id' => 12,
+            ]);
+
+            //farba
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[7],
+                'sub_category_parameter_id' => 4,
+            ]);
+
+
+            //velkost operacnej pamate
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[5],
+                'sub_category_parameter_id' => 10,
+            ]);
+
+            //velkost internej pamate
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[6],
+                'sub_category_parameter_id' => 11,
+            ]);
+
+            //kapacita baterie
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[4],
+                'sub_category_parameter_id' => 9,
+            ]);
+
+        /*// otvorenie CSV suboru
         $opened_phone_data_file = fopen('storage/app/public/phones_data.csv','r');
 
         // prvy riadok v csv su nazvy stlpcov
@@ -68,7 +130,7 @@ class ProductParametersSeeder extends Seeder
                 'product_id' => $pid,
                 'value' => $phone_data[11],
                 'sub_category_parameter_id' => 9,
-            ]);
+            ]);*/
 
         }
     }
