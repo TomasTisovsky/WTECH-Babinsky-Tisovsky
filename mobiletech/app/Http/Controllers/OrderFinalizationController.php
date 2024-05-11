@@ -16,6 +16,14 @@ class OrderFinalizationController extends Controller
     {
 
         $order_details = session()->get('order_details');
+
+        // kontrola ci pouzivatel zadal sposob dopravy a platby
+        if (!array_key_exists('transport',$order_details) or !array_key_exists('payment',$order_details)){
+            // ak nie tak sa vrati naspat
+            return redirect()->route('payment-transport');
+        }
+        
+
         return view('pages/orderFinalization', compact('order_details'));
     }
 
