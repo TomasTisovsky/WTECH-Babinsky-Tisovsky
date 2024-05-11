@@ -24,6 +24,20 @@ class PaymentTransportLive extends Component
 
     public function render()
     {
+        $order_details = session()->get('order_details');
+
+        if ($order_details != null){
+            if ( array_key_exists('transport',$order_details)){
+                $index =array_search($order_details['transport'], array_column($this->transportMethodsData, 0));
+                $this->transportMethodsClickStatus[$index] = true;
+            }
+            if (array_key_exists('payment',$order_details)){
+                $index =array_search($order_details['payment'], array_column($this->paymentMethodsData, 0));
+                $this->paymentMethodsClickStatus[$index] = true;
+            }
+
+        }
+
         return view('livewire.payment-transport-live');
     }
 
