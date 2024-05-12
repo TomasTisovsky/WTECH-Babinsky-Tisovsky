@@ -185,5 +185,73 @@ class ProductParametersSeeder extends Seeder
             ]);
 
         }
+
+        // parametre pre prislusenstvo
+        // otvorenie CSV suboru
+        $opened_glass_data_file = fopen('public/resources/prislusenstvo_data.csv','r');
+
+        // prvy riadok v csv su nazvy stlpcov
+        fgetcsv($opened_glass_data_file);
+
+        for($pid =39; $pid<=42;$pid++) {
+
+            $phone_data = fgetcsv($opened_glass_data_file);
+
+            //znacka
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[0],
+                'sub_category_parameter_id' => 1,
+            ]);
+
+            //model
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[1],
+                'sub_category_parameter_id' => 3,
+            ]);
+
+            //farba
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[3],
+                'sub_category_parameter_id' => 4,
+            ]);
+
+        }
+
+        // parametre pre obaly
+        // otvorenie CSV suboru
+        $opened_glass_data_file = fopen('public/resources/obaly_data.csv','r');
+
+        // prvy riadok v csv su nazvy stlpcov
+        fgetcsv($opened_glass_data_file);
+
+        for($pid =43; $pid<=46;$pid++) {
+
+            $phone_data = fgetcsv($opened_glass_data_file);
+
+            //znacka
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[0],
+                'sub_category_parameter_id' => 1,
+            ]);
+
+            //model
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[1],
+                'sub_category_parameter_id' => 3,
+            ]);
+
+            //farba
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[3],
+                'sub_category_parameter_id' => 4,
+            ]);
+
+        }
     }
 }

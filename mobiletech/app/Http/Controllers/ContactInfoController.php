@@ -45,7 +45,7 @@ class ContactInfoController extends Controller
             'name_in' => 'required|string|max:50',
             'surname_in' => 'required|string|max:50',
             'email_in' => 'required|string|email|max:254',
-            'phone_in' => 'string|regex:/^[0-9]+$/|max:50',
+            'phone_in' => 'string|regex:/^\+[0-9]+$/|max:50',
             'street_in' => 'required|string|max:255',
             'city_in' => 'required|string|max:255',
             'postal_code_in' => 'required|regex:/^[0-9]+$/|string|max:10',

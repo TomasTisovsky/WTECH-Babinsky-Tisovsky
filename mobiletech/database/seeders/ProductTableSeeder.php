@@ -70,5 +70,43 @@ class ProductTableSeeder extends Seeder
 
         }
 
+        //vytvorenie prislusenstva
+        $opened_acc_data_file = fopen('public/resources/prislusenstvo_data.csv','r');
+        fgetcsv($opened_acc_data_file);
+        while (($glass_data = fgetcsv($opened_acc_data_file)) !== false) {
+
+            Product::create([
+                'name' => $glass_data[0] . $glass_data[1],
+                'description' =>$glass_data[5],
+                'price' => $glass_data[2],
+                'stock_quantity' => rand(1,200),
+                'category_id' => 4,
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+        }
+
+        //vytvorenie obalov
+        $opened_acc_data_file = fopen('public/resources/obaly_data.csv','r');
+        fgetcsv($opened_acc_data_file);
+        while (($glass_data = fgetcsv($opened_acc_data_file)) !== false) {
+
+            Product::create([
+                'name' => $glass_data[0] . $glass_data[1],
+                'description' =>$glass_data[5],
+                'price' => $glass_data[2],
+                'stock_quantity' => rand(1,200),
+                'category_id' => 5,
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+        }
+
+
+
     }
 }

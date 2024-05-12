@@ -22,7 +22,7 @@
                                     <h1 class="pb-2">Popis produktu</h1>
                                     <p>{{$product_parameters->first()->description}}</p>
                                     <h1 class="py-2">Parametre</h1>
-                                    @for($i = 0; $i < 4; $i++)
+                                    @for($i = 0; $i < 2; $i++)
                                         <div class="row">
                                             <div class="col-6">{{$product_parameters[$i]->scp_name}}</div>
                                             <div class="col-6">{{$product_parameters[$i]->value}}</div>
