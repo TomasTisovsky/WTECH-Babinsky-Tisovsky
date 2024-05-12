@@ -68,7 +68,7 @@ class ProductController extends Controller
        // Prepare data to be sent to the view
         return view('pages/adminPanelProductDetail', [
             'product' => $product, // Send the product details
-            'categories' => $categories, // Send all categories if needed for a dropdown or list
+            'categories' => $categories, // Send all categories
             'category' => $category, // Send the specific category of the product
             'subCategoriesWithParameters' => $subCategoriesWithParameters, // Send structured subcategories and parameters
             'images' => $product->images
@@ -107,10 +107,10 @@ class ProductController extends Controller
         
     }
 
-    // Prepare data to be sent to the view
+    
     return view('pages/adminPanelEditProduct', [
         'product' => $product, // Send the product details
-        'categories' => $categories, // Send all categories if needed for a dropdown or list
+        'categories' => $categories, // Send all categories
         'category' => $category, // Send the specific category of the product
         'subCategoriesWithParameters' => $subCategoriesWithParameters, // Send structured subcategories and parameters
         'images' => $product->images
@@ -130,7 +130,7 @@ class ProductController extends Controller
     $product->category_id = $product->category_id;
     $product->save();
 
-    // Update parameters, you might want to handle it differently if you need to add/update/delete
+    // Update parameters
     if ($request->has('parameters')) {
         foreach ($request->input('parameters') as $parameterId => $value) {
             $parameter = $product->parameters()->where('sub_category_parameter_id', $parameterId)->first();
@@ -150,7 +150,7 @@ class ProductController extends Controller
         }
     }
 
-    // Handling images, if you need to add new images
+    // Handling images
     if ($request->hasfile('images')) {
         foreach ($request->file('images') as $image) {
             $name = $image->getClientOriginalName();
@@ -243,7 +243,7 @@ class ProductController extends Controller
         if ($request->has('brands')) {
             $brands = $request->input('brands');  // Brands is an array
             $query->whereHas('parameters', function ($q) use ($brands) {
-                $q->whereIn('value', $brands);  // Adjust to use whereIn
+                $q->whereIn('value', $brands);  
             });
         }
 
@@ -251,7 +251,7 @@ class ProductController extends Controller
         if ($request->has('colors')) {
             $colors = $request->input('colors');  // Colors is an array
             $query->whereHas('parameters', function ($q) use ($colors) {
-                $q->whereIn('value', $colors);  // Adjust to use whereIn
+                $q->whereIn('value', $colors);  
             });
         }
 

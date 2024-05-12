@@ -14,8 +14,8 @@ class AddProductController extends Controller
         $categories = Category::all();
 
         // Retrieve the category by name
-        $category = Category::with('subCategories')  // Use the exact relationship method name
-                 ->where('category_name', $categoryName)  // Ensure 'category_name' is the correct column name
+        $category = Category::with('subCategories')  
+                 ->where('category_name', $categoryName)  
                  ->first();
 
         if (!$category) {
@@ -26,15 +26,12 @@ class AddProductController extends Controller
         // Retrieve all subcategories of the retrieved category
         $subCategories = $category->subCategories;
 
-        // Create an associative array where each key is a subcategory and each value is an array of parameters for that subcategory
         $subCategoriesWithParameters = $subCategories->mapWithKeys(function ($subCategory) {
-            // Directly return the parameters collection or convert it to an array
             return [
                 $subCategory->sub_category_name => $subCategory->parameters->toArray()
             ];
         });
 
-        // Pass the data to Syour view
         return view('pages/adminPanelAddProduct', compact('categories','category', 'subCategoriesWithParameters'));
 
     }
@@ -50,7 +47,7 @@ class AddProductController extends Controller
         ]);
         $product->save();
 
-        // Assuming you have a $product instance already created/defined
+        
         if($request->has('parameters')) {
             foreach ($request->input('parameters') as $parameterId => $value) {
                 if ($value !== null) {
