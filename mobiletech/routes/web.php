@@ -8,7 +8,6 @@ use App\Http\Controllers\AdminPanelMainController;
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
-
 // prihlasenie
 Route::get('/dashboard', function () {
     return redirect()->route('main-page');
