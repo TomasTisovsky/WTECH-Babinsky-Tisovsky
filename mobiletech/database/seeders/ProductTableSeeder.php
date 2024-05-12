@@ -22,9 +22,9 @@ class ProductTableSeeder extends Seeder
         while (($phone_data = fgetcsv($opened_phone_data_file)) !== false) {
 
             Product::create([
-                'name' => $phone_data[0],
-                'description' =>$phone_data[10],
-                'price' => $phone_data[1],
+                'name' => $phone_data[0] . $phone_data[1],
+                'description' =>$phone_data[11],
+                'price' => $phone_data[2],
                 'stock_quantity' => rand(1,200),
                 'category_id' => 1,
                 'created_at' => now(),
