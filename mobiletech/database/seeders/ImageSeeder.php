@@ -26,11 +26,11 @@ class ImageSeeder extends Seeder
         $opened_phone_data_file = fopen('public/resources/mobily_data.csv','r');
         fgetcsv($opened_phone_data_file);
 
-        for ($i = 0; $i < sizeof($product_ids); $i++){
+        for ($i = 1; $i <= 30; $i++){
             $phone_data = fgetcsv($opened_phone_data_file);
 
             Image::create([
-                'product_id' => $product_ids[$i],
+                'product_id' => $i,
                 'image_name' => $phone_data[10],
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -38,7 +38,7 @@ class ImageSeeder extends Seeder
             ]);
 
             Image::create([
-                'product_id' => $product_ids[$i],
+                'product_id' => $i,
                 'image_name' => "phone_default.png",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -46,7 +46,7 @@ class ImageSeeder extends Seeder
             ]);
 
             Image::create([
-                'product_id' => $product_ids[$i],
+                'product_id' => $i,
                 'image_name' => "phone_2.png",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -54,6 +54,49 @@ class ImageSeeder extends Seeder
             ]);
         }
 
+
+        // obrazky pre tablety
+        $opened_tablet_data_file = fopen('public/resources/tablety_data.csv','r');
+        fgetcsv($opened_tablet_data_file);
+
+        for ($i = 31; $i <= 34; $i++){
+            $phone_data = fgetcsv($opened_tablet_data_file);
+
+            Image::create([
+                'product_id' => $i,
+                'image_name' => $phone_data[10],
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+            /*Image::create([
+                'product_id' => $i,
+                'image_name' => "phone_default.png",
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);*/
+
+        }
+
+        // obrazky pre skla
+        $opened_glass_data_file = fopen('public/resources/skla_data.csv','r');
+        fgetcsv($opened_glass_data_file);
+        for ($i = 35; $i <= 38; $i++){
+            $phone_data = fgetcsv($opened_glass_data_file);
+
+            Image::create([
+                'product_id' => $i,
+                'image_name' => $phone_data[3],
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+
+
+        }
 
 
     }
