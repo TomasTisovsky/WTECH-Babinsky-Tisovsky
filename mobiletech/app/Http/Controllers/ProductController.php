@@ -220,8 +220,8 @@ class ProductController extends Controller
             }else{
                 $search = $request->input('search');
                 $query->where(function ($q) use ($search) {
-                    $q->where('name', 'like', '%' . $search . '%')
-                    ->orWhere('description', 'like', '%' . $search . '%');
+                    $q->whereRaw('LOWER(name) LIKE ?', ["%{$search}%"])
+                      ->orWhereRaw('LOWER(description) LIKE ?', ["%{$search}%"]);
                 });
             }
         }
@@ -287,7 +287,7 @@ class ProductController extends Controller
             ->distinct();
 
         // Pridanie podmienky where len ak $categoryID nie je null
-        if ($categoryID !== null) {
+        if (isset($categoryID) && $categoryID !== null) {
             $query->where('products.category_id', '=', $categoryID);
         }
 
@@ -300,7 +300,7 @@ class ProductController extends Controller
             ->distinct();
 
         // Pridanie podmienky where len ak $categoryID nie je null
-        if ($categoryID !== null) {
+        if (isset($categoryID) && $categoryID !== null) {
             $query->where('products.category_id', '=', $categoryID);
         }
 

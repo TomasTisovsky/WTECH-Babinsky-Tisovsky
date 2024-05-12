@@ -4,9 +4,13 @@
         <a class="product-card-name-anchor" href="{{ route('product-detail.show', ['product_id' => $product->id]) }}"><p class="card-text card-product-name">
                 {{$name}}</p></a>
 
+        
         <a class="product-card-image-anchor" href="{{ route('product-detail.show', ['product_id' => $product->id]) }}"><img class="img-fluid card-main-image card-image-top p-0" 
         src="{{asset('resources/phones/'.$image)}}" 
                 alt="mobil fotografia"></a>
+        
+
+        
 
         <div class="row container-fluid p-0">
             <div class="col-6 d-flex card-button-col">
