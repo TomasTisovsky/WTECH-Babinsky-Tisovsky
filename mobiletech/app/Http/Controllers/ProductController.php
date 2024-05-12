@@ -227,11 +227,6 @@ class ProductController extends Controller
         }
             
 
-         
-    
-
-
-        // Apply additional filters from the request if needed
         $minimumPrice = $request->input('minimum_price');
         if ($minimumPrice !== null) {
             $minimumPrice = (float) $minimumPrice;  // Cast to float to ensure numeric comparison
@@ -276,7 +271,7 @@ class ProductController extends Controller
         $query->with('images');
 
         // Pagination
-        $products = $query->paginate(24); // Paginate so that only 12 items per page are returned
+        $products = $query->paginate(24); // Paginate so that only 24 items per page are returned
 
 
 
