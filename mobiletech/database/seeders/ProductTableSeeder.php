@@ -52,23 +52,23 @@ class ProductTableSeeder extends Seeder
 
         }
 
-
-        // citanie CSVcka a vytvaranie Productov
-        /*$opened_phone_data_file = fopen('storage/app/public/phones_data.csv','r');
-        fgetcsv($opened_phone_data_file);
-        while (($phone_data = fgetcsv($opened_phone_data_file)) !== false) {
+        //vytvorenie skiel
+        $opened_glass_data_file = fopen('public/resources/skla_data.csv','r');
+        fgetcsv($opened_glass_data_file);
+        while (($glass_data = fgetcsv($opened_glass_data_file)) !== false) {
 
             Product::create([
-                'name' => $phone_data[1] . $phone_data[2],
-                'description' => '6.1 LCD Liquid Retina 1792×828, procesor A12 Bionic, interná pamäť 64GB, fotoaparát zadný 12Mpx (F/1.8), fotoaparát predný 7Mpx (F/2.2), optická stabilizácia, GPS, Glonass, NFC, LTE, Lightning, Face ID, Dve SIM (nano-SIM a eSIM), vodoodolný podľa IP67,',
-                'price' => $phone_data[5],
+                'name' => $glass_data[0] . $glass_data[1],
+                'description' =>$glass_data[4],
+                'price' => $glass_data[2],
                 'stock_quantity' => rand(1,200),
-                'category_id' => 1,
+                'category_id' => 3,
                 'created_at' => now(),
                 'updated_at' => now(),
 
             ]);
 
-        }*/
+        }
+
     }
 }

@@ -89,13 +89,15 @@ class ProductParametersSeeder extends Seeder
 
 
         }
+
+        // parametre pre tablety
         // otvorenie CSV suboru
-        $opened_tablet_data_file = fopen('public/resources/tablety_data.csv','r');
+        $opened_tablet_data_file = fopen('public/resources/tablety_data.csv', 'r');
 
         // prvy riadok v csv su nazvy stlpcov
         fgetcsv($opened_tablet_data_file);
 
-        for($pid =31; $pid<=34;$pid++){
+        for ($pid = 31; $pid <= 34; $pid++) {
 
             $phone_data = fgetcsv($opened_tablet_data_file);
 
@@ -154,7 +156,34 @@ class ProductParametersSeeder extends Seeder
                 'product_id' => $pid,
                 'value' => $phone_data[5],
                 'sub_category_parameter_id' => 9,
-            ]);}
+            ]);
+        }
 
+        // parametre pre skla
+        // otvorenie CSV suboru
+        $opened_glass_data_file = fopen('public/resources/skla_data.csv','r');
+
+        // prvy riadok v csv su nazvy stlpcov
+        fgetcsv($opened_glass_data_file);
+
+        for($pid =35; $pid<=38;$pid++) {
+
+            $phone_data = fgetcsv($opened_glass_data_file);
+
+            //znacka
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[0],
+                'sub_category_parameter_id' => 1,
+            ]);
+
+            //model
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[1],
+                'sub_category_parameter_id' => 3,
+            ]);
+
+        }
     }
 }
