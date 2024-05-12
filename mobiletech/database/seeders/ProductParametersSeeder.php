@@ -30,31 +30,38 @@ class ProductParametersSeeder extends Seeder
 
             $phone_data = fgetcsv($opened_phone_data_file);
 
-            //model
+            //znacka
             ProductParameter::create([
                 'product_id' => $pid,
                 'value' => $phone_data[0],
+                'sub_category_parameter_id' => 1,
+            ]);
+
+            //model
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[1],
                 'sub_category_parameter_id' => 3,
             ]);
 
             //operacny system
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[2],
+                'value' => $phone_data[3],
                 'sub_category_parameter_id' => 7,
             ]);
 
             //velkost obrazovky
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[3],
+                'value' => $phone_data[4],
                 'sub_category_parameter_id' => 12,
             ]);
 
             //farba
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[7],
+                'value' => $phone_data[8],
                 'sub_category_parameter_id' => 4,
             ]);
 
@@ -62,21 +69,21 @@ class ProductParametersSeeder extends Seeder
             //velkost operacnej pamate
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[5],
+                'value' => $phone_data[6],
                 'sub_category_parameter_id' => 10,
             ]);
 
             //velkost internej pamate
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[6],
+                'value' => $phone_data[7],
                 'sub_category_parameter_id' => 11,
             ]);
 
             //kapacita baterie
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[4],
+                'value' => $phone_data[5],
                 'sub_category_parameter_id' => 9,
             ]);
 

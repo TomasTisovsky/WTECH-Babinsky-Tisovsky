@@ -31,7 +31,7 @@ class ImageSeeder extends Seeder
 
             Image::create([
                 'product_id' => $product_ids[$i],
-                'image_name' => $phone_data[9],
+                'image_name' => $phone_data[10],
                 'created_at' => now(),
                 'updated_at' => now(),
 
