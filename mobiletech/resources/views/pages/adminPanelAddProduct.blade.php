@@ -59,7 +59,7 @@
                         </div>
                         @foreach ($parameters as $parameter)
                             <div class="row mt-2">
-                                <div class="col-6 col-md-5 col-lg-4 pl-5">{{ $parameter['name'] }}</div>
+                                <div class="col-6 col-md-5 col-lg-4 pl-5">{{ $parameter['scp_name'] }}</div>
                                 <div class="col-6 col-md-5 col-lg-4">
                                     @if (isset($parameter['options']))
                                         <select class="form-select w-100" name="parameters[{{ $parameter['id'] }}]">

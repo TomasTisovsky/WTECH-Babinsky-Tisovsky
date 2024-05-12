@@ -22,5 +22,4 @@ class MainController extends Controller
         return view('pages/mainWithProducts', ['products' => $products]);
     }
 
-
 }
