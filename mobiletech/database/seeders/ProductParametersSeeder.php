@@ -26,7 +26,7 @@ class ProductParametersSeeder extends Seeder
         // prvy riadok v csv su nazvy stlpcov
         fgetcsv($opened_phone_data_file);
 
-        foreach ($product_ids as $pid){
+        for($pid =1; $pid<=30;$pid++){
 
             $phone_data = fgetcsv($opened_phone_data_file);
 
@@ -87,27 +87,29 @@ class ProductParametersSeeder extends Seeder
                 'sub_category_parameter_id' => 9,
             ]);
 
-        /*// otvorenie CSV suboru
-        $opened_phone_data_file = fopen('storage/app/public/phones_data.csv','r');
+
+        }
+        // otvorenie CSV suboru
+        $opened_tablet_data_file = fopen('public/resources/tablety_data.csv','r');
 
         // prvy riadok v csv su nazvy stlpcov
-        fgetcsv($opened_phone_data_file);
+        fgetcsv($opened_tablet_data_file);
 
-        foreach ($product_ids as $pid){
+        for($pid =31; $pid<=34;$pid++){
 
-            $phone_data = fgetcsv($opened_phone_data_file);
+            $phone_data = fgetcsv($opened_tablet_data_file);
 
             //znacka
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[1],
+                'value' => $phone_data[0],
                 'sub_category_parameter_id' => 1,
             ]);
 
             //model
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[2],
+                'value' => $phone_data[1],
                 'sub_category_parameter_id' => 3,
             ]);
 
@@ -121,24 +123,38 @@ class ProductParametersSeeder extends Seeder
             //velkost obrazovky
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[9],
+                'value' => $phone_data[4],
                 'sub_category_parameter_id' => 12,
             ]);
+
+            //farba
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[8],
+                'sub_category_parameter_id' => 4,
+            ]);
+
 
             //velkost operacnej pamate
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[10],
+                'value' => $phone_data[6],
                 'sub_category_parameter_id' => 10,
+            ]);
+
+            //velkost internej pamate
+            ProductParameter::create([
+                'product_id' => $pid,
+                'value' => $phone_data[7],
+                'sub_category_parameter_id' => 11,
             ]);
 
             //kapacita baterie
             ProductParameter::create([
                 'product_id' => $pid,
-                'value' => $phone_data[11],
+                'value' => $phone_data[5],
                 'sub_category_parameter_id' => 9,
-            ]);*/
+            ]);}
 
-        }
     }
 }

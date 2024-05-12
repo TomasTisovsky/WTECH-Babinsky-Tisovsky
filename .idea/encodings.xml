@@ -2,6 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/mobiletech/public/resources/mobily_data.csv" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/mobiletech/public/resources/phones/galaxyA7.jpg" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/mobiletech/public/resources/phones/galaxyA9.jpg" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/mobiletech/public/resources/phones/lenovoM8.jpg" charset="windows-1250" />
     <file url="file://$PROJECT_DIR$/mobiletech/public/resources/phones/moto_g.jpg" charset="windows-1250" />
     <file url="PROJECT" charset="windows-1250" />
   </component>

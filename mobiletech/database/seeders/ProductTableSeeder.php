@@ -34,6 +34,24 @@ class ProductTableSeeder extends Seeder
 
         }
 
+        // vytvorenie tabletov
+        $opened_tablet_data_file = fopen('public/resources/tablety_data.csv','r');
+        fgetcsv($opened_tablet_data_file);
+        while (($tablet_data = fgetcsv($opened_tablet_data_file)) !== false) {
+
+            Product::create([
+                'name' => $tablet_data[0] . $tablet_data[1],
+                'description' =>$tablet_data[11],
+                'price' => $tablet_data[2],
+                'stock_quantity' => rand(1,200),
+                'category_id' => 2,
+                'created_at' => now(),
+                'updated_at' => now(),
+
+            ]);
+
+        }
+
 
         // citanie CSVcka a vytvaranie Productov
         /*$opened_phone_data_file = fopen('storage/app/public/phones_data.csv','r');
