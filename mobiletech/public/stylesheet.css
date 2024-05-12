@@ -732,4 +732,45 @@ footer {
   .carousel-control-next, .carousel-control-prev {
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
     border: none;
-    }
+}
+
+.no-glow-anchor {
+    text-decoration: none;
+    color: inherit;
+}
+
+.no-glow-anchor:hover {
+    color: inherit;
+}
+
+.no-glow-anchor:focus, .button-link:active {
+    color: inherit;
+    outline: none;
+}
+
+/*Order successful styles*/
+
+#os_main {
+    height: 76vh;
+    align-items: center;
+}
+
+#successful-img {
+    height: 45vh;
+}
+
+#center-successful-img-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#center-successful-img-text p{
+    color: #ffba00;
+    font-size: 2rem;
+    text-align: center;
+}
+
+#finalization-form{
+    width: 100%;
+}
