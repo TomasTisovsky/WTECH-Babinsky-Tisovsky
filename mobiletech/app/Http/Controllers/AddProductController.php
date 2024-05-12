@@ -62,6 +62,8 @@ class AddProductController extends Controller
             }
         }
 
+        $categoryName = Category::find($category)->category_name;
+
         // Handling multiple images upload
         if ($request->hasfile('images')) {
             foreach ($request->file('images') as $image) {
@@ -73,7 +75,7 @@ class AddProductController extends Controller
 
         $product->save();
 
-        return redirect()->route('admin.products.show')->with('success', 'Product added successfully.');
+        return redirect()->route('admin.products.show')->with('categoryName', $categoryName)->with('success', 'Product added successfully.');
      
     }
 

@@ -9,6 +9,7 @@ use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
 use \App\Http\Controllers\CartController;
+use \App\Http\Controllers\ProductController;
 
 // prihlasenie
 Route::get('/dashboard', function () {
@@ -44,3 +45,8 @@ Route::get('/shopping-cart', [CartController::class, 'view_shopping_cart'])->nam
 Route::get('/deb', [CartController::class, 'debug'])->name('shopping-cart-debug.add'); // ukaze obsah kosika
 Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); // resetuje session
 
+
+//product search route  
+Route::get('/search', [ProductController::class, 'search'])->name('search');
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');

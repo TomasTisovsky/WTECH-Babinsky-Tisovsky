@@ -733,3 +733,7 @@ footer {
     background: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
     border: none;
   }
+
+  .page-item.current .page-link {
+    color: #ffba00;
+}
