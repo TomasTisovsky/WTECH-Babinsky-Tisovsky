@@ -14,6 +14,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\LoginController;
+use \App\Http\Controllers\ProductController;
 
 // prihlasenie
 Route::get('/dashboard', [LoginController::class, 'login'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -65,3 +66,8 @@ Route::get('/ns', [CartController::class, 'new_session'])->name('new-session'); 
 Route::get('/t', function (){
     return view('pages/orderSuccessful');
 })->name('test'); // test
+
+//product search route  
+Route::get('/search', [ProductController::class, 'search'])->name('search');
+
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');

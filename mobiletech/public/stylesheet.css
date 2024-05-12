@@ -820,3 +820,8 @@ footer {
 #finalization-form{
     width: 100%;
 }
+
+.page-item.current .page-link {
+    color: #ffba00;
+}
+
